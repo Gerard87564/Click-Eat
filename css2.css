@@ -18,3 +18,11 @@ label{
  option{
      align-content: left;
  }
+
+ #cuerpo{
+    background-image: url(./img/pexels-daniel-absi-952670.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}

@@ -34,20 +34,6 @@ nav ul li a:hover {
     color: blue;
 }
 
-#titol{
-    font-size: 100px;
-}
-
-img{
-    display: block;
-    width: 80%;
-    margin-left: 170%;
-}
-
-div{
-    width: 400px;
-}
-
 #cuerpo{
     background-image: url(./img/pexels-daniel-absi-952670.jpg);
     background-repeat: no-repeat;
@@ -56,14 +42,6 @@ div{
     color: white;
 }
 
-.boton {
-    border: 1px solid #2e518b; 
-    padding: 10px; 
-    background-color: #2e518b; 
-    color: #ffffff; 
-    text-decoration: none; 
-    text-transform: uppercase; 
-    font-family: 'Helvetica', sans-serif; 
-    border-radius: 50px;  
-    margin-left: 15%;  
+#titol{
+    font-size: 80px;
 }

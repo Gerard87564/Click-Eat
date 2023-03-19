@@ -29,8 +29,9 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul li:hover {
-    background: #2341ec;
+nav ul li a:hover {
+    background-color: white;
+    color: blue;
 }
 
 #titol{
@@ -39,7 +40,11 @@ nav ul li:hover {
 }
 
 #cuerpo{
-    background-color: #86dafe;
+    background-image: url(./img/pexels-daniel-absi-952670.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
 }
 
 h2{
@@ -47,20 +52,68 @@ h2{
     padding-left: 80%;
 }
 
-tr img{
+img{
     width: 100px;
     align-self: left;
     padding-left: 75%;
     
 }
 
-th{
-    font-size: 100;
-    margin-left: 120%;
-    padding-left: 82%;
+.Gerard{
+    padding-left: 2%;
 }
 
-td{
-    margin-left: 120%;
-    padding-left: 80%;
+.Roger{
+    padding-left: 2%;
 }
+
+#Vic{
+    float: left;
+    position: absolute;
+    bottom: 3%; left: 11%;
+}
+
+.Victor{
+    padding-left: 680%;
+}
+
+#Mc{
+    float: left;
+    position: absolute;
+    bottom: 43%; left: 11%;
+}
+
+.Marc{
+    padding-left: 900%;
+}
+
+figure h3{
+    margin: 0%;
+    padding: 2%;
+}
+
+figcaption{
+    margin: 0%;
+    padding-bottom: 3%;
+    padding-left: 5%;
+}
+
+#Ger{
+    position: absolute;
+    bottom: 43%; right: 30%;
+    padding-right: 0%;
+    margin-right: 60%;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+
+#Rg{
+    position: absolute;
+    right: 90.5%; bottom: 10%;
+    padding-right: 2%;
+    margin-top: 1%;
+    margin-left: 1%;
+   
+}
+
