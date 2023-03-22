@@ -8,7 +8,9 @@ label{
  }
 
  th{
-     width: 3%;
+     width: 7%;
+     padding: 1%;
+     font-size: 1.5em;
  }
 
  td{

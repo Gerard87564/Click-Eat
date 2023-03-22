@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css4.css">
+    <link rel="stylesheet" href="css7.css">
+    <script src="./form1.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Gerard">
     <meta name="description" content="etiquetas basicas">
@@ -22,22 +23,32 @@
                 <li><div><a href="./index7.html">Inici sessió</a></div></li>
             </ul>
         </nav>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h1>Qué és JoBeaver?</h1>
     </header>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <main>
-        <br>
-        <br>
-        <article id="contenido">
-            <p><dd>La idea de JoBeaver és la d’una aplicació de tipus “compra i venta”. L’aplicació es basa en l’idea de poder donar i llogar diferents serveis. Aquesta mateixa es basa en pagar segons les hores treballades, a l’aplicació es faràn les transaccions necesàries. </dd></p>
-            <img src="./img/LOGO_FINAL_BASE.png" alt="JoBeaver">
-        </article>
+        <form method="post">
+            <table>
+                <tr>
+                    <th><label for="Nom">Nom d'usuari:</label></th>
+                    <td><input type="text" id="username" name="username" placeholder="Escriu el teu nom"></td>
+                </tr>
+
+                <tr>
+                    <th><label for="pass">Contrasenya:</label></th>
+                    <td><input type="password" id="password" name="password" placeholder="Escriu una contrasenya"></td>
+                </tr>
+
+                <tr>
+                    <th id="input-submit"><input type="submit" value="Enviar" id="submit" onclick="validate()"></th>
+                </tr>
+            </table>
+        </form>
         <aside>
             <!-- Contenido secundario -->
         </aside>

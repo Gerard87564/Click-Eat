@@ -19,64 +19,78 @@
     </header>
     <main>
         <table>
-            <form action="#" method="post" enctype="text/plain">
+            <form action="mailto:ggonzalezpujolas@gmail.com" class="formulario" id="formulario">
                 <tr>
-                    <th><label for="Nom">Nom:</label></th>
-                    <td><input type="text" id="Nom" name="user_name" required placeholder="Escriu el teu nom" size="60" maxlength="20"></td>
-                </tr>
+                    <th>
+                        <div class="formulario-grupo" id="g_username">
+                            <label for="user_name">Nom usuari:</label>
+                        </div>
+                    </th>
 
-                <tr>
-                    <th><label for="Cognoms">Cognoms:</label></th>
-                    <td><input type="text" id="Cognoms" name="surname" required placeholder="Escriu els teus cognoms" size="60" maxlength="60"></td>    
+                    <td>
+                        <div class="g_input">
+                            <input type="text" id="user_name" name="user_name" placeholder="Escriu el teu nom d'usuari">
+                        </div>
+                    </td>
                 </tr>
-
                 <tr>
-                    <th><label for="Data naixement">Data de naixament</label></th>
-                    <td><input type="date" id="Data naixement" name="date" required value="1999-01-01" size="10" maxlength="10"></td>
+                    <th>
+                        <div class="formulario-grupo" id="g_fullname">
+                            <label for="fullname">Nom complet:</label>
+                        </div>
+                    </th>
+
+                    <td>
+                        <div class="g_input">
+                            <input type="text" id="fullname" name="fullname" placeholder="Escriu el teu nom complet">
+                        </div>
+                    </td>    
                 </tr>
-
                 <tr>
-                    <th><label for="sexe">Sexe</label></th>
-                    <td><select name="gender" id="sexe" size="3">
-                        <option value="gender">Home</option>
-                        <option value="gender">Dona</option>
-                        <option value="gender">Altre</option>
-                    </select></td>
+                    <th>
+                        <div class="formulario-grupo" id="g_correo">
+                            <label for="correo">E-mail:</label>
+                        </div>
+                    </th>
+
+                    <td>
+                        <div class="g_input">
+                            <input type="email" id="correo" name="correo" placeholder="Escriu el teu email">
+                        </div>
+                    </td>
                 </tr>
-
                 <tr>
-                    <th><label for="DNI">Document Identificatiu:</label></th>
-                    <td><input type="text" id="DNI" name="Document Identificatiu" placeholder="63828245G" size="30" maxlength="9" required></td>
+                    <th>
+                        <div class="formulario-grupo" id="g_password">
+                            <label for="password">Contrasenya:</label>
+                        </div>
+                    </th>
+                    
+                    <td>
+                        <div class="g_input">
+                            <input type="password" placeholder="Escriu una contrasenya" id="password" name="password">
+                        </div>
+                    </td>
                 </tr>
-
                 <tr>
-                    <th><label for="mail">E-mail:</label></th>
-                    <td><input type="email" id="mail" name="correo" placeholder="Escriu el teu email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" size="30" maxlength="30" required></td>
+                    <th>
+                        <div class="formulario-grupo" id="g_telephone">
+                            <label for="telephone">Telefón:</label>
+                        </div>
+                    </th>
+
+                    <td>
+                        <div class="g_input">
+                            <input type="tel" placeholder="+34 678 74 56 89" id="telephone" name="telephone">
+                        </div>
+                    </td>
                 </tr>
-
                 <tr>
-                    <th><label for="pass">Contrasenya:</label></th>
-                    <td><input type="password" placeholder="Escriu una contrasenya" size="20" maxlength="20" id="pass" required></td>
-                </tr>
-
-                <tr>
-                    <th><label for="treball">Tipus de treball que busques o ofereixes?</label></th>
-                    <td><input type="text" id="treball" name="type of work" placeholder="Escriu el treball que desitges realitzar o dur a terme" size="60" maxlength="60" required></td>
-                </tr>
-
-                <tr>
-                    <th><label for="selecció">T'agradaría rebre noticies de la nostre web sobre futures actualitzacions?</label></th>
-                    <td><label for="selection">
-                        <input type="radio" id="selection" name="seleccion_unica" checked>
-                        Si
-                        <br>
-                        <input type="radio" id="select" name="seleccion_unica">
-                        No
-                    </label></td>
-                </tr>
-
-                <tr>
-                    <th><input type="submit" value="Enviar Respostes"></th>
+                    <th>
+                        <div class="g_input">
+                            <input type="submit" value="Enviar Respostes">
+                        </div>
+                    </th>
                 </tr>
             </form>
         </table>

@@ -22,6 +22,14 @@ nav ul li {
     font-size: 20px;
 }
 
+nav ul li div  {
+    padding-left: 150%;
+}
+
+li div {
+    width: 420px;
+}
+
 nav ul li a {
     display: block; 
     padding: 20px;
@@ -40,12 +48,8 @@ nav ul li a:hover {
 
 img{
     display: block;
-    width: 80%;
-    margin-left: 170%;
-}
-
-div{
-    width: 400px;
+    width: 25%;
+    margin-left: 40%;
 }
 
 #cuerpo{
@@ -66,4 +70,12 @@ div{
     font-family: 'Helvetica', sans-serif; 
     border-radius: 50px;  
     margin-left: 15%;  
+}
+
+h1 {
+    padding-left: 2%;
+}
+
+h2 {
+    padding-left: 2%;
 }
