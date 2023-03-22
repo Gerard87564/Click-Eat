@@ -1,13 +1,11 @@
 var attempt="5";
-function loadHomePage() {
-	window.location.assign = "https://www.jobeaver.cat/index.html";
-}
 
 function validate(){
 	var username = document.getElementById("username").value;
 	var password = document.getElementById("password").value;
 	if ( username == "Beavie" && password == "8261819A*"){
 	alert ("Login successfull!");
+	window.location.assign = "https://www.jobeaver.cat/index.html";
 	return false;
 	}
 
