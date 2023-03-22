@@ -5,7 +5,7 @@ function validate(){
 	var password = document.getElementById("password").value;
 	if ( username == "Beavie" && password == "8261819A*"){
 	alert ("Login successfull!");
-	window.location.assign = "https://www.jobeaver.cat/index.html";
+	window.location = "https://www.jobeaver.cat/index.html";
 	return false;
 	}
 
