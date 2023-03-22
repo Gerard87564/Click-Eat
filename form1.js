@@ -1,6 +1,6 @@
 var attempt="5";
 function loadHomePage() {
-	window.location.assign = "https://www.jobeaver.cat";
+	window.location.assign = "https://www.jobeaver.cat/index.html";
 }
 
 function validate(){
