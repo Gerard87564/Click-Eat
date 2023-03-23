@@ -28,3 +28,10 @@ label{
     background-attachment: fixed;
     color: white;
 }
+
+@media screen and (max-width: 800px) {
+    body {
+        width: 100%;
+        padding: 0;
+    }
+}
