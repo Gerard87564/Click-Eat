@@ -1,95 +1,212 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: Verdana;
+    text-align: justify;
+    background-color: cornflowerblue;
 }
 
-nav {
-    background: rgba(6, 39, 226, 0.7);
-    width: 100%;
-    position: fixed;
-    z-index: 100;
+.header {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+a.inici img {
+    width: 45%;
+}
+
+figure img {
+    align-content: center;
+    width: 20em;
+    margin-left: 55%;
+}
+
+.htopnav {
+    overflow: hidden;
+    background-color: rgb(178, 204, 251);
+    border: 0.1em solid red;
+}
+
+.htopnav a {
     float: left;
-}
-
-nav ul {
-    list-style: none;
-    overflow: hidden; 
-}
-
-nav ul li {
-    float: left;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
-
-nav ul li div  {
-    padding-left: 150%;
-}
-
-li div {
-    width: 420px;
-}
-
-nav ul li a {
-    display: block; 
-    padding: 20px;
-    color: #fff;
+    color: black;
+    text-align: center;
+    padding: 1em;
     text-decoration: none;
+    margin-bottom: 1%;
 }
 
-nav ul li a:hover {
+.htopnav a:hover {
     background-color: white;
     color: blue;
 }
 
-#titol{
-    font-size: 100px;
+.leftcolumn {
+    float: left;
+    width: 65%;
+    margin-bottom: 60%;
 }
 
-img{
-    display: block;
+.rightcolumn {
+    float: left;
+    position: absolute;
+    bottom: 15%;
     width: 25%;
-    margin-left: 40%;
+    padding-left: 0.5em;
+    margin-left: 63em;
 }
 
-#cuerpo{
-    background-image: url(./img/pexels-daniel-absi-952670.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+.rightcolumn-down {
+    float: left;
+    position: absolute;
+    top: 75%;
+    width: 10%;
+    padding-left: 0.5em;
+    margin-left: 0em;
+    margin-top: 30%;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer {
+    border: 0.1em solid red;
+    padding: 1em;
+    text-align: center;
+    color: red;
+    background: yellow;
+    margin-top: 140%;
+}
+
+div.leftcolumn div h2 {
+    font-family: fantasy;
+    font-size: 250%;
+    margin-top: 1em;
+    margin-left: 5em;
+}
+
+a.inici-sessió {
+    margin-left: 20%;
+}
+
+a.registre {
+    margin-left: 3%;
+}
+
+.card {
+    background-color: white;
+    border: 0.1em solid #112c66;
+    padding: 1em;
+    margin-top: 16em;
+}
+
+.card-down {
+    background-color: black;
+    border: 0.1em solid #112c66;
+    padding-left: 30em;
+    padding-right: 62em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.card-down h1 {
     color: white;
 }
 
-.boton {
-    border: 1px solid #2e518b; 
-    padding: 10px; 
-    background-color: #2e518b; 
-    color: #ffffff; 
-    text-decoration: none; 
-    text-transform: uppercase; 
-    font-family: 'Helvetica', sans-serif; 
-    border-radius: 50px;  
-    margin-left: 15%;  
+h2.ubicació-mapa {
+    text-align: right;
 }
 
-h1 {
-    padding-left: 2%;
+form div {
+    padding-left: 3em;
 }
 
-h2 {
-    padding-left: 2%;
+div.contacte {
+    margin-right: 20%;
+    padding-right: 45%;
+    list-style-type: none;
+    display: inline-block;
 }
 
-@media screen and (max-width: 800px) {
+div.contacte figure {
+    text-decoration: none;
+    text-align: left;
+}
+
+
+.inici {
+    float: left;
+    position: absolute;
+    margin-right: 20%;
+    padding: 1%;
+    width: 350px; 
+}
+
+a.inici {
+    margin-left: 0%;
+}
+
+.qui-som {
+    margin-left: 25%;
+    margin-top: 0.60%;
+}
+
+.producte {
+    margin-top: 0.60%;
+}
+
+.on-ens-trobem {
+    margin-top: 0.60%;
+}
+
+.inici-sessió {
+    margin-top: 0.60%;
+}
+
+.registre {
+    margin-top: 0.60%;
+}
+
+@media screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 768px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
     body {
         width: 100%;
-        padding: 0;
+        flex-direction: column;
+    }
+    .htopnav {
+        position: absolute;
+        margin-left: 30%;
+    }
+    .htopnav a.inici{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .htopnav a{
+        float: none;
+        display: inline;
+        text-align: left;
     }
 }
 
-@media screen and (max-width: 400px) {
-    nav ul li a:hover {
-        float: none;
+@media screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 768px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    body {
         width: 100%;
+        flex-direction: row;
+    }
+    .htopnav a {
+        width: 10%;
     }
 }
