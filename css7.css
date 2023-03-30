@@ -3,61 +3,9 @@
     padding: 0;
 }
 
-nav {
-    background: rgba(6, 39, 226, 0.7);
-    width: 100%;
-    position: fixed;
-    z-index: 100;
-    float: left;
-}
-
-nav ul {
-    list-style: none;
-    overflow: hidden; 
-}
-
-nav ul li {
-    float: left;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
-
-nav ul li div  {
-    padding-left: 150%;
-}
-
-li div {
-    width: 420px;
-}
-
-nav ul li a {
-    display: block; 
-    padding: 20px;
-    color: #fff;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    background-color: white;
-    color: blue;
-}
-
-#titol{
-    font-size: 100px;
-}
-
-img{
-    display: block;
-    width: 80%;
-    margin-left: 170%;
-}
-
 #cuerpo{
-    background-image: url(./img/pexels-daniel-absi-952670.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
+    text-align: justify;
+    background-color: cornflowerblue;
 }
 
 #submit {
@@ -73,6 +21,7 @@ img{
 }
 
 th{
+    font-family: Verdana;
     width: 2%;
     padding: 1%;
     padding-left: 30%;
@@ -91,16 +40,8 @@ table {
     padding-top: 5%;
 }
 
-@media screen and (max-width: 800px) {
-    body {
-        width: 100%;
-        padding: 0;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    nav ul li a:hover {
-        float: none;
-        width: 100%;
-    }
+div.logo img {
+    width: 45%;
+    margin-top: -6%;
+    margin-left: 22.5%;
 }
