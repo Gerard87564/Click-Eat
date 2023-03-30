@@ -11,8 +11,8 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    background-position: center;
-    background-repeat: no-repeat;
+    text-align: center;
+    width: 100%;
 }
 
 a.inici img {
@@ -21,16 +21,20 @@ a.inici img {
 
 figure img {
     align-content: center;
-    width: 20em;
+    width: 10em;
     margin-left: 55%;
 }
 
 .htopnav {
+    float: left;
+    line-height: 120%;
     overflow: hidden;
+    margin: -1%;
     background-color: rgb(178, 204, 251);
-    border: 0.1em solid red;
-    width: 100%;
+    border: 0.1em solid cornflowerblue;
+    width: 102%;
     height: 100%;
+    border-radius: 12%;
 }
 
 .htopnav a {
@@ -40,11 +44,17 @@ figure img {
     padding: 1em;
     text-decoration: none;
     margin-bottom: 1em;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+
+    
 }
 
 .htopnav a:hover {
     background-color: white;
     color: blue;
+    border-radius: 50px;
 }
 
 .leftcolumn {
@@ -73,13 +83,13 @@ div.card figure figcaption {
 }
 
 figcaption#victor {
-    margin-left: 55%;
+    margin-left: 32%;
     margin-top: 1%;
     width: 100%;
 }
 
 figcaption#marc2 {
-    margin-left: 65%;
+    margin-left: 35%;
     margin-top: 1%;
     width: 100%;
 }
@@ -110,11 +120,11 @@ figure.marc1 {
 .footer {
     display: flex;
     justify-content: center;
-    border: 0.1em solid red;
+    border: 0.1em solid black;
     padding: 1em;
     text-align: center;
-    color: red;
-    background: yellow;
+    color: white;
+    background: black;
     margin-top: 140%;
 }
 
@@ -128,13 +138,18 @@ h2 {
 }
 
 
-h1 {
+h1.eslogan {
     font-family: fantasy;
     font-size: 210%;
     margin: 1%;
     margin-left: 30%;
     margin-top: 7%;
     margin-bottom: 19.5%;
+}
+
+h1 {
+    font-family: fantasy;
+    font-size: 210%;
 }
 
 a.inici-sessió {
@@ -152,8 +167,23 @@ a.registre {
     margin-top: 16em;
 }
 
-h2.ubicació-mapa {
-    text-align: right;
+h1.ubicació-mapa {
+    text-align: center;
+}
+
+iframe {
+    margin-left: -5%;
+    margin-bottom: 10%;
+}
+
+div.card-ubi {
+    background-color: white;
+    margin-left: -260%;
+    border: 0.1em solid #112c66;
+    padding: 1em;
+    padding-left: 100%;
+    padding-right: 135%;
+    margin-top: 16em;
 }
 
 form div {
