@@ -34,7 +34,6 @@ figure img {
     border: 0.1em solid cornflowerblue;
     width: 102%;
     height: 100%;
-    border-radius: 12%;
 }
 
 .htopnav a {
@@ -169,21 +168,22 @@ a.registre {
 
 h1.ubicació-mapa {
     text-align: center;
+    margin-left: 60%;
 }
 
 iframe {
-    margin-left: -5%;
+    margin-left: 55%;
     margin-bottom: 10%;
 }
 
 div.card-ubi {
     background-color: white;
-    margin-left: -260%;
+    margin-left: -280%;
     border: 0.1em solid #112c66;
-    padding: 1em;
-    padding-left: 100%;
-    padding-right: 135%;
+    padding-left: 1em;
+    padding-right: 40em;
     margin-top: 16em;
+    width: 414.7%;
 }
 
 form div {
