@@ -104,6 +104,7 @@ figure.marc1 {
     width: 25%;
     padding-left: 0.5em;
     margin-left: 63em;
+    margin-top: 10em;
 }
 
 .row::after {
@@ -166,6 +167,17 @@ a.registre {
     margin-top: 16em;
 }
 
+.card-producte {
+    background-color: white;
+    margin-left: -280%;
+    border: 0.1em solid #112c66;
+    padding-left: 1em;
+    text-align: center;
+    padding-right: 10em;
+    margin-top: 58em;
+    width: 414.7%;
+}
+
 h1.ubicació-mapa {
     text-align: center;
     margin-left: 60%;
@@ -182,7 +194,7 @@ div.card-ubi {
     border: 0.1em solid #112c66;
     padding-left: 1em;
     padding-right: 40em;
-    margin-top: 16em;
+    margin-top: 58em;
     width: 414.7%;
 }
 
