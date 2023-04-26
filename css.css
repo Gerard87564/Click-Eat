@@ -45,20 +45,19 @@ header {
 
 a.logo_cabecera img{
     position: fixed;
-    bottom: 90%;
+    bottom: 90.5%;
     width: 11%;
     padding-top: 1%;
     padding-bottom: 1%;
     padding-left: 1%;
     padding-right: 1%;
-    margin-left: 10%;
+    margin-left: 0%;
 }
 
 
 .nav {
     display: inline;
     overflow: hidden;
-    width: 85%;
     max-width: 850px;
     margin: 0 auto;
 }
@@ -66,7 +65,7 @@ a.logo_cabecera img{
 .htopnav {
     position: fixed;
     top: 1.5%;
-    margin-left: 25%;
+    margin-left: 12%;
     width: 70%;
 }
 
@@ -98,6 +97,101 @@ header a img:hover {
 
 i.menu-icon  {
     display: none;
+}
+
+@media only screen and (max-width: 1320px) {
+
+    header {
+        position: fixed;
+        height: fit-content;
+        padding-bottom: 0%;
+    }
+
+    a.logo_cabecera img{
+        width: 12em;
+        margin-bottom: -0.5%;
+        margin-left: 0em;
+    }
+    
+    .nav div.htopnav{
+       display: none;
+       position: relative;
+       top: 11.5%; right: 60%;
+       width: 50%;
+    }
+    
+
+    .nav div a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 0.5em 1em;
+        transition: all 0.4s linear;
+        border-radius: 50px;
+        width: 165%;
+    }
+
+    .nav div a:hover {
+        background-color: white;
+        color: blue;
+        padding-left: 8em;
+    }
+
+    i.menu-icon {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        bottom: 1em; left: 60em;
+        width: 50em;
+    }
+}
+
+
+@media only screen and (max-width: 980px) {
+
+    header {
+        position: fixed;
+        height: fit-content;
+        padding-bottom: 0%;
+    }
+
+    a.logo_cabecera img{
+        width: 12em;
+        margin-bottom: -0.5%;
+        margin-left: 0em;
+    }
+    
+    .nav div.htopnav{
+       display: none;
+       position: relative;
+       top: 11.5%; right: 60%;
+       width: 50%;
+    }
+    
+
+    .nav div a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 0.5em 1em;
+        transition: all 0.4s linear;
+        border-radius: 50px;
+        width: 165%;
+    }
+
+    .nav div a:hover {
+        background-color: white;
+        color: blue;
+        padding-left: 8em;
+    }
+
+    i.menu-icon {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        bottom: 1em; left: 55em;
+        width: 50em;
+    }
 }
 
 @media only screen and (max-width: 920px) {
@@ -143,6 +237,54 @@ i.menu-icon  {
         cursor: pointer;
         position: relative;
         bottom: 1em; left: 180%;
+        width: 50em;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+
+    header {
+        position: fixed;
+        height: fit-content;
+        padding-bottom: 0%;
+    }
+
+    a.logo_cabecera img{
+        width: 8em;
+        margin-bottom: 12%;
+        margin-left: 0em;
+    }
+    
+    .nav div.htopnav{
+       display: none;
+       position: relative;
+       top: 11.5%; right: 60%;
+       width: 50%;
+    }
+    
+
+    .nav div a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 0.5em 1em;
+        transition: all 0.4s linear;
+        border-radius: 50px;
+        width: 165%;
+    }
+
+    .nav div a:hover {
+        background-color: white;
+        color: blue;
+        padding-left: 8em;
+    }
+
+    i.menu-icon {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        bottom: 0.5em; left: 22em;
         width: 50em;
     }
 }
