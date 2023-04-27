@@ -961,7 +961,7 @@ i.menu-icon  {
         background-color: white;
         color: black;
         margin-bottom: 20%;
-        margin-left: 10%;
+        margin-left: 0.5%;
     }
     
     
@@ -1031,7 +1031,7 @@ i.menu-icon  {
         position: relative;
         top: 4em;
         border: 0.1em solid black;
-        height: 20.8vh;
+        height: 21.2vh;
         padding: 1em;
         text-align: center;
         color: white;
@@ -1040,7 +1040,8 @@ i.menu-icon  {
     }
     
     footer p {
-        margin-top: 10%;
+        margin-top: 11%;
+        margin-right: 10%;
     }
     
     #contacte figure img {
