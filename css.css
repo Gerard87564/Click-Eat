@@ -499,17 +499,18 @@ i.menu-icon  {
 
 
 @media only screen and (max-width: 400px) {
-
+    
     header {
         position: fixed;
         height: fit-content;
-        padding-bottom: 0%;
+        padding-bottom: 10%;
         width: 100%;
     }
 
     a.logo_cabecera img{
+        position: fixed;
+        top: 0.1%;
         width: 8em;
-        margin-bottom: 12%;
         margin-left: 0em;
     }
     
@@ -540,8 +541,8 @@ i.menu-icon  {
     i.menu-icon {
         display: block;
         cursor: pointer;
-        position: relative;
-        bottom: 0.5em; left: 22em;
+        position: fixed;
+        top: 3.5em; left: 22em;
         width: 50em;
     }
 
@@ -549,7 +550,7 @@ i.menu-icon  {
         margin-top: 35%;
         font-size: 110%;
         width: 100%;
-        margin-left: 10%;
+        margin-left: 5%;
     }
 
     .width-100 {
@@ -677,7 +678,7 @@ i.menu-icon  {
         background-color: white;
         color: black;
         margin-bottom: 20%;
-        margin-left: 10%;
+        margin-left: 2%;
     }
     
     
@@ -757,6 +758,7 @@ i.menu-icon  {
     
     footer p {
         margin-top: 10%;
+        margin-right: 4.2%;
     }
     
     #contacte figure img {
@@ -766,12 +768,12 @@ i.menu-icon  {
     
     figure#twitter img {
         position: absolute;
-        top: 40%; right: 18%;
+        top: 40%; right: 24%;
     }
     
     figure#instagram  img{
         position: absolute;
-        top: 40%; right: 8%;
+        top: 40%; right: 14%;
     }    
 
     .column2 article p {
@@ -782,18 +784,19 @@ i.menu-icon  {
      }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 390px) {
 
     header {
         position: fixed;
         height: fit-content;
-        padding-bottom: 0%;
+        padding-bottom: 10%;
         width: 100%;
     }
 
     a.logo_cabecera img{
+        position: fixed;
+        top: 0%;
         width: 8em;
-        margin-bottom: 1%;
         margin-left: 0em;
     }
     
@@ -824,8 +827,8 @@ i.menu-icon  {
     i.menu-icon {
         display: block;
         cursor: pointer;
-        position: relative;
-        bottom: 0.5em; left: 19.5em;
+        position: fixed;
+        top: 3.5em; left: 19.5em;
         width: 50em;
     }
 
