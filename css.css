@@ -321,6 +321,7 @@ input {
 button, select {
     text-transform: none;
 }
+
 button, input {
     overflow: visible;
 }
@@ -358,25 +359,32 @@ i.menu-icon  {
 
 
 @media only screen and (max-width: 920px) {
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
 
     header {
         position: absolute;
         height: fit-content;
-        padding-bottom: 0%;
+        padding-bottom: 3.5%;
+        overflow-x: hidden;
+        width: 100%;
     }
 
     a.logo_cabecera img{
         position: absolute;
-        top: 1.5em;
-        margin-left: 1%;
-        width: 25%;
+        top: 1em; 
+        width: 12em;
+        height: 3.5em;
+        margin-left: 7em;
     }
     
     .nav div.htopnav{
        display: none;
-       position: absolute;
-       top: 11.5%; right: 60%;
-       width: 50%;
+       position: relative;
+       top: 0%; right: 60%;
+       width: 100%;
     }
     
 
@@ -387,60 +395,183 @@ i.menu-icon  {
         padding: 0.5em 1em;
         transition: all 0.4s linear;
         border-radius: 50px;
-        width: 100%;
+        width: 165%;
+        margin-top: 1em;
+        margin-left: 7em;
     }
 
     i.menu-icon {
         display: block;
         cursor: pointer;
         position: relative;
-        bottom: 0.3em; left: 180%;
+        top: 0.5em; left: 50em;
         width: 100%;
     }
 
     main h1#eslogan {
         margin-top: 15%;
-        margin-left: 16%;
+        font-size: 110%;
+        width: 100%;
+        margin-left: 30%;
     }
 
-    footer {
-        position: relative;
-        top: 4em;
-        border: 0.1em solid black;
-        height: 17.2vh;
-        padding: 1em;
+    .width-100 {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    .searchbox-input {
+        height: 100%;
+        padding-right: 3px;
+        border: 0;
+        background-color: white;
+        font-family: Wallie;
+        font-size: 1em;
+        white-space: nowrap;
+    }
+    
+    [type=search] {
+        outline-offset: -2px;
+    }
+    
+    
+    input[type="search"] {
+        appearance: auto;
+        box-sizing: border-box;
+        padding: 12px 12px;
+    }
+    
+    input {
+        writing-mode: horizontal-tb;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: start;
+        -webkit-rtl-ordering: logical;
+        cursor: text;
+        margin: 0em;
+        padding: 1px 2px;
+        border-width: 2px;
+        border-style: inset;
+        border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+        border-image: initial;
+    }
+    
+    .button_submit {
+        display: flex;
+        justify-content: center;
+        width: 113px;
+        height: 38px;
+        border: 0;
+        border-radius: 51px;
+        background-color: rgb(36, 36, 198);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        font-weight: 700;
+        font-size: 1em;
+        color: #fff;
+    }
+    
+    .align-items-center {
+        align-items: center;
+    }
+
+    button {
+        writing-mode: horizontal-tb;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
         text-align: center;
+        align-items: flex-start;
+        cursor: default;
+        box-sizing: border-box;
+        margin: 0em;
+        margin-left: 2em;
+        padding: 1px 6px;
+        border-width: 2px;
+        border-style: outset;
+        border-image: initial;
+    }
+    
+    .btn {
+        display: inline-block;
+        font-weight: 200;
         color: white;
-        background: black;
-    }
-    
-    footer p {
-        margin-top: 4%;
-    }
-    
-    #contacte figure img {
-        display: inline;
-        width: 2.5%;
-    }
-    
-    figure#twitter img {
-        position: absolute;
-        top: 42%; right: 8%;
-    }
-    
-    figure#instagram  img{
-        position: absolute;
-        top: 42%; right: 3%;
+        text-align: center;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 0.375em 0.75em;
+        font-size: 80%;
+        line-height: 1.5;
     }
 
+    body {
+        min-height: 100vh;
+        margin: 0;
+        background-color: cornflowerblue;
+        font-family: Grenette;
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 0 1 calc(50% - 1em);
+        margin-bottom: 10%;
+    }
+    
+    .row::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
     .column {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: nowrap;
         justify-content: center;
         background-color: white;
         color: black;
         margin-bottom: 20%;
+        margin-left: 2%;
+    }
+    
+    
+    .column2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        color: black;
+    }
+    
+    
+    .column3 iframe {
+        width: 100%;
+        height: 100%;
+        margin-left: 1%;
+    }
+    
+    p#prod {
+       position: absolute;
+       top: 250em; right: 10em;
+       font-size: 100%;
+       width: 65%;
+    }
+    
+    .column3 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        color: black;
     }
     
     .card {
@@ -449,18 +580,637 @@ i.menu-icon  {
     }
     
     .card h2 {
-        width: 1000%;
-        margin-left: 12%;
+        margin-left: 35%;
     }
     
     .card figure img {
-        width: 100%;
+        width: 50%;
+        margin-left: 20%;
     }
     
     .card figure figcaption {
-        margin-left: 5%;
+        margin-left: 35%;
         width: 100%;
     }
+    
+    #qui_som {
+        margin-left: 40%;
+        margin-top: 52%;
+    }
+
+    #producte {
+        margin-left: 35%;
+        margin-top: 30%;
+    }
+
+    #ubicació-mapa {
+        margin-left: 40%;
+        margin-top: 42%;
+    }
+    
+    footer {
+        position: absolute;
+        top: 310em;
+        border: 0.1em solid black;
+        height: 23vh;
+        padding: 1em;
+        text-align: center;
+        color: white;
+        background: black;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    footer p {
+        margin-top: 10.5%;
+        margin-right: 7.2%;
+        font-size: 150%;
+    }
+    
+    #contacte figure img {
+        display: inline;
+        width: 5.5%;
+    }
+    
+    figure#twitter img {
+        position: absolute;
+        top: 35%; right: 24%;
+    }
+    
+    figure#instagram  img{
+        position: absolute;
+        top: 35%; right: 14%;
+    }    
+}
+
+@media only screen and (max-width: 720px) {
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    header {
+        position: absolute;
+        height: fit-content;
+        padding-bottom: 3.5%;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    a.logo_cabecera img{
+        position: absolute;
+        top: 1em; 
+        width: 10em;
+        height: 3em;
+        margin-left: 3em;
+    }
+    
+    .nav div.htopnav{
+       display: none;
+       position: relative;
+       top: 0%; right: 60%;
+       width: 100%;
+    }
+    
+
+    .nav div a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 0.5em 1em;
+        transition: all 0.4s linear;
+        border-radius: 50px;
+        width: 165%;
+        margin-top: 0.5em;
+        margin-left: 3em;
+    }
+
+    i.menu-icon {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        top: 0.5em; left: 40em;
+        width: 100%;
+    }
+
+    main h1#eslogan {
+        margin-top: 15%;
+        font-size: 110%;
+        width: 100%;
+        margin-left: 25%;
+    }
+
+    .width-100 {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    .searchbox-input {
+        height: 100%;
+        padding-right: 3px;
+        border: 0;
+        background-color: white;
+        font-family: Wallie;
+        font-size: 1em;
+        white-space: nowrap;
+    }
+    
+    [type=search] {
+        outline-offset: -2px;
+    }
+    
+    
+    input[type="search"] {
+        appearance: auto;
+        box-sizing: border-box;
+        padding: 12px 12px;
+    }
+    
+    input {
+        writing-mode: horizontal-tb;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: start;
+        -webkit-rtl-ordering: logical;
+        cursor: text;
+        margin: 0em;
+        padding: 1px 2px;
+        border-width: 2px;
+        border-style: inset;
+        border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+        border-image: initial;
+    }
+    
+    .button_submit {
+        display: flex;
+        justify-content: center;
+        width: 113px;
+        height: 38px;
+        border: 0;
+        border-radius: 51px;
+        background-color: rgb(36, 36, 198);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        font-weight: 700;
+        font-size: 1em;
+        color: #fff;
+    }
+    
+    .align-items-center {
+        align-items: center;
+    }
+
+    button {
+        writing-mode: horizontal-tb;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: center;
+        align-items: flex-start;
+        cursor: default;
+        box-sizing: border-box;
+        margin: 0em;
+        margin-left: 2em;
+        padding: 1px 6px;
+        border-width: 2px;
+        border-style: outset;
+        border-image: initial;
+    }
+    
+    .btn {
+        display: inline-block;
+        font-weight: 200;
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 0.375em 0.75em;
+        font-size: 80%;
+        line-height: 1.5;
+    }
+
+    body {
+        min-height: 100vh;
+        margin: 0;
+        background-color: cornflowerblue;
+        font-family: Grenette;
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 0 1 calc(50% - 1em);
+        margin-bottom: 10%;
+    }
+    
+    .row::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .column {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        background-color: white;
+        color: black;
+        margin-bottom: 20%;
+        margin-left: 2%;
+    }
+    
+    
+    .column2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        color: black;
+    }
+    
+    
+    .column3 iframe {
+        width: 100%;
+        height: 100%;
+        margin-left: 1%;
+    }
+    
+    p#prod {
+       position: absolute;
+       top: 165em; right: 8em;
+       font-size: 120%;
+       width: 65%;
+    }
+    
+    .column3 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        color: black;
+    }
+    
+    .card {
+        width: 100%;
+        max-height: 100vh;
+    }
+    
+    .card h2 {
+        margin-left: 35%;
+    }
+    
+    .card figure img {
+        width: 50%;
+        margin-left: 20%;
+    }
+    
+    .card figure figcaption {
+        margin-left: 29%;
+        width: 100%;
+    }
+    
+    #qui_som {
+        margin-left: 40%;
+        margin-top: 52%;
+    }
+
+    #producte {
+        margin-left: 30%;
+        margin-top: 30%;
+    }
+
+    #ubicació-mapa {
+        margin-left: 40%;
+        margin-top: 42%;
+    }
+    
+    footer {
+        position: absolute;
+        top: 270em;
+        border: 0.1em solid black;
+        height: 20vh;
+        padding: 1em;
+        text-align: center;
+        color: white;
+        background: black;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    footer p {
+        margin-top: 9.5%;
+        margin-right: 7.2%;
+        font-size: 150%;
+    }
+    
+    #contacte figure img {
+        display: inline;
+        width: 5.5%;
+    }
+    
+    figure#twitter img {
+        position: absolute;
+        top: 35%; right: 24%;
+    }
+    
+    figure#instagram  img{
+        position: absolute;
+        top: 35%; right: 14%;
+    }    
+}
+
+@media only screen and (max-width: 520px) {
+    
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    header {
+        position: absolute;
+        height: fit-content;
+        padding-bottom: 3.5%;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    a.logo_cabecera img{
+        position: absolute;
+        top: 1em; 
+        width: 7em;
+        height: 2.5em;
+        margin-left: 0em;
+    }
+    
+    .nav div.htopnav{
+       display: none;
+       position: relative;
+       top: 0%; right: 60%;
+       width: 100%;
+    }
+    
+
+    .nav div a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 0.5em 1em;
+        transition: all 0.4s linear;
+        border-radius: 50px;
+        width: 165%;
+        margin-left: 0%;
+    }
+
+    i.menu-icon {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        top: 0.5em; left: 28em;
+        width: 100%;
+    }
+
+    main h1#eslogan {
+        margin-top: 35%;
+        font-size: 110%;
+        width: 100%;
+        margin-left: 15%;
+    }
+
+    .width-100 {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    .searchbox-input {
+        height: 100%;
+        padding-right: 3px;
+        border: 0;
+        background-color: white;
+        font-family: Wallie;
+        font-size: 1em;
+        white-space: nowrap;
+    }
+    
+    [type=search] {
+        outline-offset: -2px;
+    }
+    
+    
+    input[type="search"] {
+        appearance: auto;
+        box-sizing: border-box;
+        padding: 12px 12px;
+    }
+    
+    input {
+        writing-mode: horizontal-tb;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: start;
+        -webkit-rtl-ordering: logical;
+        cursor: text;
+        margin: 0em;
+        padding: 1px 2px;
+        border-width: 2px;
+        border-style: inset;
+        border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+        border-image: initial;
+    }
+    
+    .button_submit {
+        display: flex;
+        justify-content: center;
+        width: 113px;
+        height: 38px;
+        border: 0;
+        border-radius: 51px;
+        background-color: rgb(36, 36, 198);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        font-weight: 700;
+        font-size: 1em;
+        color: #fff;
+    }
+    
+    .align-items-center {
+        align-items: center;
+    }
+
+    button {
+        writing-mode: horizontal-tb;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: center;
+        align-items: flex-start;
+        cursor: default;
+        box-sizing: border-box;
+        margin: 0em;
+        margin-left: 2em;
+        padding: 1px 6px;
+        border-width: 2px;
+        border-style: outset;
+        border-image: initial;
+    }
+    
+    .btn {
+        display: inline-block;
+        font-weight: 200;
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 0.375em 0.75em;
+        font-size: 80%;
+        line-height: 1.5;
+    }
+
+    body {
+        min-height: 100vh;
+        margin: 0;
+        background-color: cornflowerblue;
+        font-family: Grenette;
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 0 1 calc(50% - 1em);
+        margin-bottom: 10%;
+    }
+    
+    .row::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .column {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        background-color: white;
+        color: black;
+        margin-bottom: 20%;
+        margin-left: 2%;
+    }
+    
+    
+    .column2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        color: black;
+    }
+    
+    
+    .column3 iframe {
+        width: 100%;
+        height: 50%;
+        margin-left: 1%;
+    }
+    
+    p#prod {
+       position: absolute;
+       top: 179em; right: 5em;
+       font-size: 100%;
+       width: 65%;
+    }
+    
+    .column3 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        color: black;
+    }
+    
+    .card {
+        width: 100%;
+        max-height: 100vh;
+    }
+    
+    .card h2 {
+        margin-left: 25%;
+    }
+    
+    .card figure img {
+        width: 70%;
+        margin-left: 10%;
+    }
+    
+    .card figure figcaption {
+        margin-left: 15%;
+        width: 100%;
+    }
+    
+    #qui_som {
+        margin-left: 40%;
+        margin-top: 52%;
+    }
+
+    #producte {
+        margin-left: 25%;
+        margin-top: 30%;
+    }
+
+    #ubicació-mapa {
+        margin-left: 34%;
+        margin-top: 42%;
+    }
+    
+    footer {
+        position: absolute;
+        top: 230em;
+        border: 0.1em solid black;
+        height: 23vh;
+        padding: 1em;
+        text-align: center;
+        color: white;
+        background: black;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    footer p {
+        margin-top: 9.5%;
+        margin-right: 7.2%;
+        font-size: 100%;
+    }
+    
+    #contacte figure img {
+        display: inline;
+        width: 6.5%;
+    }
+    
+    figure#twitter img {
+        position: absolute;
+        top: 35%; right: 24%;
+    }
+    
+    figure#instagram  img{
+        position: absolute;
+        top: 35%; right: 14%;
+    }    
 }
 
 
@@ -746,34 +1496,33 @@ i.menu-icon  {
     }    
 }
 
-@media only screen and (max-width: 400px) {
-    
+@media only screen and (max-width: 420px) {
     html, body {
-        overflow-x: hidden;
         width: 100%;
+        overflow-x: hidden;
     }
 
     header {
         position: absolute;
         height: fit-content;
-        padding-bottom: 5%;
-        width: 100%;
+        padding-bottom: 3.5%;
         overflow-x: hidden;
+        width: 100%;
     }
 
     a.logo_cabecera img{
         position: absolute;
-        top: 1em;
-        margin-bottom: 3%;
-        width: 8em;
+        top: 1em; 
+        width: 10em;
+        height: 2.5em;
         margin-left: 0em;
     }
     
     .nav div.htopnav{
        display: none;
        position: relative;
-       top: 11.5%; right: 60%;
-       width: 50%;
+       top: 0%; right: 60%;
+       width: 100%;
     }
     
 
@@ -784,7 +1533,7 @@ i.menu-icon  {
         padding: 0.5em 1em;
         transition: all 0.4s linear;
         border-radius: 50px;
-        width: 185%;
+        width: 165%;
     }
 
     i.menu-icon {
@@ -799,7 +1548,7 @@ i.menu-icon  {
         margin-top: 35%;
         font-size: 110%;
         width: 100%;
-        margin-left: 5%;
+        margin-left: 10%;
     }
 
     .width-100 {
@@ -943,14 +1692,14 @@ i.menu-icon  {
     .column3 iframe {
         width: 100%;
         height: 50%;
-        margin-left: 5%;
+        margin-left: 1%;
     }
     
     p#prod {
        position: absolute;
-       top: 140em; right: 3.5em;
+       top: 149em; right: 5em;
+       font-size: 100%;
        width: 65%;
-       margin-left: 10%;
     }
     
     .column3 {
@@ -990,15 +1739,15 @@ i.menu-icon  {
     }
 
     #ubicació-mapa {
-        margin-left: 35%;
+        margin-left: 34%;
         margin-top: 42%;
     }
     
     footer {
         position: absolute;
-        top: 190em;
+        top: 210em;
         border: 0.1em solid black;
-        height: 19vh;
+        height: 23vh;
         padding: 1em;
         text-align: center;
         color: white;
@@ -1008,8 +1757,8 @@ i.menu-icon  {
     }
     
     footer p {
-        margin-top: 5%;
-        margin-right: 4.2%;
+        margin-top: 7.5%;
+        margin-right: 7.2%;
     }
     
     #contacte figure img {
@@ -1019,14 +1768,13 @@ i.menu-icon  {
     
     figure#twitter img {
         position: absolute;
-        top: 2.3em; left: 19em;
+        top: 29%; right: 24%;
     }
     
     figure#instagram  img{
         position: absolute;
-        top: 2.3em; left: 22em;
+        top: 29%; right: 14%;
     }    
-
 }
 
 @media only screen and (max-width: 360px) {
