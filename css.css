@@ -1250,15 +1250,13 @@ i.menu-icon  {
         border-radius: 50px;
         width: 165%;
         margin-left: 0%;
-        margin-top: 10%;
     }
 
     i.menu-icon {
         display: block;
         cursor: pointer;
         position: relative;
-        top: 0.5em;
-        margin-left: 10%;
+        top: 0.5em; left: 22em;
         width: 100%;
     }
 
@@ -1266,7 +1264,7 @@ i.menu-icon  {
         margin-top: 35%;
         font-size: 110%;
         width: 100%;
-        margin-left: 15%;
+        margin-left: 5%;
     }
 
     .width-100 {
@@ -1415,10 +1413,9 @@ i.menu-icon  {
     
     p#prod {
        position: absolute;
-       right: 5em;
-       margin-top: 35%;
+       top: 140em; right: 4em;
        font-size: 100%;
-       width: 65%;
+       width: 70%;
     }
     
     .column3 {
@@ -1465,7 +1462,7 @@ i.menu-icon  {
     
     footer {
         position: absolute;
-        margin-top: 20%;
+        top: 190em;
         border: 0.1em solid black;
         height: 23vh;
         padding: 1em;
@@ -1477,7 +1474,7 @@ i.menu-icon  {
     }
     
     footer p {
-        margin-top: 7.5%;
+        margin-top: 8.5%;
         margin-right: 7.2%;
         font-size: 100%;
     }
