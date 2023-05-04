@@ -93,7 +93,7 @@ footer {
     position: relative;
     top: 4em;
     border: 0.1em solid black;
-    height: 17.2vh;
+    height: 17.5vh;
     padding: 1em;
     text-align: center;
     color: white;
@@ -111,12 +111,23 @@ footer p {
 
 figure#twitter img {
     position: absolute;
-    top: 28%; right: 8%;
+    top: 28%; right: 13%;
 }
 
 figure#instagram  img{
     position: absolute;
-    top: 28%; right: 3%;
+    top: 28%; right: 8%;
+}
+
+figure#footerleft  img{
+    position: absolute;
+    top: 28%; left: 7%;
+    width: 4%;
+}
+
+figure#mail  img{
+    position: absolute;
+    top: 32%; right: 3%;
 }
 
 header {
@@ -1191,8 +1202,9 @@ i.menu-icon  {
     }
     
     footer p {
-        margin-top: 10.5%;
+        margin-top: 8%;
         margin-right: 7.2%;
+        font-size: 100%;
     }
     
     #contacte figure img {
@@ -1202,12 +1214,23 @@ i.menu-icon  {
     
     figure#twitter img {
         position: absolute;
-        top: 40%; right: 24%;
+        top: 32%; right: 24%;
     }
     
     figure#instagram  img{
         position: absolute;
-        top: 40%; right: 14%;
+        top: 32%; right: 14%;
+    }    
+
+    figure#mail  img{
+        position: absolute;
+        top: 34%; right: 4%;
+    }    
+
+    figure#footerleft  img{
+        position: absolute;
+        top: 30%; right: 4%;
+        width: 10%;
     }    
 }
 
@@ -1474,7 +1497,7 @@ i.menu-icon  {
     }
     
     footer p {
-        margin-top: 12%;
+        margin-top: 8%;
         margin-right: 7.2%;
         font-size: 100%;
     }
@@ -1492,6 +1515,17 @@ i.menu-icon  {
     figure#instagram  img{
         position: absolute;
         top: 29%; right: 14%;
+    } 
+    
+    figure#mail  img{
+        position: absolute;
+        top: 32%; right: 4%;
+    }    
+
+    figure#footerleft  img{
+        position: absolute;
+        top: 30%; right: 4%;
+        width: 10%;
     }    
 }
 
@@ -1770,12 +1804,12 @@ i.menu-icon  {
     
     figure#twitter img {
         position: absolute;
-        top: 28%; left: 78%;
+        top: 28%; left: 73%;
     }
     
     figure#instagram  img{
         position: absolute;
-        top: 28%; left: 90%;
+        top: 28%; left: 82%;
     }    
 
     .column2 article p {
@@ -1784,4 +1818,15 @@ i.menu-icon  {
         position: absolute;
         right: 3%;
      }
+
+     figure#mail  img{
+        position: absolute;
+        top: 31%; right: 2%;
+    }    
+
+    figure#footerleft  img{
+        position: absolute;
+        top: 28%; right: 4%;
+        width: 10%;
+    }    
 }
