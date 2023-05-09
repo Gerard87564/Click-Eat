@@ -587,6 +587,271 @@ input {
     }
 }
 
+@media only screen and (max-width: 1100px) {
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    header {
+        position: fixed;
+        height: fit-content;
+        padding-bottom: 15.5%;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    #img-logo {
+        position: absolute;
+        top: 0.7em; left: 50em;
+        width: 15em;
+        height: 4em;
+        margin-left: 1em;
+    }
+
+    .nav ul.htopnav {
+       display: none;
+       position: relative;
+       width: 100%;
+     }
+
+    .nav ul li a {
+        display: block;
+        margin-top: 1.5em;
+    }
+
+    .nav ul li a.list-element {
+        left: 0em; top: 5em;
+    }
+
+    .nav ul li a.list-element2 {
+        left: 0em; top: 5em;
+    }
+ 
+     i.menu-icon {
+         display: block;
+         cursor: pointer;
+         position: relative;
+         top: 5em; left: 1.5em;
+         width: 100%;
+     }
+    
+     i#icon-lupa {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    header {
+        position: fixed;
+        height: fit-content;
+        padding-bottom: 15.5%;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    #img-logo {
+        position: absolute;
+        top: 0.7em; left: 30em;
+        width: 15em;
+        height: 4em;
+        margin-left: 1em;
+    }
+
+    .nav ul.htopnav {
+       display: none;
+       position: relative;
+       width: 100%;
+     }
+
+    .nav ul li a {
+        display: block;
+        margin-top: 1.5em;
+    }
+
+    .nav ul li a.list-element {
+        left: 0em; top: 5em;
+    }
+
+    .nav ul li a.list-element2 {
+        left: 0em; top: 5em;
+    }
+ 
+     i.menu-icon {
+         display: block;
+         cursor: pointer;
+         position: relative;
+         top: 4em; left: 1.5em;
+         width: 100%;
+     }
+    
+     i#icon-lupa {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    header {
+        position: fixed;
+        height: fit-content;
+        padding-bottom: 15.5%;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    #img-logo {
+        position: absolute;
+        top: 0.7em; left: 30em;
+        width: 15em;
+        height: 4em;
+        margin-left: 1em;
+    }
+
+    .nav ul.htopnav {
+       display: none;
+       position: relative;
+       width: 100%;
+     }
+
+    .nav ul li a {
+        display: block;
+        margin-top: 1.5em;
+    }
+
+    .nav ul li a.list-element {
+        left: 0em; top: 5em;
+    }
+
+    .nav ul li a.list-element2 {
+        left: 0em; top: 5em;
+    }
+ 
+     i.menu-icon {
+         display: block;
+         cursor: pointer;
+         position: relative;
+         top: 4em; left: 1.5em;
+         width: 100%;
+     }
+    
+     i#icon-lupa {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    header {
+        position: fixed;
+        height: fit-content;
+        padding-bottom: 15.5%;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    #img-logo {
+        position: absolute;
+        top: 0.7em; left: 30em;
+        width: 15em;
+        height: 4em;
+        margin-left: 1em;
+    }
+
+    .nav ul.htopnav {
+       display: none;
+       position: relative;
+       width: 100%;
+     }
+
+    .nav ul li a {
+        display: block;
+        margin-top: 1.5em;
+    }
+
+    .nav ul li a.list-element {
+        left: 0em; top: 5em;
+    }
+
+    .nav ul li a.list-element2 {
+        left: 0em; top: 5em;
+    }
+ 
+     i.menu-icon {
+         display: block;
+         cursor: pointer;
+         position: relative;
+         top: 4em; left: 1.5em;
+         width: 100%;
+     }
+    
+     i#icon-lupa {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 520px) {
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    header {
+        position: fixed;
+        height: fit-content;
+        padding-bottom: 15.5%;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    #img-logo {
+        position: absolute;
+        top: 0.7em; left: 20em;
+        width: 9em;
+        height: 2.5em;
+        margin-left: 1em;
+    }
+
+    .nav ul.htopnav {
+       display: none;
+       position: relative;
+       width: 100%;
+     }
+
+    .nav ul li a {
+        display: block;
+        margin-top: 1.5em;
+    }
+
+    .nav ul li a.list-element {
+        left: 0em; top: 4em;
+    }
+
+    .nav ul li a.list-element2 {
+        left: 0em; top: 4em;
+    }
+ 
+     i.menu-icon {
+         display: block;
+         cursor: pointer;
+         position: relative;
+         top: 2.8em; left: 1.5em;
+         width: 100%;
+     }
+    
+     i#icon-lupa {
+        display: none;
+    }
+}
 
 @media only screen and (max-device-width: 460px) {
     html, body {
