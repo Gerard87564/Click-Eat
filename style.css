@@ -647,7 +647,7 @@ input {
     header {
         position: fixed;
         height: fit-content;
-        padding-bottom: 17.5%;
+        padding-bottom: 21.5%;
         overflow-x: hidden;
         width: 100%;
     }
