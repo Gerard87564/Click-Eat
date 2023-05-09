@@ -259,7 +259,7 @@ input {
 }
 
 .width-100 {
-    margin-left: 1%;
+    margin-left: 0%;
     width: 155%;
 }
 
@@ -570,7 +570,7 @@ input {
     }
     
     .width-100 {
-        margin-left: 0%;
+        margin-left: 2.5%;
         width: 275%;
     }
     
@@ -608,11 +608,6 @@ input {
         height: 2.2em;
         margin-left: 1em;
     }
-     
-    .nav ul {
-        position: relative;
-        top: 2em; right: 10em;
-    } 
 
     .nav ul.htopnav {
          display: none;
@@ -624,7 +619,11 @@ input {
     }
 
     .nav ul li a.list-element {
-        left: 10em;
+        left: 0em; top: 4em;
+    }
+
+    .nav ul li a.list-element2 {
+        left: 0em; top: 4em;
     }
  
      i.menu-icon {
@@ -660,14 +659,11 @@ input {
         height: 2.2em;
         margin-left: 1em;
     }
-     
-    .nav ul {
-        position: relative;
-        top: 2em; right: 10em;
-    } 
 
     .nav ul.htopnav {
-         display: none;
+       display: none;
+       position: relative;
+       width: 100%;
      }
 
     .nav ul li a {
