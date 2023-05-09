@@ -14,14 +14,14 @@ jQuery("document").ready(function($){
     });
 
     var menuButton2 = $("#icon-lupa"); 
-        menu2 = $("div.nav div");  
+        menu2 = $(".nav div form");  
 
     menuButton2.click(function() {
 
-        if(menu2.hasClass("show")) {
-            menu2.removeClass("show");
+        if(menu2.hasClass("searchbox-form_SearchBox1")) {
+            menu2.removeClass("searchbox-form_SearchBox1");
         } else {
-            menu2.addClass("show");
+            menu2.addClass("searchbox-form_SearchBox1");
         }
     });
 });
