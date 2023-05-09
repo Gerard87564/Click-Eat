@@ -672,7 +672,11 @@ input {
     }
 
     .nav ul li a.list-element {
-        left: 10em;
+        left: 0em;
+    }
+
+    .nav ul li a.list-element2 {
+        left: 0em;
     }
  
      i.menu-icon {
