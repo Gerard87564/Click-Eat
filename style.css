@@ -12,22 +12,51 @@ body{
 }
 
 header {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
     width: 100%;
     position: fixed;
     background-color: rgb(135, 176, 251);
     min-height: 10vh;
-    overflow: hidden;
 }
 
 .nav {
-    flex: 1;
+    flex: 5;
     display: flex;
-    flex-direction: row;
+}
+
+.nav ul {
+    display: flex;
+    width: 100%;
+}
+
+.nav ul li {
+    display: flex;
+    margin-left: 2%;
 }
 
 .nav ul li a{
     position: relative;
+    top: 1.8%; right: 15em;
+    display: flex;
+    width: 100%;
+    flex: 1;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
 
+.nav ul li a.list-element2 {
+    display: flex;
+    left: 10em;
+}
+
+.nav ul li a.list-element2 {
+    display: flex;
+    left: 10em;
 }
 
 .nav ul li a::before,
@@ -41,58 +70,45 @@ header {
 }
 
 .nav ul li a::before{
-    bottom: -5px;
+    bottom: -0px;
     width: 90%;
     right: 0;
 }
 
 .nav ul li a::after{
-    bottom: -10px;
+    bottom: 20px;
     width: 60%;
     left: 0;
 }
 
-.nav ul li a.activo::before,
-.nav ul li a:hover::before{
+.nav ul li a.activo::after,
+.nav ul li a:hover::after{
     opacity: 1;
     width: 100%;
 }
 
-.nav ul li {
-    display: inline;
-}
-
-.nav ul {
-    width: 100%;
-}
-
 #img-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
     width: 30%;
     margin-top: 4%;
     margin-left: 6%;
 }
 
-.nav ul li a {
-    text-decoration: none;
-    color: black;
-    margin-left: 2%;
-    top: 1.8em; right: 17em;
-}
 
-.nav ul li a.list-element2 {
-    left: 10em;
-}
 
 .nav ul li a.list-element:hover {
     text-decoration: none;
     color: blue;
-    padding: 0.1em;
+    padding: 0em;
 }
 
 .nav ul li a.list-element2:hover {
     text-decoration: none;
     color: blue;
-    padding: 0.1em;
+    padding: 0em;
 }
 
 #img-logo:hover {
@@ -137,12 +153,14 @@ i.menu-icon  {
 }
 
 form {
-    position: fixed;
+    position: relative;
+    top: 4.5em; right: 85em;
+    margin-bottom: 5em;
 }
 
 button {
     position: fixed;
-    top: 4.6em; left: 47em;
+    top: 4.6em; left: 57em;
     writing-mode: horizontal-tb;
     text-transform: none;
     text-indent: 0px;
@@ -260,598 +278,315 @@ input {
 
 .width-100 {
     margin-left: 0%;
-    width: 155%;
+    width: 700%;
 }
 
 .display-flex {
     display: flex;
 }
 
-
-@media only screen and (max-device-width: 1600px) {
-    div.nav div {
-        display: none;
-    }
-    
-    div.nav div.show {
-        display: block;
-    }
-    
-    div.nav div form{
-        display: block;
-    }
-    
-    form {
-        position: relative;
-        top: 4.5em; right: 85em;
-        margin-bottom: 5em;
-    }
-    
-    button {
-        position: fixed;
-        top: 4.6em; left: 57em;
-        writing-mode: horizontal-tb;
-        text-transform: none;
-        text-indent: 0px;
-        text-shadow: none;
-        display: inline-block;
-        text-align: center;
-        align-items: flex-start;
-        cursor: default;
-        box-sizing: border-box;
-        margin: 0em;
-        margin-left: 5em;
-        padding: 1px 6px;
-        border-width: 2px;
-        border-style: outset;
-        border-image: initial;
-    }
-    
-    .button_submit {
-        display: flex;
-        justify-content: center;
-        width: 113px;
-        height: 38px;
-        border: 0;
-        border-radius: 51px;
-        background-color: rgb(36, 36, 198);
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-        font-weight: 700;
-        font-size: 1em;
-        color: #fff;
-    }
-    
-    .button {
-        color: #fff;
-        padding: 12px 20px;
-        border-radius: 25px;
-        transition: all .2s ease-in-out,padding 0s;
-    }
-    
-    .align-items-center {
-        align-items: center;
-    }
-    
-    .btn {
-        display: inline-block;
-        font-weight: 400;
-        color: white;
-        text-align: center;
-        vertical-align: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-        border: 1px solid transparent;
-        padding: 0.375em 0.75em;
-        font-size: 1em;
-        line-height: 1.5;
-    }
-    
-    button, select {
-        text-transform: none;
-    }
-    
-    button, input {
-        overflow: visible;
-    }
-    
-    .searchbox-input {
-        height: 100%;
-        padding-right: 3px;
-        border: 0;
-        background-color: white;
-        font-family: Wallie;
-        font-size: 1em;
-        white-space: nowrap;
-    }
-    
-    [type=search] {
-        outline-offset: -2px;
-    }
-    
-    
-    input[type="search"] {
-        appearance: auto;
-        box-sizing: border-box;
-        padding: 12px 12px;
-    }
-    
-    input {
-        writing-mode: horizontal-tb;
-        text-transform: none;
-        text-indent: 0px;
-        text-shadow: none;
-        display: inline-block;
-        text-align: start;
-        -webkit-rtl-ordering: logical;
-        cursor: text;
-        margin: 0em;
-        padding: 1px 2px;
-        border-width: 2px;
-        border-style: inset;
-        border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-        border-image: initial;
-    }
-    
-    
-    .searchbox-form_SearchBox2 {
-        height: 38px;
-        border: 1px solid #90a4ae;
-        border-radius: 32px;
-        margin-left: 27%;
-        overflow: hidden;
-        background-color: white;
-    }
-    
-    .width-100 {
-        margin-left: 1%;
-        width: 275%;
-    }
-    
-    .display-flex {
-        display: flex;
-    }
-    
-    
-    i#icon-lupa {
-        display: block;
-        cursor: pointer;
-        margin-top: 1.8em;
-        margin-right: 6em;
-    }
+i#icon-lupa {
+    position: absolute;
+    left: 90em; top: 1.8em;
+    display: block;
+    cursor: pointer;
 }
 
-
-@media only screen and (min-device-width: 1200px) {
-
-    #img-logo {
-        width: 30%;
-        margin-top: 4%;
-        margin-left: 8%;
-    }
-
-
-    div.nav div {
-        display: none;
-    }
-    
-    div.nav div.show {
-        display: block;
-    }
-    
-    div.nav div form{
-        display: block;
-    }
-    
-    form {
-        position: relative;
-        top: 4.5em; right: 86em;
-        margin-bottom: 5em;
-    }
-    
-    button {
-        position: fixed;
-        top: 4.6em; left: 57em;
-        writing-mode: horizontal-tb;
-        text-transform: none;
-        text-indent: 0px;
-        text-shadow: none;
-        display: inline-block;
-        text-align: center;
-        align-items: flex-start;
-        cursor: default;
-        box-sizing: border-box;
-        margin: 0em;
-        margin-left: 5em;
-        padding: 1px 6px;
-        border-width: 2px;
-        border-style: outset;
-        border-image: initial;
-    }
-    
-    .button_submit {
-        display: flex;
-        justify-content: center;
-        width: 113px;
-        height: 38px;
-        border: 0;
-        border-radius: 51px;
-        background-color: rgb(36, 36, 198);
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-        font-weight: 700;
-        font-size: 1em;
-        color: #fff;
-    }
-    
-    .button {
-        color: #fff;
-        padding: 12px 20px;
-        border-radius: 25px;
-        transition: all .2s ease-in-out,padding 0s;
-    }
-    
-    .align-items-center {
-        align-items: center;
-    }
-    
-    .btn {
-        display: inline-block;
-        font-weight: 400;
-        color: white;
-        text-align: center;
-        vertical-align: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-        border: 1px solid transparent;
-        padding: 0.375em 0.75em;
-        font-size: 1em;
-        line-height: 1.5;
-    }
-    
-    button, select {
-        text-transform: none;
-    }
-    
-    button, input {
-        overflow: visible;
-    }
-    
-    .searchbox-input {
-        height: 100%;
-        padding-right: 3px;
-        border: 0;
-        background-color: white;
-        font-family: Wallie;
-        font-size: 1em;
-        white-space: nowrap;
-    }
-    
-    [type=search] {
-        outline-offset: -2px;
-    }
-    
-    
-    input[type="search"] {
-        appearance: auto;
-        box-sizing: border-box;
-        padding: 12px 12px;
-    }
-    
-    input {
-        writing-mode: horizontal-tb;
-        text-transform: none;
-        text-indent: 0px;
-        text-shadow: none;
-        display: inline-block;
-        text-align: start;
-        -webkit-rtl-ordering: logical;
-        cursor: text;
-        margin: 0em;
-        padding: 1px 2px;
-        border-width: 2px;
-        border-style: inset;
-        border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-        border-image: initial;
-    }
-    
-    
-    .searchbox-form_SearchBox2 {
-        height: 38px;
-        border: 1px solid #90a4ae;
-        border-radius: 32px;
-        margin-left: 27%;
-        overflow: hidden;
-        background-color: white;
-    }
-    
-    .width-100 {
-        margin-left: 2.5%;
-        width: 275%;
-    }
-    
-    .display-flex {
-        display: flex;
-    }
-    
-    
-    i#icon-lupa {
-        display: block;
-        cursor: pointer;
-        margin-top: 1.8em;
-        margin-right: 2.5em;
-    }
-}
-
-@media only screen and (max-width: 1100px) {
-    html, body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-    header {
-        position: fixed;
-        height: fit-content;
-        padding-bottom: 15.5%;
-        overflow-x: hidden;
-        width: 100%;
-    }
-
-    #img-logo {
-        position: absolute;
-        top: 0.7em; left: 50em;
-        width: 15em;
-        height: 4em;
-        margin-left: 1em;
-    }
-
-    .nav ul.htopnav {
-       display: none;
-       position: relative;
-       width: 100%;
-     }
-
-    .nav ul li a {
-        display: block;
-        margin-top: 1.5em;
-    }
-
-    .nav ul li a.list-element {
-        left: 0em; top: 5em;
-    }
-
-    .nav ul li a.list-element2 {
-        left: 0em; top: 5em;
-    }
- 
-     i.menu-icon {
-         display: block;
-         cursor: pointer;
-         position: relative;
-         top: 5em; left: 1.5em;
-         width: 100%;
-     }
-    
-     i#icon-lupa {
-        display: none;
-    }
-}
 
 @media only screen and (max-width: 920px) {
+
     html, body {
         width: 100%;
         overflow-x: hidden;
     }
+
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 150vh;
+        background-color: white;
+    }
+    
     header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
         position: fixed;
-        height: fit-content;
-        padding-bottom: 15.5%;
-        overflow-x: hidden;
+        background-color: rgb(135, 176, 251);
+        min-height: 10vh;
+        overflow: hidden;
+    }
+    
+    .nav {
+        flex: 6;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .nav ul {
+        display: flex;
         width: 100%;
     }
-
-    #img-logo {
-        position: absolute;
-        top: 0.7em; left: 30em;
-        width: 15em;
-        height: 4em;
-        margin-left: 1em;
+    
+    .nav ul li {
+        display: flex;
     }
-
-    .nav ul.htopnav {
-       display: none;
-       position: relative;
-       width: 100%;
-     }
-
-    .nav ul li a {
-        display: block;
-        margin-top: 1.5em;
+    
+    .nav ul li a{
+        position: relative;
+        top: 1.8%; right: 15em;
+        display: flex;
+        width: 100%;
+        flex: 1;
+        max-width: 200%;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: black;
     }
-
+    
     .nav ul li a.list-element {
-        left: 0em; top: 5em;
+        display: flex;
+        right: 5em;
     }
 
     .nav ul li a.list-element2 {
-        left: 0em; top: 5em;
+        display: flex;
+        left: -5em;
     }
- 
-     i.menu-icon {
-         display: block;
-         cursor: pointer;
-         position: relative;
-         top: 4em; left: 1.5em;
-         width: 100%;
-     }
     
-     i#icon-lupa {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    html, body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-    header {
-        position: fixed;
-        height: fit-content;
-        padding-bottom: 15.5%;
-        overflow-x: hidden;
-        width: 100%;
-    }
-
-    #img-logo {
+    .nav ul li a::before,
+    .nav ul li a::after
+    {
+        content: '';
+        border-bottom: 4px solid blue;
         position: absolute;
-        top: 0.7em; left: 30em;
-        width: 15em;
-        height: 4em;
-        margin-left: 1em;
+        opacity: 0;
+        transition: 1.2s;
     }
-
-    .nav ul.htopnav {
-       display: none;
-       position: relative;
-       width: 100%;
-     }
-
-    .nav ul li a {
-        display: block;
-        margin-top: 1.5em;
-    }
-
-    .nav ul li a.list-element {
-        left: 0em; top: 5em;
-    }
-
-    .nav ul li a.list-element2 {
-        left: 0em; top: 5em;
-    }
- 
-     i.menu-icon {
-         display: block;
-         cursor: pointer;
-         position: relative;
-         top: 4em; left: 1.5em;
-         width: 100%;
-     }
     
-     i#icon-lupa {
-        display: none;
+    .nav ul li a::before{
+        bottom: -5px;
+        width: 90%;
+        right: 0;
     }
-}
-
-@media only screen and (max-width: 768px) {
-    html, body {
+    
+    .nav ul li a::after{
+        bottom: -10px;
+        width: 60%;
+        left: 0;
+    }
+    
+    .nav ul li a.activo::after,
+    .nav ul li a:hover::after{
+        opacity: 1;
         width: 100%;
-        overflow-x: hidden;
     }
-    header {
-        position: fixed;
-        height: fit-content;
-        padding-bottom: 15.5%;
-        overflow-x: hidden;
-        width: 100%;
-    }
-
+    
     #img-logo {
-        position: absolute;
-        top: 0.7em; left: 30em;
-        width: 15em;
-        height: 4em;
-        margin-left: 1em;
+        display: flex;
+        flex: 2;
+        width: 85%;
+        margin-top: 15%;
+        margin-left: 6%;
     }
 
-    .nav ul.htopnav {
-       display: none;
-       position: relative;
-       width: 100%;
-     }
-
-    .nav ul li a {
-        display: block;
-        margin-top: 1.5em;
-    }
-
-    .nav ul li a.list-element {
-        left: 0em; top: 5em;
-    }
-
-    .nav ul li a.list-element2 {
-        left: 0em; top: 5em;
-    }
- 
-     i.menu-icon {
-         display: block;
-         cursor: pointer;
-         position: relative;
-         top: 4em; left: 1.5em;
-         width: 100%;
-     }
     
-     i#icon-lupa {
+    .nav ul li a.list-element:hover {
+        text-decoration: none;
+        color: blue;
+        padding: 0em;
+    }
+    
+    .nav ul li a.list-element2:hover {
+        text-decoration: none;
+        color: blue;
+        padding: 0em;
+    }
+    
+    #img-logo:hover {
+        transform: scale(1.5);
+        -webkit-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+    }
+    
+    #main {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #left-column {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+    }
+    
+    #right-column {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+    }
+    
+    #footer {
+        flex: 1; 
+    }
+    
+    i.menu-icon  {
         display: none;
     }
-}
-
-
-@media only screen and (max-width: 520px) {
-    html, body {
-        width: 100%;
-        overflow-x: hidden;
+    
+    .nav div form.searchbox-form_SearchBox1 {
+        display: none;
     }
-    header {
+    
+    .nav div form div.searchbox-form_SearchBox2{
+        display: block;
+    }
+    
+    form {
+        position: relative;
+        top: 4.5em; right: 55em;
+        margin-bottom: 5em;
+    }
+    
+    button {
         position: fixed;
-        height: fit-content;
-        padding-bottom: 15.5%;
-        overflow-x: hidden;
-        width: 100%;
+        top: 4.6em; left: 35em;
+        writing-mode: horizontal-tb;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: center;
+        align-items: flex-start;
+        cursor: default;
+        box-sizing: border-box;
+        margin: 0em;
+        margin-left: 5em;
+        padding: 1px 6px;
+        border-width: 2px;
+        border-style: outset;
+        border-image: initial;
     }
-
-    #img-logo {
-        position: absolute;
-        top: 0.7em; left: 20em;
-        width: 9em;
-        height: 2.5em;
-        margin-left: 1em;
-    }
-
-    .nav ul.htopnav {
-       display: none;
-       position: relative;
-       width: 100%;
-     }
-
-    .nav ul li a {
-        display: block;
-        margin-top: 1.5em;
-    }
-
-    .nav ul li a.list-element {
-        left: 0em; top: 4em;
-    }
-
-    .nav ul li a.list-element2 {
-        left: 0em; top: 4em;
-    }
- 
-     i.menu-icon {
-         display: block;
-         cursor: pointer;
-         position: relative;
-         top: 2.8em; left: 1.5em;
-         width: 100%;
-     }
     
-     i#icon-lupa {
-        display: none;
+    .button_submit {
+        display: flex;
+        justify-content: center;
+        width: 113px;
+        height: 38px;
+        border: 0;
+        border-radius: 51px;
+        background-color: rgb(36, 36, 198);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        font-weight: 700;
+        font-size: 1em;
+        color: #fff;
     }
+    
+    .button {
+        color: #fff;
+        padding: 12px 20px;
+        border-radius: 25px;
+        transition: all .2s ease-in-out,padding 0s;
+    }
+    
+    .align-items-center {
+        align-items: center;
+    }
+    
+    .btn {
+        display: inline-block;
+        font-weight: 400;
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 0.375em 0.75em;
+        font-size: 1em;
+        line-height: 1.5;
+    }
+    
+    button, select {
+        text-transform: none;
+    }
+    
+    button, input {
+        overflow: visible;
+    }
+    
+    .searchbox-input {
+        height: 100%;
+        padding-right: 3px;
+        border: 0;
+        background-color: white;
+        font-family: Wallie;
+        font-size: 1em;
+        white-space: nowrap;
+    }
+    
+    [type=search] {
+        outline-offset: -2px;
+    }
+    
+    
+    input[type="search"] {
+        appearance: auto;
+        box-sizing: border-box;
+        padding: 12px 12px;
+    }
+    
+    input {
+        writing-mode: horizontal-tb;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: start;
+        -webkit-rtl-ordering: logical;
+        cursor: text;
+        margin: 0em;
+        padding: 1px 2px;
+        border-width: 2px;
+        border-style: inset;
+        border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+        border-image: initial;
+    }
+    
+    
+    .searchbox-form_SearchBox2 {
+        height: 38px;
+        border: 1px solid #90a4ae;
+        border-radius: 32px;
+        margin-left: 27%;
+        overflow: hidden;
+        background-color: white;
+    }
+    
+    .width-100 {
+        margin-left: 0%;
+        width: 1600%;
+    }
+    
+    .display-flex {
+        display: flex;
+    }
+    
+    i#icon-lupa {
+        position: absolute;
+        left: 56em; top: 1.8em;
+        display: block;
+        cursor: pointer;
+    }
+    
 }
+
 
 @media only screen and (max-device-width: 460px) {
     html, body {
