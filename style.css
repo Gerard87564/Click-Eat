@@ -18,7 +18,8 @@ header {
     width: 100%;
     position: fixed;
     background-color: rgb(135, 176, 251);
-    min-height: 16vh;
+    min-height: 12vh;
+    z-index: 2;
 }
 
 .nav {
@@ -294,10 +295,10 @@ i#icon-lupa {
 }
 
 .slider-wrapper {
-    position: fixed;
-    top: 7.5em; left: 0em;
+    position: relative;
+    top: 5.6em; left: 0em;
     max-width: 1525px;
-    max-height: 857,81px;
+    max-height: 867,81px;
     margin: 0 auto;
 }
 
@@ -370,6 +371,203 @@ i#icon-lupa {
 .slider-nav-flecha a i:hover {
     transform: scale(1.2);
 }
+
+.lower-container {
+    margin: 120px auto;
+    padding: 0;
+    max-width: 1400px;
+  }
+  
+  
+  /* Apunta a todos los elementos h3 con clase CSS title */
+  .title {
+    color: black;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  
+  /* Apunta a todos los parrafos con la clase CSS text */
+  .text {
+    color: black;
+    font-size: 19px;
+    width: 100%;
+    padding: 10px;
+    margin: 0, 20px;
+    text-align: justify;
+  }
+
+  * Mostrar horizontalmente, poner un poco de espacio alrededor */
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Agregar algo de padding alrededor del contenedor. Alinear el texto al centro */
+.stats {
+  padding: 45px 50px;
+  text-align: center;
+}
+
+/* Aplicar margen y ancho */
+.stat {
+  margin: 0 30px;
+  text-align: center;
+  width: 800px;
+}
+
+.stats .fa {
+    color: blue;
+}
+
+.testimonial {
+    color: black;
+    padding: 40px;
+    margin-top: 15em;
+}
+
+.testimonial img {
+    height: 100%;
+    clip-path: circle();
+}
+
+/* Alinea el texto al centro */
+
+h2{
+  position: absolute;
+  top: 37em; left: 22em;
+  text-align: center;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+  }
+
+
+
+  footer.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+  }
+  
+  
+  /* Crear una tarjeta en blanco con sombreado alrededor */
+  .card {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
+                 7px  7px 20px rgba(0, 0, 0, 0.2)
+  }
+
+/* Add padding around the footer as well */
+
+footer {
+    background-color: black;
+    padding: 20px 10px;
+  }
+
+  .copyright {
+    color: white;
+  }
+  
+  /* Sets all link texts to white and puts margin to the left and right */
+  
+  footer a {
+    color: white;
+    margin: 0 10px;
+    position: relative;
+    left: 45em;
+  }
+  
+
+  footer a:hover {
+    color: cornflowerblue;
+  }
+
+/* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
+*/ 
+
+.image {
+    width: 600px;
+    margin-left: 80px;
+  }
+
+/* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
+
+.stats .flex {
+    flex-direction: column;
+  }
+
+  .stats {
+    text-align: center;
+  }
+
+/* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
+
+.stat {
+    width: 100%;
+    padding-right: 80px;
+  }
+
+/* Mueve el círculo al centro de la tarjeta  */
+
+  /* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
+
+.navbar .flex {
+    flex-direction: column;
+  }
+
+
+/* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
+
+  .navbar a:hover {
+    color: white;
+    border-bottom: 2px solid black;
+  }
+
+
+/* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
+
+  .navbar ul {
+    background: #9867C5;
+    border-radius: 5px;
+    padding: 10px 0;
+  }
+
+
+/* Alinear el texto al centro */
+
+  .showcase {
+    height: auto;
+    text-align: center;
+  }
+
+
+/* Reducir el tamaño de la fuente */
+
+.little-info {
+    font-size: 13px;
+  }
+
+
+/* Reducir el ancho de la imágen */
+
+  .image {
+    width: 350px;
+    margin-left: 70px;
+  }
+
+  .stat {
+    margin-bottom: 40px;
+  }
+
+
+/* Mover el círculo una vez más */
 
 @keyframes arrow {
     0% {
