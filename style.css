@@ -18,7 +18,7 @@ header {
     width: 100%;
     position: fixed;
     background-color: rgb(135, 176, 251);
-    min-height: 10vh;
+    min-height: 16vh;
 }
 
 .nav {
@@ -28,7 +28,7 @@ header {
 
 .nav ul {
     position: absolute;
-    top: 2em; left: 10em;
+    top: 2.5em; left: 10em;
     display: flex;
     width: 70%;
 }
@@ -94,7 +94,7 @@ header {
     justify-content: center;
     flex: 2;
     width: 20%;
-    margin-top: 2.3%;
+    margin-top: 3.3%;
     margin-left: 2%;
 }
 
@@ -288,21 +288,22 @@ input {
 
 i#icon-lupa {
     position: absolute;
-    left: 90em; top: 1.8em;
+    left: 90em; top: 2.5em;
     display: block;
     cursor: pointer;
 }
 
 .slider-wrapper {
     position: fixed;
-    top: 5em; left: 15em;
-    max-width: 1000px;
+    top: 7.5em; left: 0em;
+    max-width: 1525px;
+    max-height: 857,81px;
     margin: 0 auto;
 }
 
 .slider {
     display: flex;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 21 / 9;
     overflow-x: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -320,7 +321,7 @@ i#icon-lupa {
     display: flex;
     column-gap: 1rem;
     position: absolute;
-    bottom: 1.25rem;
+    bottom: 5.25rem;
     left: 50%;
     transform: translate(-50%);
     z-index: 1;
@@ -338,6 +339,49 @@ i#icon-lupa {
 .slider-nav a:hover {
     opacity: 1;
 }
+
+.slider-nav-flecha {
+    display: flex;
+    column-gap: 1rem;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    margin:0 auto;
+    bottom: 25rem;
+    left: 45%;
+    z-index: 1;
+}
+
+.flecha1 {
+    margin-left: -34.3em;
+}
+
+.animatedColor {
+    color: white;
+}
+
+.slider-nav-flecha a {
+    width: 100px;
+    height: 50px;
+    margin-top: 50%;
+    font-size:20px; 
+}
+
+.slider-nav-flecha a i:hover {
+    transform: scale(1.2);
+}
+
+@keyframes arrow {
+    0% {
+    transform: translate(0px, 50px);
+    }
+    50% {
+    transform: translate(0px, 60px);
+    }
+    100% {
+    transform: translate(0px, 50px);
+    }
+    }
 
 @media only screen and (max-width: 920px) {
 
