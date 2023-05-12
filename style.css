@@ -458,10 +458,60 @@ h2{
   /* Crear una tarjeta en blanco con sombreado alrededor */
   .card {
     padding: 10px;
+    padding-bottom: 50%;
     background-color: white;
     border-radius: 10px;
     box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
-                 7px  7px 20px rgba(0, 0, 0, 0.2)
+                 7px  7px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .card:hover {
+    transform: scale(1.1);
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
+
+  .card-1 {
+    background-image: url(./img/FONTANERO-SUELDO.jpg);
+    background-size: cover;
+  }
+
+  .card-2 {
+    background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
+    background-size: cover;
+  }
+  
+  .card-3 {
+    background-image: url(./img/cocinero.webp);
+    background-size: cover;
+  }
+
+  .card-4 {
+    background-image: url(./img/funciones-de-un-jardinero.jpg);
+    background-size: cover;
+  }
+
+  .card-5 {
+    background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
+    background-size: cover;
+  }
+
+  .card-6 {
+    background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
+    background-size: cover;
+  }
+
+  .card p {
+    background-color: rgba(255, 255, 255, 0.672);
+    padding-bottom: 7%;
+    padding-top: 3%;
+    text-align: center;
+    justify-content: center;
+    width: 105%; height: 100%;
+    position: relative;
+    top: 12.9em; right: 2.6%;
+    border-radius: 10px;
   }
 
 /* Add padding around the footer as well */
