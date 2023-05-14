@@ -20,6 +20,7 @@ header {
     background-color: rgb(135, 176, 251);
     min-height: 12vh;
     z-index: 2;
+    
 }
 
 .nav {
@@ -114,7 +115,7 @@ header {
 }
 
 #img-logo:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
     -webkit-transition: all 500ms ease;
     -o-transition: all 500ms ease;
     transition: all 500ms ease;
@@ -126,15 +127,8 @@ header {
     flex-direction: row;
 }
 
-#left-column {
+#ubicación div.container {
     display: flex;
-    flex-direction: row;
-    flex: 1;
-}
-
-#right-column {
-    display: flex;
-    flex-direction: row;
     flex: 1;
 }
 
@@ -465,13 +459,6 @@ h2{
                  7px  7px 20px rgba(0, 0, 0, 0.2);
   }
 
-  .card:hover {
-    transform: scale(1.1);
-    -webkit-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-  }
-
   .card-1 {
     background-image: url(./img/FONTANERO-SUELDO.jpg);
     background-size: cover;
@@ -502,7 +489,7 @@ h2{
     background-size: cover;
   }
 
-  .card p {
+  .card h3 {
     background-color: rgba(255, 255, 255, 0.672);
     padding-bottom: 7%;
     padding-top: 3%;
@@ -512,7 +499,31 @@ h2{
     position: relative;
     top: 12.9em; right: 2.6%;
     border-radius: 10px;
+    font-size: 100%;
   }
+
+  .card p {
+    text-align: center;
+    justify-content: center;
+    width: 105%; height: 100%;
+    position: relative;
+    top: 11em; right: 2.6%;
+    border-radius: 10px;
+    font-size: 100%;
+  }
+
+  
+
+  .card p:before {
+    opacity: 0;
+  }
+
+  .card p:hover::before {
+    content: attr(data-content);
+    opacity: 1;
+  }
+
+
 
 /* Add padding around the footer as well */
 
@@ -524,6 +535,39 @@ footer {
   .copyright {
     color: white;
   }
+
+  iframe {
+    margin-left: 30%;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    max-height: 20em;
+    max-width: 100em;
+  }
+
+  .card-7 p {
+    left: 25%;
+    padding: 5em;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    font-size: 140%;
+  }
+
+  .card-7 h3 {
+    left: 25%; top: 5em;
+    padding: 5em;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    font-size: 240%;
+  }
+
+  .card-7 p, h3 {
+    position: relative;
+    background-color: white;
+  }
+
+
   
   /* Sets all link texts to white and puts margin to the left and right */
   
