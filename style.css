@@ -22,7 +22,7 @@ header {
     height: fit-content;
     width: 100%;
     position: fixed;
-    background-color: rgb(135, 176, 251);
+    background-color: rgb(226, 247, 255);
     min-height: 12vh;
     z-index: 2;
     
@@ -73,6 +73,7 @@ header {
     border-bottom: 4px solid blue;
     position: absolute;
     opacity: 0;
+    
 }
 
 .nav ul li a::before{
@@ -131,9 +132,16 @@ header {
     flex-direction: row;
 }
 
-#ubicación div.container {
+#ubicación {
     display: flex;
     flex: 1;
+}
+
+.container div.slider-wrapper {
+  display: flex;
+  flex: 1;
+  max-width: 180em;
+  max-height: 80em;
 }
 
 #footer {
@@ -293,16 +301,14 @@ i#icon-lupa {
 }
 
 .slider-wrapper {
-    position: relative;
-    top: 5.6em; left: 0em;
-    max-width: 1525px;
-    max-height: 867,81px;
-    margin: 0 auto;
+  max-width: 100em;
+  max-height: 50em;
+  margin-left: 0%;
 }
 
 .slider {
     display: flex;
-    aspect-ratio: 21 / 9;
+    aspect-ratio: 16 / 9;
     overflow-x: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -313,14 +319,14 @@ i#icon-lupa {
 .slider img {
     flex: 1 0 100%;
     scroll-snap-align: start;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .slider-nav {
     display: flex;
     column-gap: 1rem;
     position: absolute;
-    bottom: 5.25rem;
+    top: 50rem;
     left: 50%;
     transform: translate(-50%);
     z-index: 1;
@@ -346,7 +352,7 @@ i#icon-lupa {
     width: 100px;
     height: 50px;
     margin:0 auto;
-    bottom: 25rem;
+    bottom: 35rem;
     left: 45%;
     z-index: 1;
 }
@@ -370,11 +376,6 @@ i#icon-lupa {
     transform: scale(1.2);
 }
 
-.lower-container {
-    margin: 120px auto;
-    padding: 0;
-    max-width: 1400px;
-  }
   
   
   /* Apunta a todos los elementos h3 con clase CSS title */
@@ -434,7 +435,7 @@ i#icon-lupa {
 
 h2{
   position: absolute;
-  top: 37em; left: 22em;
+  top: 40em; left: 22em;
   text-align: center;
 }
 
@@ -549,26 +550,30 @@ footer {
   }
 
   .card-7 p {
-    left: 25%;
-    padding: 5em;
+    padding: 2em;
     justify-content: center;
     text-align: center;
     width: 50%;
     font-size: 140%;
+    margin-left: 25%;
   }
 
   .card-7 h3 {
-    left: 25%; top: 5em;
-    padding: 5em;
+    padding-top: 2em;
+    margin-left: 24%;
     justify-content: center;
     text-align: center;
     width: 50%;
     font-size: 240%;
   }
 
-  .card-7 p, h3 {
+  .card-7 {
     position: relative;
+    width: 100%;
+    height: 10%;
     background-color: white;
+    margin-left: 0%;
+    margin-top:  10%;
   }
 
 
