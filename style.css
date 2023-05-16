@@ -58,14 +58,6 @@ header {
     color: black;
 }
 
-.nav ul li a.list-element2 {
-    top: 0em; left: 10em;
-}
-
-.nav ul li a.list-element {
-    top: 0em; left: 1em;
-}
-
 .nav ul li a::before,
 .nav ul li a::after
 {
@@ -89,10 +81,60 @@ header {
 }
 
 .nav ul li a.activo::after,
-.nav ul li a:hover::after{
+.nav ul li a.element1:hover::after{
     opacity: 1;
-    width: 75%;
-    left: 1em;
+    width: 55%;
+    left: 2em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element2:hover::after{
+    opacity: 1;
+    width: 95%;
+    left: 0.2em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element2:hover::after{
+    opacity: 1;
+    width: 95%;
+    left: 0.2em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element3:hover::after{
+    opacity: 1;
+    width: 60%;
+    left: 1.8em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element4:hover::after{
+    opacity: 1;
+    width: 60%;
+    left: 1.8em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element5:hover::after{
+    opacity: 1;
+    width: 42%;
+    left: 2.7em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element6:hover::after{
+    opacity: 1;
+    width: 73%;
+    left: 1.3em;
+}
+
+.nav ul li a.list-element2 {
+    top: 0em; left: 10em;
+}
+
+.nav ul li a.list-element {
+    top: 0em; left: 1em;
 }
 
 #img-logo {
