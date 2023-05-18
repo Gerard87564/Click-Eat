@@ -33,7 +33,7 @@ header {
     display: flex;
 }
 
-.nav ul {
+.nav ul.htopnav {
     position: absolute;
     top: 2.5em; left: 10em;
     display: flex;
@@ -347,7 +347,6 @@ i#icon-lupa {
   max-width: 180em;
   max-height: 80em;
   margin-left: 0em;
-  z-index: 3;
 }
 
 .slider {
@@ -365,6 +364,7 @@ i#icon-lupa {
     scroll-snap-align: start;
     object-fit: fill;
     width: 100%;
+    padding-top: 5em;
 }
 
 .slider video {
@@ -372,6 +372,7 @@ i#icon-lupa {
   scroll-snap-align: start;
   object-fit: fill;
   width: 100%;
+  padding-top: 5em;
 }
 
 .slider-nav {
@@ -593,7 +594,7 @@ footer {
     color: white;
   }
 
-  iframe {
+  iframe  {
     margin-left: 30%;
     margin-top: 15%;
     margin-bottom: 5%;
@@ -748,16 +749,60 @@ footer {
     overflow-x: hidden;
   }
 
+  body {
+    width: 100%;
+  }
+
+  header {
+    height: fit-content;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  img#img-logo {
+    position: absolute;
+    top: 2.2em; left: 12em;
+    width: 6em;
+    height: 1.5em;
+    margin-left: 0em;
+  }
+
   i.menu-icon {
     display: block;
     cursor: pointer;
+    position: relative;
+    top: 3.7em; left: 2em;
   }
 
   .nav {
     width: 100%;
+    margin-bottom: 7em;
   }
 
-  .nav ul {
+  .nav ul.htopnav {
     display: none;
+    width: 100%;
   }
+
+  .nav ul li {
+    position: relative;
+    top: 6em; left: 0em;
+    margin-bottom: 1em;
+
+  }
+
+  .nav ul li a {
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  .nav ul li a.list-element2 {
+    margin-left: -9em;
+  }
+
+  
+}
+
+@media only screen and (max-width:920px) {
+  
 }
