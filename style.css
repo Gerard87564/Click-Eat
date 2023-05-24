@@ -761,9 +761,9 @@ footer {
 
   img#img-logo {
     position: absolute;
-    top: 2.4em; left: 12em;
-    width: 6em;
-    height: 1.5em;
+    top: 2.4em; left: 19em;
+    width: 8em;
+    height: 2em;
     margin-left: 0em;
   }
 
@@ -771,7 +771,8 @@ footer {
     display: block;
     cursor: pointer;
     position: relative;
-    top: 3.7em; left: 2em;
+    top:3.8em; left: 2em;
+    width: 100%;
   }
 
   .nav {
@@ -800,10 +801,436 @@ footer {
     margin-left: -9em;
   }
 
-  
+  #img-logo:hover {
+    transform: scale(1.2);
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
 }
 
-@media only screen and (min-width:920px)  and (max-width:920px) {
+#main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+#ubicación {
+    display: flex;
+    flex: 1;
+}
+
+.container div.slider-wrapper {
+  display: flex;
+  flex: 1;
+  max-width: 280em;
+  max-height: 150em;
+}
+
+#footer {
+    flex: 1; 
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 .25rem .5rem #21212126;
+    border-radius: .5rem;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 280em;
+  max-height: 150em;
+  margin-left: 0em;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: fill;
+    width: 100%;
+    padding-top: 5em;
+}
+
+.slider video {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: fill;
+  width: 180%;
+  height: 130%;
+
+  padding-top: 7em;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    top: 29rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 4;
+}
+
+.slider-nav a {
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: .75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}
+
+.slider-nav-flecha {
+    display: flex;
+    column-gap: 1rem;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    margin:0 auto;
+    bottom: 20rem;
+    left: 45%;
+    z-index: 1;
+}
+
+.flecha1 {
+    margin-left: -20.3em;
+}
+
+.animatedColor {
+    color: white;
+}
+
+.slider-nav-flecha a {
+    width: 100px;
+    height: 50px;
+    margin-top: 50%;
+    font-size:20px; 
+}
+
+.slider-nav-flecha a i:hover {
+    transform: scale(1.2);
+}
+
+  
+  
+  /* Apunta a todos los elementos h3 con clase CSS title */
+  .title {
+    color: black;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  
+  /* Apunta a todos los parrafos con la clase CSS text */
+  .text {
+    color: black;
+    font-size: 19px;
+    width: 100%;
+    padding: 10px;
+    margin: 0, 20px;
+    text-align: justify;
+  }
+
+  * Mostrar horizontalmente, poner un poco de espacio alrededor */
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Agregar algo de padding alrededor del contenedor. Alinear el texto al centro */
+.stats {
+  padding: 45px 50px;
+  text-align: center;
+}
+
+/* Aplicar margen y ancho */
+.stat {
+  margin: 0 30px;
+  text-align: center;
+  width: 800px;
+}
+
+.stats .fa {
+    color: blue;
+}
+
+.testimonial {
+    color: black;
+    padding: 40px;
+    margin-top: 15em;
+}
+
+.testimonial img {
+    height: 100%;
+    clip-path: circle();
+}
+
+/* Alinea el texto al centro */
+
+h2{
+  position: absolute;
+  top: 31em; left: 10em;
+  text-align: center;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+  }
+
+
+
+  footer.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+  }
+  
+  
+  /* Crear una tarjeta en blanco con sombreado alrededor */
+  .card {
+    padding: 10px;
+    padding-bottom: 50%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
+                 7px  7px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-1 {
+    background-image: url(./img/FONTANERO-SUELDO.jpg);
+    background-size: cover;
+  }
+
+  .card-2 {
+    background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
+    background-size: cover;
+  }
+  
+  .card-3 {
+    background-image: url(./img/cocinero.webp);
+    background-size: cover;
+  }
+
+  .card-4 {
+    background-image: url(./img/funciones-de-un-jardinero.jpg);
+    background-size: cover;
+  }
+
+  .card-5 {
+    background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
+    background-size: cover;
+  }
+
+  .card-6 {
+    background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
+    background-size: cover;
+  }
+
+  .card h3 {
+    background-color: rgba(255, 255, 255, 0.672);
+    padding-bottom: 7%;
+    padding-top: 3%;
+    text-align: center;
+    justify-content: center;
+    width: 110%; height: 100%;
+    position: relative;
+    top: 9.7em; right: 5%;
+    border-radius: 10px;
+    font-size: 70%;
+  }
+
+  .card p {
+    text-align: center;
+    justify-content: center;
+    width: 110%; height: 100%;
+    position: relative;
+    top: 5.6em; right: 2.6%;
+    border-radius: 10px;
+    font-size: 80%;
+  }
+
+  
+
+  .card p:before {
+    opacity: 0;
+  }
+
+  .card p:hover::before {
+    content: attr(data-content);
+    opacity: 1;
+  }
+
+
+
+/* Add padding around the footer as well */
+
+footer {
+    background-color: black;
+    padding: 20px 10px;
+  }
+
+  .copyright {
+    color: white;
+  }
+
+  iframe  {
+    margin-left: 0%;
+    margin-top: 15%;
+    margin-bottom: -1%;
+    max-height: 20em;
+    max-width: 100em;
+    width: 100%;
+  }
+
+  .card-7 p {
+    padding: 2em;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    font-size: 140%;
+    margin-left: 25%;
+  }
+
+  .card-7 h3 {
+    padding-top: 2em;
+    margin-left: 24%;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    font-size: 240%;
+  }
+
+  .card-7 {
+    position: relative;
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    margin-left: 0%;
+    margin-top:  10%;
+  }
+
+
+  
+  /* Sets all link texts to white and puts margin to the left and right */
+  
+  footer a {
+    color: white;
+    margin: 0 10px;
+    position: relative;
+    left: 25em;
+  }
+  
+
+  footer a:hover {
+    color: cornflowerblue;
+  }
+
+/* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
+*/ 
+
+.image {
+    width: 600px;
+    margin-left: 80px;
+  }
+
+/* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
+
+.stats .flex {
+    flex-direction: column;
+  }
+
+  .stats {
+    text-align: center;
+  }
+
+/* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
+
+.stat {
+    width: 100%;
+    padding-right: 80px;
+  }
+
+/* Mueve el círculo al centro de la tarjeta  */
+
+  /* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
+
+.navbar .flex {
+    flex-direction: column;
+  }
+
+
+/* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
+
+  .navbar a:hover {
+    color: white;
+    border-bottom: 2px solid black;
+  }
+
+
+/* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
+
+  .navbar ul {
+    background: #9867C5;
+    border-radius: 5px;
+    padding: 10px 0;
+  }
+
+
+/* Alinear el texto al centro */
+
+  .showcase {
+    height: auto;
+    text-align: center;
+  }
+
+
+/* Reducir el tamaño de la fuente */
+
+.little-info {
+    font-size: 13px;
+  }
+
+
+/* Reducir el ancho de la imágen */
+
+  .image {
+    width: 350px;
+    margin-left: 70px;
+  }
+
+  .stat {
+    margin-bottom: 40px;
+  }
+
+
+/* Mover el círculo una vez más */
+
+@keyframes arrow {
+    0% {
+    transform: translate(0px, 50px);
+    }
+    50% {
+    transform: translate(0px, 60px);
+    }
+    100% {
+    transform: translate(0px, 50px);
+    }
+    }
+}
+
+
+@media only screen and (max-width:920px) {
   * {
     margin: 0;
     padding: 0;
@@ -938,13 +1365,9 @@ header {
 }
 
 .nav ul li a.list-element2 {
-    top: 0em; left: 0em;
+  margin-left: -8em;
 }
 
-.nav ul li a.list-element1 {
-  position: relative;
-    top: 0em; left: 20em;
-}
 
 #img-logo {
     display: flex;
@@ -1448,6 +1871,802 @@ footer {
     margin: 0 10px;
     position: relative;
     left: 25em;
+  }
+  
+
+  footer a:hover {
+    color: cornflowerblue;
+  }
+
+/* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
+*/ 
+
+.image {
+    width: 600px;
+    margin-left: 80px;
+  }
+
+/* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
+
+.stats .flex {
+    flex-direction: column;
+  }
+
+  .stats {
+    text-align: center;
+  }
+
+/* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
+
+.stat {
+    width: 100%;
+    padding-right: 80px;
+  }
+
+/* Mueve el círculo al centro de la tarjeta  */
+
+  /* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
+
+.navbar .flex {
+    flex-direction: column;
+  }
+
+
+/* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
+
+  .navbar a:hover {
+    color: white;
+    border-bottom: 2px solid black;
+  }
+
+
+/* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
+
+  .navbar ul {
+    background: #9867C5;
+    border-radius: 5px;
+    padding: 10px 0;
+  }
+
+
+/* Alinear el texto al centro */
+
+  .showcase {
+    height: auto;
+    text-align: center;
+  }
+
+
+/* Reducir el tamaño de la fuente */
+
+.little-info {
+    font-size: 13px;
+  }
+
+
+/* Reducir el ancho de la imágen */
+
+  .image {
+    width: 350px;
+    margin-left: 70px;
+  }
+
+  .stat {
+    margin-bottom: 40px;
+  }
+
+
+/* Mover el círculo una vez más */
+
+@keyframes arrow {
+    0% {
+    transform: translate(0px, 50px);
+    }
+    50% {
+    transform: translate(0px, 60px);
+    }
+    100% {
+    transform: translate(0px, 50px);
+    }
+    }
+}
+
+@media only screen and (min-width:2100px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 150vh;
+    background-color: cornflowerblue;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    width: 100%;
+    position: fixed;
+    background-color: rgb(226, 247, 255);
+    min-height: 12vh;
+    z-index: 2;
+    
+}
+
+.nav {
+    flex: 5;
+    display: flex;
+}
+
+.nav ul.htopnav {
+    position: absolute;
+    top: 2.5em; left: 10em;
+    display: flex;
+    width: 70%;
+}
+
+.nav ul li {
+    display: flex;
+    margin-left: 2%;
+    width: 100%;
+}
+
+.nav ul li a{
+    position: relative;
+    display: flex;
+    width: 9em;
+    font-size: 180%;
+    flex: 1;
+    max-width: 120%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin-left: -1em;
+}
+
+.nav ul li a::before,
+.nav ul li a::after
+{
+    content: '';
+    border-bottom: 4px solid blue;
+    position: absolute;
+    opacity: 0;
+    
+}
+
+.nav ul li a::before{
+    bottom: -0px;
+    width: 90%;
+    right: 0;
+}
+
+.nav ul li a::after{
+    bottom: -5px;
+    width: 70%;
+    left: 0;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element1:hover::after{
+    opacity: 1;
+    width: 55%;
+    left: 2em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element2:hover::after{
+    opacity: 1;
+    width: 95%;
+    left: 0.2em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element2:hover::after{
+    opacity: 1;
+    width: 95%;
+    left: 0.2em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element3:hover::after{
+    opacity: 1;
+    width: 60%;
+    left: 1.8em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element4:hover::after{
+    opacity: 1;
+    width: 60%;
+    left: 1.8em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element5:hover::after{
+    opacity: 1;
+    width: 42%;
+    left: 2.7em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element6:hover::after{
+    opacity: 1;
+    width: 73%;
+    left: 1.3em;
+}
+
+.nav ul li a.list-element2 {
+    top: 1.5em; left: 10em;
+}
+
+.nav ul li a.list-element {
+  position: relative;
+    top: 1.5em; left: 5em;
+}
+
+#img-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+    width: 35%;
+    margin-top: 7.3%;
+    margin-left: 2%;
+}
+
+
+
+.nav ul li a.list-element:hover {
+    text-decoration: none;
+    color: blue;
+    padding: 0em;
+}
+
+.nav ul li a.list-element2:hover {
+    text-decoration: none;
+    color: blue;
+    padding: 0em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element1:hover::after{
+    opacity: 1;
+    width: 55%;
+    left: 1.9em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element2:hover::after{
+    opacity: 1;
+    width: 95%;
+    left: 0.2em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element2:hover::after{
+    opacity: 1;
+    width: 95%;
+    left: 0.1em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element3:hover::after{
+    opacity: 1;
+    width: 60%;
+    left: 1.8em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element4:hover::after{
+    opacity: 1;
+    width: 60%;
+    left: 1.75em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element5:hover::after{
+    opacity: 1;
+    width: 42%;
+    left: 2.6em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element6:hover::after{
+    opacity: 1;
+    width: 73%;
+    left: 1.15em;
+}
+
+#img-logo:hover {
+    transform: scale(1.2);
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+#main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+#ubicación {
+    display: flex;
+    flex: 1;
+}
+
+.container div.slider-wrapper {
+  display: flex;
+  flex: 1;
+  max-width: 180em;
+  max-height: 80em;
+}
+
+#footer {
+    flex: 1; 
+}
+
+i.menu-icon  {
+    display: none;
+}
+
+.nav div form.searchbox-form_SearchBox1 {
+    display: none;
+}
+
+.nav div form div.searchbox-form_SearchBox2{
+    display: block;
+}
+
+form {
+    position: relative;
+    top: 10em; right: 52.5em;
+    margin-bottom: 5em;
+}
+
+button {
+    position: fixed;
+    top: 6.4em; left: 53em;
+    writing-mode: horizontal-tb;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    margin: 0em;
+    margin-left: 5em;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-image: initial;
+}
+
+.button_submit {
+    display: flex;
+    justify-content: center;
+    width: 153px;
+    height: 58px;
+    border: 0;
+    border-radius: 51px;
+    background-color: rgb(36, 36, 198);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    color: #fff;
+}
+
+.button {
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 10em;
+    border-radius: 25px;
+    transition: all .2s ease-in-out,padding 0s;
+}
+
+.align-items-center {
+    align-items: center;
+    font-size: 150%;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375em 0.75em;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input {
+    overflow: visible;
+}
+
+.searchbox-input {
+    height: 100%;
+    padding-right: 3px;
+    border: 0;
+    background-color: white;
+    font-family: Wallie;
+    font-size: 1em;
+    white-space: nowrap;
+}
+
+[type=search] {
+    outline-offset: -2px;
+}
+
+
+input[type="search"] {
+    appearance: auto;
+    box-sizing: border-box;
+    padding: 12px 12px;
+}
+
+input {
+    writing-mode: horizontal-tb;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+
+
+.searchbox-form_SearchBox2 {
+    height: 48px;
+    border: 1px solid #90a4ae;
+    border-radius: 32px;
+    margin-left: 27%;
+    overflow: hidden;
+    background-color: white;
+}
+
+.width-100 {
+    margin-left: 0%;
+    width: 400%;
+}
+
+.display-flex {
+    display: flex;
+}
+
+i#icon-lupa {
+    position: absolute;
+    left: 70em; top: 3em;
+    font-size: 180%;
+    display: block;
+    cursor: pointer;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 180em;
+  max-height: 80em;
+  margin-left: 0em;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 .25rem .5rem #21212126;
+    border-radius: .5rem;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: fill;
+    width: 100%;
+    padding-top: 14em;
+}
+
+.slider video {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: fill;
+  width: 100%;
+  padding-top: 14em;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    top: 69rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 4;
+}
+
+.slider-nav a {
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: .75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}
+
+.slider-nav-flecha {
+    display: flex;
+    column-gap: 1rem;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    margin:0 auto;
+    bottom: 32rem;
+    left: 45%;
+    z-index: 1;
+}
+
+.flecha1 {
+    margin-left: -47.5em;
+}
+
+.animatedColor {
+    color: white;
+}
+
+.slider-nav-flecha a {
+    width: 100px;
+    height: 50px;
+    margin-top: 50%;
+    font-size:20px; 
+}
+
+.slider-nav-flecha a i:hover {
+    transform: scale(1.2);
+}
+
+  
+  
+  /* Apunta a todos los elementos h3 con clase CSS title */
+  .title {
+    color: black;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  
+  /* Apunta a todos los parrafos con la clase CSS text */
+  .text {
+    color: black;
+    font-size: 19px;
+    width: 100%;
+    padding: 10px;
+    margin: 0, 20px;
+    text-align: justify;
+  }
+
+  * Mostrar horizontalmente, poner un poco de espacio alrededor */
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Agregar algo de padding alrededor del contenedor. Alinear el texto al centro */
+.stats {
+  padding: 45px 50px;
+  text-align: center;
+}
+
+/* Aplicar margen y ancho */
+.stat {
+  margin: 0 30px;
+  text-align: center;
+  width: 800px;
+}
+
+.stats .fa {
+    color: blue;
+}
+
+.testimonial {
+    color: black;
+    padding: 40px;
+    margin-top: 15em;
+}
+
+.testimonial img {
+    height: 100%;
+    clip-path: circle();
+}
+
+/* Alinea el texto al centro */
+
+h2{
+  position: absolute;
+  top: 40em; left: 23em;
+  font-size: 210%;
+  text-align: center;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+  }
+
+
+
+  footer.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+  }
+  
+  
+  /* Crear una tarjeta en blanco con sombreado alrededor */
+  .card {
+    padding: 10px;
+    padding-bottom: 50%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
+                 7px  7px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-1 {
+    background-image: url(./img/FONTANERO-SUELDO.jpg);
+    background-size: cover;
+  }
+
+  .card-2 {
+    background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
+    background-size: cover;
+  }
+  
+  .card-3 {
+    background-image: url(./img/cocinero.webp);
+    background-size: cover;
+  }
+
+  .card-4 {
+    background-image: url(./img/funciones-de-un-jardinero.jpg);
+    background-size: cover;
+  }
+
+  .card-5 {
+    background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
+    background-size: cover;
+  }
+
+  .card-6 {
+    background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
+    background-size: cover;
+  }
+
+  .card h3 {
+    background-color: rgba(255, 255, 255, 0.672);
+    padding-bottom: 7%;
+    padding-top: 3%;
+    text-align: center;
+    justify-content: center;
+    width: 105%; height: 100%;
+    position: relative;
+    top: 11.3em; right: 2%;
+    border-radius: 10px;
+    font-size: 170%;
+  }
+
+  .card p {
+    text-align: center;
+    justify-content: center;
+    width: 110%; height: 100%;
+    position: relative;
+    top: 10.6em; right: 2.6%;
+    border-radius: 10px;
+    font-size: 150%;
+  }
+
+  
+
+  .card p:before {
+    opacity: 0;
+  }
+
+  .card p:hover::before {
+    content: attr(data-content);
+    opacity: 1;
+  }
+
+
+
+/* Add padding around the footer as well */
+
+footer {
+    background-color: black;
+    padding: 20px 10px;
+  }
+
+  .copyright {
+    color: white;
+  }
+
+  iframe  {
+    margin-left: 0%;
+    margin-top: 15%;
+    margin-bottom: -1%;
+    max-height: 30em;
+    max-width: 200em;
+    width: 100%;
+  }
+
+  .card-7 p {
+    padding: 2em;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    font-size: 210%;
+    margin-left: 25%;
+  }
+
+  .card-7 h3 {
+    padding-top: 2em;
+    margin-left: 24%;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    font-size: 280%;
+  }
+
+  .card-7 {
+    position: relative;
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    margin-left: 0%;
+    margin-top:  10%;
+  }
+
+
+  
+  /* Sets all link texts to white and puts margin to the left and right */
+  
+  footer a {
+    color: white;
+    margin: 0 10px;
+    position: relative;
+    left: 69em;
   }
   
 
