@@ -14,6 +14,7 @@ body{
     flex-direction: column;
     min-height: 150vh;
     background-color: cornflowerblue;
+    font-family: 'Abadi MT Std', sans-serif;
 }
 
 header {
@@ -761,7 +762,7 @@ footer {
 
   img#img-logo {
     position: absolute;
-    top: 2.4em; left: 13em;
+    top: 2.4em; left: 9em;
     width: 8em;
     height: 2em;
     margin-left: 0em;
@@ -1102,10 +1103,10 @@ footer {
 
   .card-7 h3 {
     padding-top: 1em;
-    margin-left: 15%;
+    margin-left: 0%;
     justify-content: center;
     text-align: center;
-    width: 80%;
+    width: 100%;
     font-size: 240%;
   }
 
@@ -1126,7 +1127,7 @@ footer {
     color: white;
     margin: 0 10px;
     position: relative;
-    left: 5em;
+    left: 4em;
     margin: 1.5em;
   }
   
