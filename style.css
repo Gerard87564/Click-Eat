@@ -761,7 +761,7 @@ footer {
 
   img#img-logo {
     position: absolute;
-    top: 2.4em; left: 19em;
+    top: 2.4em; left: 13em;
     width: 8em;
     height: 2em;
     margin-left: 0em;
@@ -797,6 +797,77 @@ footer {
     margin-bottom: 1em;
   }
 
+  .nav ul li a::before,
+.nav ul li a::after
+{
+    content: '';
+    border-bottom: 4px solid blue;
+    position: absolute;
+    opacity: 0;
+    
+}
+
+.nav ul li a::before{
+    bottom: -0px;
+    width: 90%;
+    right: 0;
+}
+
+.nav ul li a::after{
+    bottom: -5px;
+    width: 70%;
+    left: 0;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element1:hover::after{
+    opacity: 1;
+    width: 47%;
+    left: 0em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element2:hover::after{
+    opacity: 1;
+    width: 97%;
+    left: 0em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element2:hover::after{
+    opacity: 1;
+    width: 95%;
+    left: 0.2em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element3:hover::after{
+    opacity: 1;
+    width: 62%;
+    left: 0em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element4:hover::after{
+    opacity: 1;
+    width: 60%;
+    left: 0em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element5:hover::after{
+    opacity: 1;
+    width: 43%;
+    left: 0em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element6:hover::after{
+    opacity: 1;
+    width: 80%;
+    left: 0em;
+}
+
   .nav ul li a.list-element2 {
     margin-left: -9em;
   }
@@ -820,10 +891,7 @@ footer {
 }
 
 .container div.slider-wrapper {
-  display: flex;
-  flex: 1;
-  max-width: 280em;
-  max-height: 150em;
+  display: none;
 }
 
 #footer {
@@ -831,96 +899,13 @@ footer {
 }
 
 .slider {
-    display: flex;
-    aspect-ratio: 16 / 9;
-    overflow-x: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 .25rem .5rem #21212126;
-    border-radius: .5rem;
+    display: none,
 }
 
 .slider-wrapper {
-  position: relative;
-  max-width: 280em;
-  max-height: 150em;
-  margin-left: 0em;
+  display: none;
 }
 
-.slider img {
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: fill;
-    width: 100%;
-    padding-top: 5em;
-}
-
-.slider video {
-  flex: 1 0 100%;
-  scroll-snap-align: start;
-  object-fit: fill;
-  width: 180%;
-  height: 130%;
-
-  padding-top: 7em;
-}
-
-.slider-nav {
-    display: flex;
-    column-gap: 1rem;
-    position: absolute;
-    top: 29rem;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: 4;
-}
-
-.slider-nav a {
-    width: .5rem;
-    height: .5rem;
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: .75;
-    transition: opacity ease 250ms;
-}
-
-.slider-nav a:hover {
-    opacity: 1;
-}
-
-.slider-nav-flecha {
-    display: flex;
-    column-gap: 1rem;
-    position: relative;
-    width: 100px;
-    height: 50px;
-    margin:0 auto;
-    bottom: 20rem;
-    left: 45%;
-    z-index: 1;
-}
-
-.flecha1 {
-    margin-left: -20.3em;
-}
-
-.animatedColor {
-    color: white;
-}
-
-.slider-nav-flecha a {
-    width: 100px;
-    height: 50px;
-    margin-top: 50%;
-    font-size:20px; 
-}
-
-.slider-nav-flecha a i:hover {
-    transform: scale(1.2);
-}
-
-  
-  
   /* Apunta a todos los elementos h3 con clase CSS title */
   .title {
     color: black;
@@ -988,6 +973,16 @@ h2{
     gap: 100px;
   }
 
+  footer a {
+    color: white;
+    margin: 0 10px;
+    position: relative;
+    left: -20em;
+  }
+
+div.testimonial {
+  display: none;
+}
 
 
   footer.grid-3 {
@@ -995,6 +990,8 @@ h2{
     grid-template-columns: repeat(3, 1fr);
     gap: 100px;
   }
+
+  
   
   
   /* Crear una tarjeta en blanco con sombreado alrededor */
@@ -1078,6 +1075,7 @@ h2{
 footer {
     background-color: black;
     padding: 20px 10px;
+    margin-top: 120%;
   }
 
   .copyright {
@@ -1087,8 +1085,9 @@ footer {
   iframe  {
     margin-left: 0%;
     margin-top: 15%;
-    margin-bottom: -1%;
-    max-height: 20em;
+    margin-bottom: -121.4%;
+    padding-bottom: -20%;
+    max-height: 34em;
     max-width: 100em;
     width: 100%;
   }
@@ -1097,17 +1096,17 @@ footer {
     padding: 2em;
     justify-content: center;
     text-align: center;
-    width: 50%;
-    font-size: 140%;
-    margin-left: 25%;
+    width: 80%;
+    font-size: 100%;
+    margin-left: 10%;
   }
 
   .card-7 h3 {
-    padding-top: 2em;
-    margin-left: 24%;
+    padding-top: 3em;
+    margin-left: 15%;
     justify-content: center;
     text-align: center;
-    width: 50%;
+    width: 80%;
     font-size: 240%;
   }
 
@@ -1128,7 +1127,8 @@ footer {
     color: white;
     margin: 0 10px;
     position: relative;
-    left: 25em;
+    left: 5em;
+    margin: 1.5em;
   }
   
 
@@ -1213,22 +1213,7 @@ footer {
     margin-bottom: 40px;
   }
 
-
-/* Mover el círculo una vez más */
-
-@keyframes arrow {
-    0% {
-    transform: translate(0px, 50px);
-    }
-    50% {
-    transform: translate(0px, 60px);
-    }
-    100% {
-    transform: translate(0px, 50px);
-    }
-    }
 }
-
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   * {
