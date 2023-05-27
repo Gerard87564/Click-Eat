@@ -726,6 +726,8 @@ footer {
 
 /* Mover el círculo una vez más */
 
+
+
 @keyframes arrow {
     0% {
     transform: translate(0px, 50px);
@@ -781,6 +783,13 @@ footer {
     margin-bottom: 7em;
   }
 
+  .nav ul {
+    position: relative;
+    left: -100%;
+    margin-bottom: 26em;
+    margin-top: 7em;
+  }
+
   .nav ul.htopnav {
     display: none;
     width: 100%;
@@ -788,89 +797,46 @@ footer {
 
   .nav ul li {
     position: relative;
-    top: 6em; left: 0em;
-    margin-bottom: 1em;
-
+    top: 0em; left: 0em;
+    margin-bottom: 3em;
   }
 
   .nav ul li a {
     display: block;
     margin-bottom: 1em;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    margin-left: 13em;
+    float: none;
   }
 
   .nav ul li a::before,
 .nav ul li a::after
 {
     content: '';
-    border-bottom: 4px solid blue;
+    border-bottom: none;
     position: absolute;
     opacity: 0;
     
 }
 
-.nav ul li a::before{
-    bottom: -0px;
-    width: 90%;
-    right: 0;
+
+
+.nav ul li a.element1 {
+  display: none;
 }
 
-.nav ul li a::after{
-    bottom: -5px;
-    width: 70%;
-    left: 0;
+.nav ul li a.element2 {
+  display: none;
 }
 
-.nav ul li a.activo::after,
-.nav ul li a.element1:hover::after{
-    opacity: 1;
-    width: 47%;
-    left: 0em;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element2:hover::after{
-    opacity: 1;
-    width: 97%;
-    left: 0em;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element2:hover::after{
-    opacity: 1;
-    width: 95%;
-    left: 0.2em;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element3:hover::after{
-    opacity: 1;
-    width: 62%;
-    left: 0em;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element4:hover::after{
-    opacity: 1;
-    width: 60%;
-    left: 0em;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element5:hover::after{
-    opacity: 1;
-    width: 43%;
-    left: 0em;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element6:hover::after{
-    opacity: 1;
-    width: 80%;
-    left: 0em;
+.nav ul li a.list {
+  width: 40em;
 }
 
   .nav ul li a.list-element2 {
-    margin-left: -9em;
+    margin-left: -11em;
+    margin-bottom: 1em;
   }
 
   #img-logo:hover {
@@ -1087,7 +1053,7 @@ footer {
     margin-top: 15%;
     margin-bottom: -121.4%;
     padding-bottom: -20%;
-    max-height: 34em;
+    max-height: 20em;
     max-width: 100em;
     width: 100%;
   }

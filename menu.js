@@ -1,6 +1,8 @@
 console.log("1")
 jQuery("document").ready(function($){
 
+    var contador = 1;
+
     var menuButton = $(".menu-icon");
         menu =  $(".nav ul");
     
@@ -10,6 +12,18 @@ jQuery("document").ready(function($){
             menu.removeClass("htopnav");
         } else {
             menu.addClass("htopnav");
+        }
+
+        if(contador == 1) {
+            $(".nav ul").animate({
+                left: '0'
+            });
+            contador = 0;
+        } else {
+            contador = 1
+            $(".nav ul").animate({
+                left: '-100%'
+            });
         }
     });
 

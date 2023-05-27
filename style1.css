@@ -1,0 +1,315 @@
+* {
+    box-sizing: border-box; 
+    text-decoration: none;
+  }
+
+
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    background-color: cornflowerblue;
+    font-family: 'Abadi MT Std', sans-serif;
+}
+
+#header {
+    flex: 0.5;
+    width: 100%;
+    min-height: 12vh;
+    z-index: 2;
+}
+
+#header img {
+    margin-top: 3em;
+    margin-left: 33em;
+    width: 500px;
+    height: auto;
+}
+
+#main {
+    flex: 1;
+    background-color: white;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 10%;
+    border-radius: 15px;
+    padding-top: 4em;
+    padding-bottom: 5em;
+    display: flex;
+    flex-direction: column;
+}
+
+#nombre_usuario {
+    flex: 0.5;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#nombre_usuario label {
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    padding-right: -10em;
+    color: black;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+}
+
+#contraseña {
+    flex: 0.5;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#contraseña label {
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    padding-right: -1em;
+    color: black;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+}
+
+#boton {
+    flex: 1;
+    text-align: center;
+}
+
+#boton input {
+    padding: .6rem 1rem;
+  border: 1px solid rgb(74, 97, 246);
+  border-radius: 4px;
+  background-color: rgb(74, 97, 246);
+  color: #fff;
+
+  font-size: 1.5rem;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+  box-shadow: 0 1px 0 rgba(255,255,255,.5) inset,
+    0 1px 3px rgba(0,0,0,.2);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,#f90),to(#e76a00));
+  background-image: linear-gradient(rgb(73, 91, 246) 10%,blue 100%);
+}
+
+#boton label:hover, #boton label:focus {
+  background-color: rgb(74, 97, 246);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,#f0a100),to(#f70));
+  background-image: linear-gradient(rgb(76, 97, 246) 10%blue 100%);
+}
+
+#boton label:active {
+  background-color: rgb(74, 97, 246);
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,.2) inset;
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,#f0a100),to(#f70));
+  background-image: linear-gradient(rgb(76, 97, 246) 10%,blue 100%);
+}
+
+/* Sets all link texts to white and puts margin to the left and right */
+  
+footer {
+    background-color: black;
+    padding: 5px 10px;
+    padding-top: -15%;
+}
+
+.copyright {
+    color: white;
+    margin-bottom: -1em;
+}
+
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    position: relative;
+    top:-3em; left: 82em;
+  }
+
+  footer a:hover {
+    color: cornflowerblue;
+  }
+
+  @media screen and (max-width:767px) {
+  
+    
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+      }
+    
+      header {
+        height: fit-content;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    
+    #header img {
+        margin-top: 3em;
+        margin-left: 5em;
+        width: 200px;
+        height: auto;
+    }
+    
+    #main {
+         flex: 1;
+        background-color: white;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 10%;
+        border-radius: 15px;
+        padding-top: 4em;
+        padding-bottom: 5em;
+        display: flex;
+        flex-direction: column;
+        }
+    
+    #nombre_usuario {
+        flex: 0.5;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    
+    #nombre_usuario label {
+        font-size: x-large;
+        font-family: 'Times New Roman', Times, serif;
+        padding-right: 0em;
+        color: black;
+        text-shadow:
+          0 0 7px #fff,
+          0 0 10px #fff,
+          0 0 21px #fff,
+          0 0 42px #0fa,
+          0 0 82px #0fa,
+          0 0 92px #0fa,
+          0 0 102px #0fa,
+          0 0 151px #0fa;
+    }
+    
+    #contraseña {
+        flex: 0.5;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    
+    #contraseña label {
+        font-size: x-large;
+        font-family: 'Times New Roman', Times, serif;
+        padding-right: 1em;
+        color: black;
+        text-shadow:
+          0 0 7px #fff,
+          0 0 10px #fff,
+          0 0 21px #fff,
+          0 0 42px #0fa,
+          0 0 82px #0fa,
+          0 0 92px #0fa,
+          0 0 102px #0fa,
+          0 0 151px #0fa;
+    }
+    
+    #boton {
+        flex: 1;
+        text-align: center;
+    }
+    
+    #boton input {
+        padding: .6rem 1rem;
+      border: 1px solid rgb(74, 97, 246);
+      border-radius: 4px;
+      background-color: rgb(74, 97, 246);
+      color: #fff;
+    
+      font-size: 1.5rem;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+      box-shadow: 0 1px 0 rgba(255,255,255,.5) inset,
+        0 1px 3px rgba(0,0,0,.2);
+      background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,#f90),to(#e76a00));
+      background-image: linear-gradient(rgb(73, 91, 246) 10%,blue 100%);
+    }
+    
+    #boton label:hover, #boton label:focus {
+      background-color: rgb(74, 97, 246);
+      background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,#f0a100),to(#f70));
+      background-image: linear-gradient(rgb(76, 97, 246) 10%blue 100%);
+    }
+    
+    #boton label:active {
+      background-color: rgb(74, 97, 246);
+      box-shadow: 0 2px 3px 0 rgba(0,0,0,.2) inset;
+      background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,#f0a100),to(#f70));
+      background-image: linear-gradient(rgb(76, 97, 246) 10%,blue 100%);
+    }
+    
+    /* Sets all link texts to white and puts margin to the left and right */
+    
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 100px;
+      }
+    
+
+    footer.grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 100px;
+      }
+
+      footer {
+        background-color: black;
+        padding: 20px 10px;
+        margin-top: 120%;
+      }
+    
+    .copyright {
+        color: white;
+        margin-bottom: -1em;
+    }
+    
+    
+    footer a {
+        color: white;
+        margin: 0 10px;
+        position: relative;
+        top: 0.7em; left: 4em;
+        margin: 0.5em;
+      }
+    
+      footer a:hover {
+        color: cornflowerblue;
+      }
+  }
+  
+
+  @media screen and (min-width: 767px) and (max-width: 1023px) {
+
+  }
+
+  @media screen and (min-width: 1024px) {
+  
+  }
