@@ -963,7 +963,7 @@ footer {
 
 h2{
   position: absolute;
-  top: 31em; left: 10em;
+  top: 9em; left: 0em;
   text-align: center;
 }
 
@@ -980,10 +980,9 @@ h2{
     left: -20em;
   }
 
-div.testimonial {
+div.testimonial div.card {
   display: none;
 }
-
 
   footer.grid-3 {
     display: grid;
@@ -1102,7 +1101,7 @@ footer {
   }
 
   .card-7 h3 {
-    padding-top: 3em;
+    padding-top: 1em;
     margin-left: 15%;
     justify-content: center;
     text-align: center;
