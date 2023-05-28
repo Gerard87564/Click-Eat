@@ -798,7 +798,7 @@ footer a:hover {
   
     .nav ul li {
       position: relative;
-      top: 0em; left: 0em;
+      top: 0em; left: -11.5em;
       margin-bottom: 3em;
     }
   
@@ -1067,15 +1067,15 @@ footer a:hover {
       padding: 2em;
       justify-content: center;
       text-align: center;
-      width: 80%;
+      width: 110%;
       font-size: 100%;
-      margin-left: 8%;
+      margin-left: -10%;
     }
   
     .card-7 h3 {
       padding-top: 1em;
       margin-top: -5em;
-      margin-left: 0%;
+      margin-left: -0%;
       justify-content: center;
       text-align: center;
       width: 100%;
@@ -1084,10 +1084,11 @@ footer a:hover {
   
     .card-7 {
       position: relative;
-      width: 100%;
+      width: 80%;
       height: 10%;
       background-color: white;
-      margin-left: 0%;
+      border-radius: 25px;
+      margin-left: 10%;
       margin-top:  10%;
     }
   
@@ -1254,8 +1255,8 @@ footer a:hover {
       margin-bottom: 1em;
       padding: 20px;
       border-bottom: 1px solid black;
-      margin-left: 13em;
-      font-size: 80%;
+      margin-left: -1em;
+      font-size: 100%;
       float: none;
     }
   
@@ -1531,11 +1532,12 @@ footer a:hover {
   
     .card-7 {
       position: relative;
-      width: 100%;
+      width: 90%;
       height: 10%;
       background-color: white;
-      margin-left: 0%;
+      border-radius: 25px;
       margin-top:  10%;
+      margin-left: 5%;
     }
   
   
@@ -2147,7 +2149,7 @@ footer a:hover {
       margin-bottom: 1em;
       padding: 20px;
       border-bottom: 1px solid black;
-      margin-left: 13em;
+      margin-left: -1em;
       font-size: 100%;
       float: none;
     }
@@ -2272,7 +2274,7 @@ footer a:hover {
   
   h2{
     position: absolute;
-    top: 8em; left: 2em;
+    top: 8em; left: 0em;
     font-size: 140%;
     text-align: center;
   }
@@ -2417,11 +2419,12 @@ footer a:hover {
   
     .card-7 {
       position: relative;
-      width: 100%;
+      width: 90%;
       height: 10%;
       background-color: white;
-      margin-left: 0%;
+      margin-left: 5%;
       margin-top:  25%;
+      border-radius: 25px;
     }
   
   
@@ -2586,8 +2589,8 @@ footer a:hover {
       margin-bottom: 1em;
       padding: 20px;
       border-bottom: 1px solid black;
-      margin-left: 13em;
-      font-size: 90%;
+      margin-left: -1em;
+      font-size: 150%;
       float: none;
     }
   
@@ -2857,10 +2860,11 @@ footer a:hover {
   
     .card-7 {
       position: relative;
-      width: 100%;
+      width: 80%;
       height: 10%;
       background-color: white;
-      margin-left: 0%;
+      border-radius: 25px;
+      margin-left: 12%;
       margin-top:  19%;
     }
   
@@ -3025,7 +3029,7 @@ footer a:hover {
     margin-bottom: 1em;
     padding: 20px;
     border-bottom: 1px solid black;
-    margin-left: 13em;
+    margin-left: -1em;
     float: none;
     font-size: 150%;
   }
@@ -3554,7 +3558,7 @@ i.menu-icon {
   margin-bottom: 1em;
   padding: 20px;
   border-bottom: 1px solid black;
-  margin-left: 13em;
+  margin-left: -1em;
   float: none;
   font-size: 180%;
 }
@@ -6252,7 +6256,7 @@ footer a:hover {
       width: 100%;
       position: fixed;
       background-color: rgb(226, 247, 255);
-      min-height: 18vh;
+      min-height: 19.5vh;
       z-index: 2;
       
     }

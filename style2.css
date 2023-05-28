@@ -8,7 +8,7 @@
     min-height: 100vh;
     flex-direction: column;
     margin: 0;
-    background-color: #8394F9;
+    background-color: cornflowerblue;
   }
   
   #header {
@@ -172,7 +172,7 @@ footer a {
         min-height: 100vh;
         flex-direction: column;
         margin: 0;
-        background-color: #8394F9;
+        background-color: cornflowerblue;
       }
       
       #header {
@@ -353,7 +353,7 @@ footer a {
     min-height: 100vh;
     flex-direction: column;
     margin: 0;
-    background-color: #8394F9;
+    background-color: cornflowerblue;
   }
   
   #header {
