@@ -1,374 +1,366 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
-    width: 100%;
-    overflow-x: hidden;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body{
-    display: flex;
-    flex-direction: column;
-    min-height: 150vh;
-    background-color: cornflowerblue;
-    font-family: 'Abadi MT Std', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 150vh;
+  background-color: cornflowerblue;
+  font-family: 'Abadi MT Std', sans-serif;
 }
 
 header {
-    display: flex;
-    flex-direction: row;
-    height: fit-content;
-    width: 100%;
-    position: fixed;
-    background-color: rgb(226, 247, 255);
-    min-height: 12vh;
-    z-index: 2;
-    
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(226, 247, 255);
+  min-height: 12vh;
+  z-index: 2;
+  
 }
 
 .nav {
-    flex: 5;
-    display: flex;
+  flex: 5;
+  display: flex;
 }
 
 .nav ul.htopnav {
-    position: absolute;
-    top: 2.5em; left: 10em;
-    display: flex;
-    width: 70%;
+  position: absolute;
+  top: 2.5em; left: 10em;
+  display: flex;
+  width: 70%;
 }
 
 .nav ul li {
-    display: flex;
-    margin-left: 2%;
-    width: 100%;
+  display: flex;
+  margin-left: 2%;
+  width: 100%;
 }
 
 .nav ul li a{
-    position: relative;
-    display: flex;
-    width: 100%;
-    flex: 1;
-    max-width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: black;
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
 }
 
 .nav ul li a::before,
 .nav ul li a::after
 {
-    content: '';
-    border-bottom: 4px solid blue;
-    position: absolute;
-    opacity: 0;
-    
+  content: '';
+  border-bottom: 4px solid blue;
+  position: absolute;
+  opacity: 0;
+  
 }
 
 .nav ul li a::before{
-    bottom: -0px;
-    width: 90%;
-    right: 0;
+  bottom: -0px;
+  width: 90%;
+  right: 0;
 }
 
 .nav ul li a::after{
-    bottom: -5px;
-    width: 70%;
-    left: 0;
+  bottom: -5px;
+  width: 70%;
+  left: 0;
 }
 
 .nav ul li a.activo::after,
 .nav ul li a.element1:hover::after{
-    opacity: 1;
-    width: 55%;
-    left: 2em;
+  opacity: 1;
+  width: 55%;
+  left: 2em;
 }
 
 .nav ul li a.activo::after,
 .nav ul li a.element2:hover::after{
-    opacity: 1;
-    width: 95%;
-    left: 0.2em;
+  opacity: 1;
+  width: 95%;
+  left: 0.2em;
 }
 
 .nav ul li a.activo::after,
 .nav ul li a.element2:hover::after{
-    opacity: 1;
-    width: 95%;
-    left: 0.2em;
+  opacity: 1;
+  width: 95%;
+  left: 0.2em;
 }
 
 .nav ul li a.activo::after,
 .nav ul li a.element3:hover::after{
-    opacity: 1;
-    width: 60%;
-    left: 1.8em;
+  opacity: 1;
+  width: 60%;
+  left: 1.8em;
 }
 
 .nav ul li a.activo::after,
 .nav ul li a.element4:hover::after{
-    opacity: 1;
-    width: 60%;
-    left: 1.8em;
+  opacity: 1;
+  width: 60%;
+  left: 1.8em;
 }
 
 .nav ul li a.activo::after,
 .nav ul li a.element5:hover::after{
-    opacity: 1;
-    width: 42%;
-    left: 2.7em;
+  opacity: 1;
+  width: 42%;
+  left: 2.7em;
 }
 
 .nav ul li a.activo::after,
 .nav ul li a.element6:hover::after{
-    opacity: 1;
-    width: 73%;
-    left: 1.3em;
+  opacity: 1;
+  width: 73%;
+  left: 1.3em;
 }
 
 .nav ul li a.list-element2 {
-    top: 0em; left: 10em;
+  top: 0em; left: 10em;
 }
 
 .nav ul li a.list-element {
-    top: 0em; left: 1em;
+  top: 0em; left: 1em;
 }
 
 #img-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 2;
-    width: 20%;
-    margin-top: 3.3%;
-    margin-left: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+  width: 20%;
+  margin-top: 3.3%;
+  margin-left: 2%;
 }
 
 
 
 .nav ul li a.list-element1:hover {
-    text-decoration: none;
-    color: blue;
-    padding: 0em;
+  text-decoration: none;
+  color: blue;
+  padding: 0em;
 }
 
 .nav ul li a.list-element2:hover {
-    text-decoration: none;
-    color: blue;
-    padding: 0em;
+  text-decoration: none;
+  color: blue;
+  padding: 0em;
 }
 
 #img-logo:hover {
-    transform: scale(1.2);
-    -webkit-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
+  transform: scale(1.2);
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
 #main {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
 }
 
 #ubicación {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
 
 .container div.slider-wrapper {
-  display: flex;
-  flex: 1;
-  max-width: 180em;
-  max-height: 80em;
+display: flex;
+flex: 1;
+max-width: 180em;
+max-height: 80em;
 }
 
 #footer {
-    flex: 1; 
+  flex: 1; 
 }
 
 i.menu-icon  {
-    display: none;
+  display: none;
 }
 
 .nav div form.searchbox-form_SearchBox1 {
-    display: none;
+  display: none;
 }
 
 .nav div form div.searchbox-form_SearchBox2{
-    display: block;
+  display: block;
 }
 
 form {
-    position: relative;
-    top: 4.5em; right: 52.5em;
-    margin-bottom: 5em;
+  position: relative;
+  top: 4.5em; right: 52.5em;
+  margin-bottom: 5em;
 }
 
 button {
-    position: fixed;
-    top: 4.6em; left: 57em;
-    writing-mode: horizontal-tb;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: center;
-    align-items: flex-start;
-    cursor: default;
-    box-sizing: border-box;
-    margin: 0em;
-    margin-left: 5em;
-    padding: 1px 6px;
-    border-width: 2px;
-    border-style: outset;
-    border-image: initial;
+  position: fixed;
+  top: 4.6em; left: 57em;
+  writing-mode: horizontal-tb;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  box-sizing: border-box;
+  margin: 0em;
+  margin-left: 5em;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-image: initial;
 }
 
 .button_submit {
-    display: flex;
-    justify-content: center;
-    width: 113px;
-    height: 38px;
-    border: 0;
-    border-radius: 51px;
-    background-color: rgb(36, 36, 198);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    font-weight: 700;
-    font-size: 1em;
-    color: #fff;
+  display: flex;
+  justify-content: center;
+  width: 113px;
+  height: 38px;
+  border: 0;
+  border-radius: 51px;
+  background-color: rgb(36, 36, 198);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-weight: 700;
+  font-size: 1em;
+  color: #fff;
 }
 
 .button {
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 25px;
-    transition: all .2s ease-in-out,padding 0s;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 25px;
+  transition: all .2s ease-in-out,padding 0s;
 }
 
 .align-items-center {
-    align-items: center;
+  align-items: center;
 }
 
 .btn {
-    display: inline-block;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    border: 1px solid transparent;
-    padding: 0.375em 0.75em;
-    font-size: 1em;
-    line-height: 1.5;
+  display: inline-block;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375em 0.75em;
+  font-size: 1em;
+  line-height: 1.5;
 }
 
 button, select {
-    text-transform: none;
+  text-transform: none;
 }
 
 button, input {
-    overflow: visible;
+  overflow: visible;
 }
 
 .searchbox-input {
-    height: 100%;
-    padding-right: 3px;
-    border: 0;
-    background-color: white;
-    font-family: Wallie;
-    font-size: 1em;
-    white-space: nowrap;
+  height: 100%;
+  padding-right: 3px;
+  border: 0;
+  background-color: white;
+  font-family: Wallie;
+  font-size: 1em;
+  white-space: nowrap;
 }
 
 [type=search] {
-    outline-offset: -2px;
+  outline-offset: -2px;
 }
 
 
 input[type="search"] {
-    appearance: auto;
-    box-sizing: border-box;
-    padding: 12px 12px;
+  appearance: auto;
+  box-sizing: border-box;
+  padding: 12px 12px;
 }
 
 input {
-    writing-mode: horizontal-tb;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    -webkit-rtl-ordering: logical;
-    cursor: text;
-    margin: 0em;
-    padding: 1px 2px;
-    border-width: 2px;
-    border-style: inset;
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-    border-image: initial;
+  writing-mode: horizontal-tb;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  margin: 0em;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
 }
 
 
 .searchbox-form_SearchBox2 {
-    height: 38px;
-    border: 1px solid #90a4ae;
-    border-radius: 32px;
-    margin-left: 27%;
-    overflow: hidden;
-    background-color: white;
+  height: 38px;
+  border: 1px solid #90a4ae;
+  border-radius: 32px;
+  margin-left: 27%;
+  overflow: hidden;
+  background-color: white;
 }
 
 .width-100 {
-    margin-left: 0%;
-    width: 400%;
+  margin-left: 0%;
+  width: 400%;
 }
 
 .display-flex {
-    display: flex;
+  display: flex;
 }
 
 i#icon-lupa {
-    position: absolute;
-    left: 90em; top: 2.5em;
-    display: block;
-    cursor: pointer;
+  position: absolute;
+  left: 90em; top: 2.5em;
+  display: block;
+  cursor: pointer;
 }
 
 .slider-wrapper {
-  position: relative;
-  max-width: 180em;
-  max-height: 80em;
-  margin-left: 0em;
+position: relative;
+max-width: 180em;
+max-height: 80em;
+margin-left: 0em;
 }
 
 .slider {
-    display: flex;
-    aspect-ratio: 16 / 9;
-    overflow-x: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 .25rem .5rem #21212126;
-    border-radius: .5rem;
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 .25rem .5rem #21212126;
+  border-radius: .5rem;
 }
 
 .slider img {
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: fill;
-    width: 100%;
-    padding-top: 5em;
-}
-
-.slider video {
   flex: 1 0 100%;
   scroll-snap-align: start;
   object-fit: fill;
@@ -376,353 +368,361 @@ i#icon-lupa {
   padding-top: 5em;
 }
 
+.slider video {
+flex: 1 0 100%;
+scroll-snap-align: start;
+object-fit: fill;
+width: 100%;
+padding-top: 5em;
+}
+
 .slider-nav {
-    display: flex;
-    column-gap: 1rem;
-    position: absolute;
-    top: 50rem;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: 4;
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  top: 50rem;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 4;
 }
 
 .slider-nav a {
-    width: .5rem;
-    height: .5rem;
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: .75;
-    transition: opacity ease 250ms;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: .75;
+  transition: opacity ease 250ms;
 }
 
 .slider-nav a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .slider-nav-flecha {
-    display: flex;
-    column-gap: 1rem;
-    position: relative;
-    width: 100px;
-    height: 50px;
-    margin:0 auto;
-    bottom: 35rem;
-    left: 45%;
-    z-index: 1;
+  display: flex;
+  column-gap: 1rem;
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin:0 auto;
+  bottom: 35rem;
+  left: 45%;
+  z-index: 1;
 }
 
 .flecha1 {
-    margin-left: -34.3em;
+  margin-left: -34.3em;
 }
 
 .animatedColor {
-    color: white;
+  color: white;
 }
 
 .slider-nav-flecha a {
-    width: 100px;
-    height: 50px;
-    margin-top: 50%;
-    font-size:20px; 
+  width: 100px;
+  height: 50px;
+  margin-top: 50%;
+  font-size:20px; 
 }
 
 .slider-nav-flecha a i:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
-  
-  
-  /* Apunta a todos los elementos h3 con clase CSS title */
-  .title {
-    color: black;
-    font-size: 20px;
-    text-align: left;
-    padding-left: 10px;
-    padding-top: 10px;
-  }
-  
-  /* Apunta a todos los parrafos con la clase CSS text */
-  .text {
-    color: black;
-    font-size: 19px;
-    width: 100%;
-    padding: 10px;
-    margin: 0, 20px;
-    text-align: justify;
-  }
 
-  * Mostrar horizontalmente, poner un poco de espacio alrededor */
+
+/* Apunta a todos los elementos h3 con clase CSS title */
+.title {
+  color: black;
+  font-size: 20px;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+/* Apunta a todos los parrafos con la clase CSS text */
+.text {
+  color: black;
+  font-size: 19px;
+  width: 100%;
+  padding: 10px;
+  margin: 0, 20px;
+  text-align: justify;
+}
+
+* Mostrar horizontalmente, poner un poco de espacio alrededor */
 .flex {
-  display: flex;
-  justify-content: space-around;
+display: flex;
+justify-content: space-around;
 }
 
 /* Agregar algo de padding alrededor del contenedor. Alinear el texto al centro */
 .stats {
-  padding: 45px 50px;
-  text-align: center;
+padding: 45px 50px;
+text-align: center;
 }
 
 /* Aplicar margen y ancho */
 .stat {
-  margin: 0 30px;
-  text-align: center;
-  width: 800px;
+margin: 0 30px;
+text-align: center;
+width: 800px;
 }
 
 .stats .fa {
-    color: blue;
+  color: blue;
 }
 
 .testimonial {
-    color: black;
-    padding: 40px;
-    margin-top: 5em;
+  color: black;
+  padding: 40px;
+  margin-top: 5em;
 }
 
 .testimonial img {
-    height: 100%;
-    clip-path: circle();
+  height: 100%;
+  clip-path: circle();
 }
 
 /* Alinea el texto al centro */
 
 h2{
-  position: absolute;
-  top: 40em; left: 22em;
-  text-align: center;
+position: absolute;
+top: 40em; left: 22em;
+text-align: center;
 }
 
 .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 100px;
-  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+}
 
 
 
-  footer.grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 100px;
-  }
-  
-  
-  /* Crear una tarjeta en blanco con sombreado alrededor */
-  .card {
-    padding: 10px;
-    padding-bottom: 50%;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
-                 7px  7px 20px rgba(0, 0, 0, 0.2);
-  }
+footer.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+}
 
-  .card-1 {
-    background-image: url(./img/FONTANERO-SUELDO.jpg);
-    background-size: cover;
-  }
 
-  .card-2 {
-    background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
-    background-size: cover;
-  }
-  
-  .card-3 {
-    background-image: url(./img/cocinero.webp);
-    background-size: cover;
-  }
+/* Crear una tarjeta en blanco con sombreado alrededor */
+.card {
+  padding: 10px;
+  padding-bottom: 50%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
+               7px  7px 20px rgba(0, 0, 0, 0.2);
+}
 
-  .card-4 {
-    background-image: url(./img/funciones-de-un-jardinero.jpg);
-    background-size: cover;
-  }
+#card-1 {
+  background-image: url(./img/FONTANERO-SUELDO.jpg);
+  background-size: cover;
+}
 
-  .card-5 {
-    background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
-    background-size: cover;
-  }
+#card-2 {
+  background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
+  background-size: cover;
+}
 
-  .card-6 {
-    background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
-    background-size: cover;
-  }
+#card-3 {
+  background-image: url(./img/cocinero.webp);
+  background-size: cover;
+}
 
-  .card h3 {
-    background-color: rgba(255, 255, 255, 0.672);
-    padding-bottom: 7%;
-    padding-top: 3%;
-    text-align: center;
-    justify-content: center;
-    width: 105%; height: 100%;
-    position: relative;
-    top: 12.9em; right: 2.6%;
-    border-radius: 10px;
-    font-size: 100%;
-  }
+#card-4 {
+  background-image: url(./img/funciones-de-un-jardinero.jpg);
+  background-size: cover;
+}
 
-  .card p {
-    text-align: center;
-    justify-content: center;
-    width: 105%; height: 100%;
-    position: relative;
-    top: 11em; right: 2.6%;
-    border-radius: 10px;
-    font-size: 100%;
-  }
+#card-5 {
+  background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
+  background-size: cover;
+}
 
-  
+#card-6 {
+  background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
+  background-size: cover;
+}
 
-  .card p:before {
-    opacity: 0;
-  }
+.card h3 {
+  background-color: rgba(255, 255, 255, 0.672);
+  padding-bottom: 7%;
+  padding-top: 3%;
+  text-align: center;
+  justify-content: center;
+  width: 105%; height: 100%;
+  position: relative;
+  top: 12.9em; right: 2.6%;
+  border-radius: 10px;
+  font-size: 100%;
+}
 
-  .card p:hover::before {
-    content: attr(data-content);
-    opacity: 1;
-  }
+.card p {
+  text-align: center;
+  justify-content: center;
+  width: 105%; height: 100%;
+  position: relative;
+  top: 11em; right: 2.6%;
+  border-radius: 10px;
+  font-size: 100%;
+}
+
+
+
+.card p:before {
+  opacity: 0;
+}
+
+.card p:hover::before {
+  content: attr(data-content);
+  opacity: 1;
+}
 
 
 
 /* Add padding around the footer as well */
 
 footer {
-    background-color: black;
-    padding: 20px 10px;
-  }
+  background-color: black;
+  padding: 20px 10px;
+}
 
-  .copyright {
-    color: white;
-  }
+.copyright {
+  color: white;
+}
 
-  iframe  {
-    margin-left: 0%;
-    margin-top: 5%;
-    margin-bottom: -1%;
-    max-height: 30em;
-    max-width: 100em;
-    width: 105%;
-  }
+iframe  {
+  margin-left: 0%;
+  margin-top: 5%;
+  margin-bottom: -1%;
+  max-height: 30em;
+  max-width: 100em;
+  width: 105%;
+}
 
-  .card-7 p {
-    padding: 2em;
-    justify-content: center;
-    text-align: center;
-    width: 50%;
-    font-size: 140%;
-    margin-left: 25%;
-  }
+.card-7 p {
+  padding: 2em;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  font-size: 140%;
+  margin-left: 25%;
+}
 
-  .card-7 h3 {
-    padding-top: 2em;
-    margin-left: 24%;
-    justify-content: center;
-    text-align: center;
-    width: 50%;
-    font-size: 240%;
-  }
+.card-7 h3 {
+  padding-top: 2em;
+  margin-left: 24%;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  font-size: 240%;
+}
 
-  .card-7 {
-    position: relative;
-    width: 100%;
-    height: 10%;
-    background-color: white;
-    margin-left: 0%;
-    margin-top:  0%;
-  }
+.card-7 {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  background-color: white;
+  margin-left: 0%;
+  margin-top:  0%;
+}
 
 
-  
-  /* Sets all link texts to white and puts margin to the left and right */
-  
-  footer a {
-    color: white;
-    margin: 0 10px;
-    position: relative;
-    left: 45em;
-  }
-  
 
-  footer a:hover {
-    color: cornflowerblue;
-  }
+/* Sets all link texts to white and puts margin to the left and right */
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  position: relative;
+  left: 45em;
+}
+
+
+footer a:hover {
+  color: cornflowerblue;
+}
 
 /* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
 */ 
 
 .image {
-    width: 600px;
-    margin-left: 80px;
-  }
+  width: 600px;
+  margin-left: 80px;
+}
 
 /* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
 
 .stats .flex {
-    flex-direction: column;
-  }
+  flex-direction: column;
+}
 
-  .stats {
-    text-align: center;
-  }
+.stats {
+  text-align: center;
+}
 
 /* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
 
 .stat {
-    width: 100%;
-    padding-right: 80px;
-  }
+  width: 100%;
+  padding-right: 80px;
+}
 
 /* Mueve el círculo al centro de la tarjeta  */
 
-  /* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
+/* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
 
 .navbar .flex {
-    flex-direction: column;
-  }
+  flex-direction: column;
+}
 
 
 /* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
 
-  .navbar a:hover {
-    color: white;
-    border-bottom: 2px solid black;
-  }
+.navbar a:hover {
+  color: white;
+  border-bottom: 2px solid black;
+}
 
 
 /* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
 
-  .navbar ul {
-    background: #9867C5;
-    border-radius: 5px;
-    padding: 10px 0;
-  }
+.navbar ul {
+  background: #9867C5;
+  border-radius: 5px;
+  padding: 10px 0;
+}
 
 
 /* Alinear el texto al centro */
 
-  .showcase {
-    height: auto;
-    text-align: center;
-  }
+.showcase {
+  height: auto;
+  text-align: center;
+}
 
 
 /* Reducir el tamaño de la fuente */
 
 .little-info {
-    font-size: 13px;
-  }
+  font-size: 13px;
+}
 
 
 /* Reducir el ancho de la imágen */
 
-  .image {
-    width: 350px;
-    margin-left: 70px;
-  }
+.image {
+  width: 350px;
+  margin-left: 70px;
+}
 
-  .stat {
-    margin-bottom: 40px;
-  }
+.stat {
+  margin-bottom: 40px;
+}
 
 
 /* Mover el círculo una vez más */
@@ -730,2236 +730,18 @@ footer {
 
 
 @keyframes arrow {
-    0% {
-    transform: translate(0px, 50px);
-    }
-    50% {
-    transform: translate(0px, 60px);
-    }
-    100% {
-    transform: translate(0px, 50px);
-    }
-    }
+  0% {
+  transform: translate(0px, 50px);
+  }
+  50% {
+  transform: translate(0px, 60px);
+  }
+  100% {
+  transform: translate(0px, 50px);
+  }
+  }
 
-    @media screen and (min-width: 280px) and (max-width: 300px) {
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-    
-      html, body {
-        width: 100%;
-        overflow-x: hidden;
-      }
-    
-      body {
-        width: 100%;
-      }
-    
-      header {
-        height: fit-content;
-        overflow-x: hidden;
-        width: 100%;
-      }
-    
-      img#img-logo {
-        position: absolute;
-        top: 2.5em; left: 8em;
-        width: 8em;
-        height: 2em;
-        margin-left: 0em;
-      }
-    
-      i.menu-icon {
-        display: block;
-        cursor: pointer;
-        position: relative;
-        top:3.5em; left: 2em;
-        width: 100%;
-      }
-    
-      .nav {
-        width: 100%;
-        margin-bottom: 7em;
-      }
-    
-      .nav ul {
-        position: relative;
-        left: -100%;
-        margin-bottom: 26em;
-        margin-top: 4em;
-      }
-    
-      .nav ul.htopnav {
-        display: none;
-        width: 100%;
-      }
-    
-      .nav ul li {
-        position: relative;
-        top: 0em; left: 0em;
-        margin-bottom: 3em;
-      }
-    
-      .nav ul li a {
-        display: block;
-        margin-bottom: 1em;
-        padding: 20px;
-        border-bottom: 1px solid black;
-        margin-left: 13em;
-        font-size: 80%;
-        float: none;
-      }
-    
-      .nav ul li a::before,
-    .nav ul li a::after
-    {
-        content: '';
-        border-bottom: none;
-        position: absolute;
-        opacity: 0;
-        
-    }
-    
-    
-    
-    .nav ul li a.element1 {
-      display: none;
-    }
-    
-    .nav ul li a.element2 {
-      display: none;
-    }
-    
-    .nav ul li a.list {
-      width: 40em;
-    }
-    
-      .nav ul li a.list-element2 {
-        margin-left: -11em;
-        margin-bottom: 1em;
-      }
-    
-      #img-logo:hover {
-        transform: scale(1.2);
-        -webkit-transition: all 500ms ease;
-        -o-transition: all 500ms ease;
-        transition: all 500ms ease;
-    }
-    
-    #main {
-        flex: 1;
-        display: flex;
-        flex-direction: row;
-    }
-    
-    #ubicación {
-        display: flex;
-        flex: 1;
-    }
-    
-    .container div.slider-wrapper {
-      display: none;
-    }
-    
-    #footer {
-        flex: 1; 
-    }
-    
-    .slider {
-        display: none,
-    }
-    
-    .slider-wrapper {
-      display: none;
-    }
-    
-      /* Apunta a todos los elementos h3 con clase CSS title */
-      .title {
-        color: black;
-        font-size: 20px;
-        text-align: left;
-        padding-left: 10px;
-        padding-top: 10px;
-      }
-      
-      /* Apunta a todos los parrafos con la clase CSS text */
-      .text {
-        color: black;
-        font-size: 19px;
-        width: 100%;
-        padding: 10px;
-        margin: 0, 20px;
-        text-align: justify;
-      }
-    
-      * Mostrar horizontalmente, poner un poco de espacio alrededor */
-    .flex {
-      display: flex;
-      justify-content: space-around;
-    }
-    
-    /* Agregar algo de padding alrededor del contenedor. Alinear el texto al centro */
-    .stats {
-      padding: 45px 50px;
-      text-align: center;
-    }
-    
-    /* Aplicar margen y ancho */
-    .stat {
-      margin: 0 30px;
-      text-align: center;
-      width: 800px;
-    }
-    
-    .stats .fa {
-        color: blue;
-    }
-    
-    .testimonial {
-        color: black;
-        padding: 40px;
-        margin-top: 15em;
-    }
-    
-    .testimonial img {
-        height: 100%;
-        clip-path: circle();
-    }
-    
-    /* Alinea el texto al centro */
-    
-    h2{
-      position: absolute;
-      top: 10em; left: 1em;
-      font-size: 100%;
-      text-align: center;
-    }
-    
-    .grid-3 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 100px;
-      }
-    
-      footer a {
-        color: white;
-        margin: 0 10px;
-        position: relative;
-        left: -20em;
-      }
-    
-    div.testimonial div.card {
-      display: none;
-    }
-    
-      footer.grid-3 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 100px;
-      }
-    
-      
-      
-      
-      /* Crear una tarjeta en blanco con sombreado alrededor */
-      .card {
-        padding: 10px;
-        padding-bottom: 50%;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
-                     7px  7px 20px rgba(0, 0, 0, 0.2);
-      }
-    
-      .card-1 {
-        background-image: url(./img/FONTANERO-SUELDO.jpg);
-        background-size: cover;
-      }
-    
-      .card-2 {
-        background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
-        background-size: cover;
-      }
-      
-      .card-3 {
-        background-image: url(./img/cocinero.webp);
-        background-size: cover;
-      }
-    
-      .card-4 {
-        background-image: url(./img/funciones-de-un-jardinero.jpg);
-        background-size: cover;
-      }
-    
-      .card-5 {
-        background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
-        background-size: cover;
-      }
-    
-      .card-6 {
-        background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
-        background-size: cover;
-      }
-    
-      .card h3 {
-        background-color: rgba(255, 255, 255, 0.672);
-        padding-bottom: 7%;
-        padding-top: 3%;
-        text-align: center;
-        justify-content: center;
-        width: 110%; height: 100%;
-        position: relative;
-        top: 9.7em; right: 5%;
-        border-radius: 10px;
-        font-size: 70%;
-      }
-    
-      .card p {
-        text-align: center;
-        justify-content: center;
-        width: 110%; height: 100%;
-        position: relative;
-        top: 5.6em; right: 2.6%;
-        border-radius: 10px;
-        font-size: 80%;
-      }
-    
-      
-    
-      .card p:before {
-        opacity: 0;
-      }
-    
-      .card p:hover::before {
-        content: attr(data-content);
-        opacity: 1;
-      }
-    
-    
-    
-    /* Add padding around the footer as well */
-    
-    footer {
-        background-color: black;
-        padding: 20px 10px;
-        margin-top: 120%;
-      }
-    
-      .copyright {
-        color: white;
-        font-size: 70%;
-        margin-top: 2em;
-      }
-    
-      iframe  {
-        margin-left: 0%;
-        margin-top: 15%;
-        margin-bottom: -121.4%;
-        padding-bottom: -20%;
-        max-height: 20em;
-        max-width: 100em;
-        width: 100%;
-      }
-    
-      .card-7 p {
-        padding: 2em;
-        justify-content: center;
-        text-align: center;
-        width: 80%;
-        font-size: 100%;
-        margin-left: 8%;
-      }
-    
-      .card-7 h3 {
-        padding-top: 1em;
-        margin-top: -5em;
-        margin-left: 0%;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-        font-size: 110%;
-      }
-    
-      .card-7 {
-        position: relative;
-        width: 100%;
-        height: 10%;
-        background-color: white;
-        margin-left: 0%;
-        margin-top:  10%;
-      }
-    
-    
-      
-      /* Sets all link texts to white and puts margin to the left and right */
-      
-      footer a {
-        color: white;
-        margin: 0 10px;
-        position: relative;
-        left: 0em;
-        margin: 1.5em;
-      }
-      
-    
-      footer a:hover {
-        color: cornflowerblue;
-      }
-    
-    /* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
-    */ 
-    
-    .image {
-        width: 600px;
-        margin-left: 80px;
-      }
-    
-    /* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
-    
-    .stats .flex {
-        flex-direction: column;
-      }
-    
-      .stats {
-        text-align: center;
-      }
-    
-    /* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
-    
-    .stat {
-        width: 100%;
-        padding-right: 80px;
-      }
-    
-    /* Mueve el círculo al centro de la tarjeta  */
-    
-      /* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
-    
-    .navbar .flex {
-        flex-direction: column;
-      }
-    
-    
-    /* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
-    
-      .navbar a:hover {
-        color: white;
-        border-bottom: 2px solid black;
-      }
-    
-    
-    /* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
-    
-      .navbar ul {
-        background: #9867C5;
-        border-radius: 5px;
-        padding: 10px 0;
-      }
-    
-    
-    /* Alinear el texto al centro */
-    
-      .showcase {
-        height: auto;
-        text-align: center;
-      }
-    
-    
-    /* Reducir el tamaño de la fuente */
-    
-    .little-info {
-        font-size: 13px;
-      }
-    
-    
-    /* Reducir el ancho de la imágen */
-    
-      .image {
-        width: 350px;
-        margin-left: 70px;
-      }
-    
-      .stat {
-        margin-bottom: 40px;
-      }
-    
-    }
-
-
-    @media screen and (min-width: 300px) and (max-width: 400px) {
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-    
-      html, body {
-        width: 100%;
-        overflow-x: hidden;
-      }
-    
-      body {
-        width: 100%;
-      }
-    
-      header {
-        height: fit-content;
-        overflow-x: hidden;
-        width: 100%;
-      }
-    
-      img#img-logo {
-        position: absolute;
-        top: 2.5em; left: 10em;
-        width: 8em;
-        height: 2em;
-        margin-left: 0em;
-      }
-    
-      i.menu-icon {
-        display: block;
-        cursor: pointer;
-        position: relative;
-        top:3.5em; left: 2em;
-        width: 100%;
-      }
-    
-      .nav {
-        width: 100%;
-        margin-bottom: 7em;
-      }
-    
-      .nav ul {
-        position: relative;
-        left: -100%;
-        margin-bottom: 26em;
-        margin-top: 4em;
-      }
-    
-      .nav ul.htopnav {
-        display: none;
-        width: 100%;
-      }
-    
-      .nav ul li {
-        position: relative;
-        top: 0em; left: 0em;
-        margin-bottom: 3em;
-      }
-    
-      .nav ul li a {
-        display: block;
-        margin-bottom: 1em;
-        padding: 20px;
-        border-bottom: 1px solid black;
-        margin-left: 13em;
-        font-size: 80%;
-        float: none;
-      }
-    
-      .nav ul li a::before,
-    .nav ul li a::after
-    {
-        content: '';
-        border-bottom: none;
-        position: absolute;
-        opacity: 0;
-        
-    }
-    
-    
-    
-    .nav ul li a.element1 {
-      display: none;
-    }
-    
-    .nav ul li a.element2 {
-      display: none;
-    }
-    
-    .nav ul li a.list {
-      width: 40em;
-    }
-    
-      .nav ul li a.list-element2 {
-        margin-left: -11em;
-        margin-bottom: 1em;
-      }
-    
-      #img-logo:hover {
-        transform: scale(1.2);
-        -webkit-transition: all 500ms ease;
-        -o-transition: all 500ms ease;
-        transition: all 500ms ease;
-    }
-    
-    #main {
-        flex: 1;
-        display: flex;
-        flex-direction: row;
-    }
-    
-    #ubicación {
-        display: flex;
-        flex: 1;
-    }
-    
-    .container div.slider-wrapper {
-      display: none;
-    }
-    
-    #footer {
-        flex: 1; 
-    }
-    
-    .slider {
-        display: none,
-    }
-    
-    .slider-wrapper {
-      display: none;
-    }
-    
-      /* Apunta a todos los elementos h3 con clase CSS title */
-      .title {
-        color: black;
-        font-size: 20px;
-        text-align: left;
-        padding-left: 10px;
-        padding-top: 10px;
-      }
-      
-      /* Apunta a todos los parrafos con la clase CSS text */
-      .text {
-        color: black;
-        font-size: 19px;
-        width: 100%;
-        padding: 10px;
-        margin: 0, 20px;
-        text-align: justify;
-      }
-    
-      * Mostrar horizontalmente, poner un poco de espacio alrededor */
-    .flex {
-      display: flex;
-      justify-content: space-around;
-    }
-    
-    /* Agregar algo de padding alrededor del contenedor. Alinear el texto al centro */
-    .stats {
-      padding: 45px 50px;
-      text-align: center;
-    }
-    
-    /* Aplicar margen y ancho */
-    .stat {
-      margin: 0 30px;
-      text-align: center;
-      width: 800px;
-    }
-    
-    .stats .fa {
-        color: blue;
-    }
-    
-    .testimonial {
-        color: black;
-        padding: 40px;
-        margin-top: 15em;
-    }
-    
-    .testimonial img {
-        height: 100%;
-        clip-path: circle();
-    }
-    
-    /* Alinea el texto al centro */
-    
-    h2{
-      position: absolute;
-      top: 10em; left: 1em;
-      font-size: 100%;
-      text-align: center;
-    }
-    
-    .grid-3 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 100px;
-      }
-    
-      footer a {
-        color: white;
-        margin: 0 10px;
-        position: relative;
-        left: 0em;
-      }
-    
-    div.testimonial div.card {
-      display: none;
-    }
-    
-      footer.grid-3 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 100px;
-      }
-    
-      
-      
-      
-      /* Crear una tarjeta en blanco con sombreado alrededor */
-      .card {
-        padding: 10px;
-        padding-bottom: 50%;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
-                     7px  7px 20px rgba(0, 0, 0, 0.2);
-      }
-    
-      .card-1 {
-        background-image: url(./img/FONTANERO-SUELDO.jpg);
-        background-size: cover;
-      }
-    
-      .card-2 {
-        background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
-        background-size: cover;
-      }
-      
-      .card-3 {
-        background-image: url(./img/cocinero.webp);
-        background-size: cover;
-      }
-    
-      .card-4 {
-        background-image: url(./img/funciones-de-un-jardinero.jpg);
-        background-size: cover;
-      }
-    
-      .card-5 {
-        background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
-        background-size: cover;
-      }
-    
-      .card-6 {
-        background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
-        background-size: cover;
-      }
-    
-      .card h3 {
-        background-color: rgba(255, 255, 255, 0.672);
-        padding-bottom: 7%;
-        padding-top: 3%;
-        text-align: center;
-        justify-content: center;
-        width: 110%; height: 100%;
-        position: relative;
-        top: 9.7em; right: 5%;
-        border-radius: 10px;
-        font-size: 70%;
-      }
-    
-      .card p {
-        text-align: center;
-        justify-content: center;
-        width: 110%; height: 100%;
-        position: relative;
-        top: 5.6em; right: 2.6%;
-        border-radius: 10px;
-        font-size: 80%;
-      }
-    
-      
-    
-      .card p:before {
-        opacity: 0;
-      }
-    
-      .card p:hover::before {
-        content: attr(data-content);
-        opacity: 1;
-      }
-    
-    
-    
-    /* Add padding around the footer as well */
-    
-    footer {
-        background-color: black;
-        padding: 20px 10px;
-        margin-top: 120%;
-      }
-    
-      .copyright {
-        color: white;
-        font-size: 70%;
-        margin-top: 2em;
-      }
-    
-      iframe  {
-        margin-left: 0%;
-        margin-top: 15%;
-        margin-bottom: -121.4%;
-        padding-bottom: -20%;
-        max-height: 20em;
-        max-width: 100em;
-        width: 100%;
-      }
-    
-      .card-7 p {
-        padding: 2em;
-        justify-content: center;
-        text-align: center;
-        width: 80%;
-        font-size: 100%;
-        margin-left: 8%;
-      }
-    
-      .card-7 h3 {
-        padding-top: 1em;
-        margin-top: -5em;
-        margin-left: 0%;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-        font-size: 110%;
-      }
-    
-      .card-7 {
-        position: relative;
-        width: 100%;
-        height: 10%;
-        background-color: white;
-        margin-left: 0%;
-        margin-top:  10%;
-      }
-    
-    
-      
-      /* Sets all link texts to white and puts margin to the left and right */
-      
-      footer a {
-        color: white;
-        margin: 0 10px;
-        position: relative;
-        left: 5em;
-        margin: 1.5em;
-      }
-      
-    
-      footer a:hover {
-        color: cornflowerblue;
-      }
-    
-    /* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
-    */ 
-    
-    .image {
-        width: 600px;
-        margin-left: 80px;
-      }
-    
-    /* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
-    
-    .stats .flex {
-        flex-direction: column;
-      }
-    
-      .stats {
-        text-align: center;
-      }
-    
-    /* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
-    
-    .stat {
-        width: 100%;
-        padding-right: 80px;
-      }
-    
-    /* Mueve el círculo al centro de la tarjeta  */
-    
-      /* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
-    
-    .navbar .flex {
-        flex-direction: column;
-      }
-    
-    
-    /* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
-    
-      .navbar a:hover {
-        color: white;
-        border-bottom: 2px solid black;
-      }
-    
-    
-    /* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
-    
-      .navbar ul {
-        background: #9867C5;
-        border-radius: 5px;
-        padding: 10px 0;
-      }
-    
-    
-    /* Alinear el texto al centro */
-    
-      .showcase {
-        height: auto;
-        text-align: center;
-      }
-    
-    
-    /* Reducir el tamaño de la fuente */
-    
-    .little-info {
-        font-size: 13px;
-      }
-    
-    
-    /* Reducir el ancho de la imágen */
-    
-      .image {
-        width: 350px;
-        margin-left: 70px;
-      }
-    
-      .stat {
-        margin-bottom: 40px;
-      }
-    
-    }
-
-    
-    @media screen and (min-width: 400px) and (max-width: 412px) {
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-    
-      html, body {
-        width: 100%;
-        overflow-x: hidden;
-      }
-    
-      body {
-        width: 100%;
-      }
-    
-      header {
-        height: fit-content;
-        overflow-x: hidden;
-        width: 100%;
-      }
-    
-      img#img-logo {
-        position: absolute;
-        top: 2.5em; left: 10em;
-        width: 8em;
-        height: 2em;
-        margin-left: 0em;
-      }
-    
-      i.menu-icon {
-        display: block;
-        cursor: pointer;
-        position: relative;
-        top:3.5em; left: 2em;
-        width: 100%;
-      }
-    
-      .nav {
-        width: 100%;
-        margin-bottom: 7em;
-      }
-    
-      .nav ul {
-        position: relative;
-        left: -100%;
-        margin-bottom: 26em;
-        margin-top: 4em;
-      }
-    
-      .nav ul.htopnav {
-        display: none;
-        width: 100%;
-      }
-    
-      .nav ul li {
-        position: relative;
-        top: 0em; left: 0em;
-        margin-bottom: 3em;
-      }
-    
-      .nav ul li a {
-        display: block;
-        margin-bottom: 1em;
-        padding: 20px;
-        border-bottom: 1px solid black;
-        margin-left: 13em;
-        font-size: 80%;
-        float: none;
-      }
-    
-      .nav ul li a::before,
-    .nav ul li a::after
-    {
-        content: '';
-        border-bottom: none;
-        position: absolute;
-        opacity: 0;
-        
-    }
-    
-    
-    
-    .nav ul li a.element1 {
-      display: none;
-    }
-    
-    .nav ul li a.element2 {
-      display: none;
-    }
-    
-    .nav ul li a.list {
-      width: 40em;
-    }
-    
-      .nav ul li a.list-element2 {
-        margin-left: -11em;
-        margin-bottom: 1em;
-      }
-    
-      #img-logo:hover {
-        transform: scale(1.2);
-        -webkit-transition: all 500ms ease;
-        -o-transition: all 500ms ease;
-        transition: all 500ms ease;
-    }
-    
-    #main {
-        flex: 1;
-        display: flex;
-        flex-direction: row;
-    }
-    
-    #ubicación {
-        display: flex;
-        flex: 1;
-    }
-    
-    .container div.slider-wrapper {
-      display: none;
-    }
-    
-    #footer {
-        flex: 1; 
-    }
-    
-    .slider {
-        display: none,
-    }
-    
-    .slider-wrapper {
-      display: none;
-    }
-    
-      /* Apunta a todos los elementos h3 con clase CSS title */
-      .title {
-        color: black;
-        font-size: 20px;
-        text-align: left;
-        padding-left: 10px;
-        padding-top: 10px;
-      }
-      
-      /* Apunta a todos los parrafos con la clase CSS text */
-      .text {
-        color: black;
-        font-size: 19px;
-        width: 100%;
-        padding: 10px;
-        margin: 0, 20px;
-        text-align: justify;
-      }
-    
-      * Mostrar horizontalmente, poner un poco de espacio alrededor */
-    .flex {
-      display: flex;
-      justify-content: space-around;
-    }
-    
-    /* Agregar algo de padding alrededor del contenedor. Alinear el texto al centro */
-    .stats {
-      padding: 45px 50px;
-      text-align: center;
-    }
-    
-    /* Aplicar margen y ancho */
-    .stat {
-      margin: 0 30px;
-      text-align: center;
-      width: 800px;
-    }
-    
-    .stats .fa {
-        color: blue;
-    }
-    
-    .testimonial {
-        color: black;
-        padding: 40px;
-        margin-top: 15em;
-    }
-    
-    .testimonial img {
-        height: 100%;
-        clip-path: circle();
-    }
-    
-    /* Alinea el texto al centro */
-    
-    h2{
-      position: absolute;
-      top: 10em; left: 1em;
-      font-size: 100%;
-      text-align: center;
-    }
-    
-    .grid-3 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 100px;
-      }
-    
-      footer a {
-        color: white;
-        margin: 0 10px;
-        position: relative;
-        left: 0em;
-      }
-    
-    div.testimonial div.card {
-      display: none;
-    }
-    
-      footer.grid-3 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 100px;
-      }
-    
-      
-      
-      
-      /* Crear una tarjeta en blanco con sombreado alrededor */
-      .card {
-        padding: 10px;
-        padding-bottom: 50%;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
-                     7px  7px 20px rgba(0, 0, 0, 0.2);
-      }
-    
-      .card-1 {
-        background-image: url(./img/FONTANERO-SUELDO.jpg);
-        background-size: cover;
-      }
-    
-      .card-2 {
-        background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
-        background-size: cover;
-      }
-      
-      .card-3 {
-        background-image: url(./img/cocinero.webp);
-        background-size: cover;
-      }
-    
-      .card-4 {
-        background-image: url(./img/funciones-de-un-jardinero.jpg);
-        background-size: cover;
-      }
-    
-      .card-5 {
-        background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
-        background-size: cover;
-      }
-    
-      .card-6 {
-        background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
-        background-size: cover;
-      }
-    
-      .card h3 {
-        background-color: rgba(255, 255, 255, 0.672);
-        padding-bottom: 7%;
-        padding-top: 3%;
-        text-align: center;
-        justify-content: center;
-        width: 110%; height: 100%;
-        position: relative;
-        top: 9.7em; right: 5%;
-        border-radius: 10px;
-        font-size: 70%;
-      }
-    
-      .card p {
-        text-align: center;
-        justify-content: center;
-        width: 110%; height: 100%;
-        position: relative;
-        top: 5.6em; right: 2.6%;
-        border-radius: 10px;
-        font-size: 80%;
-      }
-    
-      
-    
-      .card p:before {
-        opacity: 0;
-      }
-    
-      .card p:hover::before {
-        content: attr(data-content);
-        opacity: 1;
-      }
-    
-    
-    
-    /* Add padding around the footer as well */
-    
-    footer {
-        background-color: black;
-        padding: 20px 10px;
-        margin-top: 120%;
-      }
-    
-      .copyright {
-        color: white;
-        font-size: 70%;
-        margin-top: 2em;
-      }
-    
-      iframe  {
-        margin-left: 0%;
-        margin-top: 15%;
-        margin-bottom: -121.4%;
-        padding-bottom: -20%;
-        max-height: 20em;
-        max-width: 100em;
-        width: 100%;
-      }
-    
-      .card-7 p {
-        padding: 2em;
-        justify-content: center;
-        text-align: center;
-        width: 80%;
-        font-size: 100%;
-        margin-left: 8%;
-      }
-    
-      .card-7 h3 {
-        padding-top: 1em;
-        margin-top: -5em;
-        margin-left: 0%;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-        font-size: 110%;
-      }
-    
-      .card-7 {
-        position: relative;
-        width: 100%;
-        height: 10%;
-        background-color: white;
-        margin-left: 0%;
-        margin-top:  10%;
-      }
-    
-    
-      
-      /* Sets all link texts to white and puts margin to the left and right */
-      
-      footer a {
-        color: white;
-        margin: 0 10px;
-        position: relative;
-        left: 5em;
-        margin: 1.5em;
-      }
-      
-    
-      footer a:hover {
-        color: cornflowerblue;
-      }
-    
-    /* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
-    */ 
-    
-    .image {
-        width: 600px;
-        margin-left: 80px;
-      }
-    
-    /* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
-    
-    .stats .flex {
-        flex-direction: column;
-      }
-    
-      .stats {
-        text-align: center;
-      }
-    
-    /* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
-    
-    .stat {
-        width: 100%;
-        padding-right: 80px;
-      }
-    
-    /* Mueve el círculo al centro de la tarjeta  */
-    
-      /* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
-    
-    .navbar .flex {
-        flex-direction: column;
-      }
-    
-    
-    /* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
-    
-      .navbar a:hover {
-        color: white;
-        border-bottom: 2px solid black;
-      }
-    
-    
-    /* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
-    
-      .navbar ul {
-        background: #9867C5;
-        border-radius: 5px;
-        padding: 10px 0;
-      }
-    
-    
-    /* Alinear el texto al centro */
-    
-      .showcase {
-        height: auto;
-        text-align: center;
-      }
-    
-    
-    /* Reducir el tamaño de la fuente */
-    
-    .little-info {
-        font-size: 13px;
-      }
-    
-    
-    /* Reducir el ancho de la imágen */
-    
-      .image {
-        width: 350px;
-        margin-left: 70px;
-      }
-    
-      .stat {
-        margin-bottom: 40px;
-      }
-    
-    }
-
-    @media screen and (min-width: 412px) and (max-width: 540px) {
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-    
-      html, body {
-        width: 100%;
-        overflow-x: hidden;
-      }
-    
-      body {
-        width: 100%;
-      }
-    
-      header {
-        height: fit-content;
-        overflow-x: hidden;
-        width: 100%;
-      }
-    
-      img#img-logo {
-        position: absolute;
-        top: 2.2em; left: 12em;
-        width: 8em;
-        height: 2em;
-        margin-left: 0em;
-      }
-    
-      i.menu-icon {
-        display: block;
-        cursor: pointer;
-        position: relative;
-        top:3.5em; left: 2em;
-        width: 100%;
-      }
-    
-      .nav {
-        width: 100%;
-        margin-bottom: 7em;
-      }
-    
-      .nav ul {
-        position: relative;
-        left: -100%;
-        margin-bottom: 26em;
-        margin-top: 4em;
-      }
-    
-      .nav ul.htopnav {
-        display: none;
-        width: 100%;
-      }
-    
-      .nav ul li {
-        position: relative;
-        top: 0em; left: 0em;
-        margin-bottom: 3em;
-      }
-    
-      .nav ul li a {
-        display: block;
-        margin-bottom: 1em;
-        padding: 20px;
-        border-bottom: 1px solid black;
-        margin-left: 13em;
-        font-size: 100%;
-        float: none;
-      }
-    
-      .nav ul li a::before,
-    .nav ul li a::after
-    {
-        content: '';
-        border-bottom: none;
-        position: absolute;
-        opacity: 0;
-        
-    }
-    
-    
-    
-    .nav ul li a.element1 {
-      display: none;
-    }
-    
-    .nav ul li a.element2 {
-      display: none;
-    }
-    
-    .nav ul li a.list {
-      width: 43em;
-    }
-    
-      .nav ul li a.list-element2 {
-        margin-left: -11em;
-        margin-bottom: 1em;
-      }
-    
-      #img-logo:hover {
-        transform: scale(1.2);
-        -webkit-transition: all 500ms ease;
-        -o-transition: all 500ms ease;
-        transition: all 500ms ease;
-    }
-    
-    #main {
-        flex: 1;
-        display: flex;
-        flex-direction: row;
-    }
-    
-    #ubicación {
-        display: flex;
-        flex: 1;
-    }
-    
-    .container div.slider-wrapper {
-      display: none;
-    }
-    
-    #footer {
-        flex: 1; 
-    }
-    
-    .slider {
-        display: none,
-    }
-    
-    .slider-wrapper {
-      display: none;
-    }
-    
-      /* Apunta a todos los elementos h3 con clase CSS title */
-      .title {
-        color: black;
-        font-size: 20px;
-        text-align: left;
-        padding-left: 10px;
-        padding-top: 10px;
-      }
-      
-      /* Apunta a todos los parrafos con la clase CSS text */
-      .text {
-        color: black;
-        font-size: 19px;
-        width: 100%;
-        padding: 10px;
-        margin: 0, 20px;
-        text-align: justify;
-      }
-    
-      * Mostrar horizontalmente, poner un poco de espacio alrededor */
-    .flex {
-      display: flex;
-      justify-content: space-around;
-    }
-    
-    /* Agregar algo de padding alrededor del contenedor. Alinear el texto al centro */
-    .stats {
-      padding: 45px 50px;
-      text-align: center;
-    }
-    
-    /* Aplicar margen y ancho */
-    .stat {
-      margin: 0 30px;
-      text-align: center;
-      width: 800px;
-    }
-    
-    .stats .fa {
-        color: blue;
-    }
-    
-    .testimonial {
-        color: black;
-        padding: 40px;
-        margin-top: 15em;
-    }
-    
-    .testimonial img {
-        height: 100%;
-        clip-path: circle();
-    }
-    
-    /* Alinea el texto al centro */
-    
-    h2{
-      position: absolute;
-      top: 8em; left: 2em;
-      font-size: 140%;
-      text-align: center;
-    }
-    
-    .grid-3 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 100px;
-      }
-    
-    div.testimonial div.card {
-      display: none;
-    }
-    
-      footer.grid-3 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 100px;
-      }
-    
-      
-      
-      
-      /* Crear una tarjeta en blanco con sombreado alrededor */
-      .card {
-        padding: 10px;
-        padding-bottom: 50%;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
-                     7px  7px 20px rgba(0, 0, 0, 0.2);
-      }
-    
-      .card-1 {
-        background-image: url(./img/FONTANERO-SUELDO.jpg);
-        background-size: cover;
-      }
-    
-      .card-2 {
-        background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
-        background-size: cover;
-      }
-      
-      .card-3 {
-        background-image: url(./img/cocinero.webp);
-        background-size: cover;
-      }
-    
-      .card-4 {
-        background-image: url(./img/funciones-de-un-jardinero.jpg);
-        background-size: cover;
-      }
-    
-      .card-5 {
-        background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
-        background-size: cover;
-      }
-    
-      .card-6 {
-        background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
-        background-size: cover;
-      }
-    
-      .card h3 {
-        background-color: rgba(255, 255, 255, 0.672);
-        padding-bottom: 7%;
-        padding-top: 3%;
-        text-align: center;
-        justify-content: center;
-        width: 110%; height: 100%;
-        position: relative;
-        top: 9.7em; right: 5%;
-        border-radius: 10px;
-        font-size: 70%;
-      }
-    
-      .card p {
-        text-align: center;
-        justify-content: center;
-        width: 110%; height: 100%;
-        position: relative;
-        top: 5.6em; right: 2.6%;
-        border-radius: 10px;
-        font-size: 80%;
-      }
-    
-      
-    
-      .card p:before {
-        opacity: 0;
-      }
-    
-      .card p:hover::before {
-        content: attr(data-content);
-        opacity: 1;
-      }
-    
-    
-    
-    /* Add padding around the footer as well */
-    
-    footer {
-        background-color: black;
-        padding: 20px 10px;
-        margin-top: 120%;
-      }
-    
-      .copyright {
-        color: white;
-        font-size: 70%;
-        margin-top: 2em;
-      }
-    
-      iframe  {
-        margin-left: 0%;
-        margin-top: 15%;
-        margin-bottom: -121.4%;
-        padding-bottom: -20%;
-        max-height: 30em;
-        max-width: 100em;
-        width: 100%;
-      }
-    
-      .card-7 p {
-        padding: 2em;
-        justify-content: center;
-        text-align: center;
-        width: 80%;
-        font-size: 120%;
-        margin-left: 8%;
-      }
-    
-      .card-7 h3 {
-        padding-top: 1em;
-        margin-top: -5em;
-        margin-left: 0%;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-        font-size: 150%;
-      }
-    
-      .card-7 {
-        position: relative;
-        width: 100%;
-        height: 10%;
-        background-color: white;
-        margin-left: 0%;
-        margin-top:  25%;
-      }
-    
-    
-      
-      /* Sets all link texts to white and puts margin to the left and right */
-      
-      footer a {
-        color: white;
-        margin: 0 10px;
-        position: relative;
-        left: 8em;
-        margin: 1.5em;
-      }
-      
-    
-      footer a:hover {
-        color: cornflowerblue;
-      }
-    
-    /* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
-    */ 
-    
-    .image {
-        width: 600px;
-        margin-left: 80px;
-      }
-    
-    /* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
-    
-    .stats .flex {
-        flex-direction: column;
-      }
-    
-      .stats {
-        text-align: center;
-      }
-    
-    /* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
-    
-    .stat {
-        width: 100%;
-        padding-right: 80px;
-      }
-    
-    /* Mueve el círculo al centro de la tarjeta  */
-    
-      /* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
-    
-    .navbar .flex {
-        flex-direction: column;
-      }
-    
-    
-    /* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
-    
-      .navbar a:hover {
-        color: white;
-        border-bottom: 2px solid black;
-      }
-    
-    
-    /* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
-    
-      .navbar ul {
-        background: #9867C5;
-        border-radius: 5px;
-        padding: 10px 0;
-      }
-    
-    
-    /* Alinear el texto al centro */
-    
-      .showcase {
-        height: auto;
-        text-align: center;
-      }
-    
-    
-    /* Reducir el tamaño de la fuente */
-    
-    .little-info {
-        font-size: 13px;
-      }
-    
-    
-    /* Reducir el ancho de la imágen */
-    
-      .image {
-        width: 350px;
-        margin-left: 70px;
-      }
-    
-      .stat {
-        margin-bottom: 40px;
-      }
-    
-    }
-    
-    @media screen and (min-width: 540px) and (max-width:780px) {
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-    
-      html, body {
-        width: 100%;
-        overflow-x: hidden;
-      }
-    
-      body {
-        width: 100%;
-      }
-    
-      header {
-        height: fit-content;
-        overflow-x: hidden;
-        width: 100%;
-      }
-    
-      img#img-logo {
-        position: absolute;
-        top: 1.5em; left: 19em;
-        width: 10em;
-        height: 2.5em;
-        margin-left: 0em;
-      }
-    
-      i.menu-icon {
-        display: block;
-        cursor: pointer;
-        position: relative;
-        top:4em; left: 2em;
-        width: 100%;
-      }
-    
-      .nav {
-        width: 100%;
-        margin-bottom: 7em;
-      }
-    
-      .nav ul {
-        position: relative;
-        left: -100%;
-        margin-bottom: 26em;
-        margin-top: 7em;
-      }
-    
-      .nav ul.htopnav {
-        display: none;
-        width: 100%;
-      }
-    
-      .nav ul li {
-        position: relative;
-        top: 0em; left: 0em;
-        margin-bottom: 3em;
-      }
-    
-      .nav ul li a {
-        display: block;
-        margin-bottom: 1em;
-        padding: 20px;
-        border-bottom: 1px solid black;
-        margin-left: 13em;
-        font-size: 90%;
-        float: none;
-      }
-    
-      .nav ul li a::before,
-    .nav ul li a::after
-    {
-        content: '';
-        border-bottom: none;
-        position: absolute;
-        opacity: 0;
-        
-    }
-    
-    
-    
-    .nav ul li a.element1 {
-      display: none;
-    }
-    
-    .nav ul li a.element2 {
-      display: none;
-    }
-    
-    .nav ul li a.list {
-      width: 58em;
-    }
-    
-      .nav ul li a.list-element2 {
-        margin-left: -11em;
-        margin-bottom: 1em;
-      }
-    
-      #img-logo:hover {
-        transform: scale(1.2);
-        -webkit-transition: all 500ms ease;
-        -o-transition: all 500ms ease;
-        transition: all 500ms ease;
-    }
-    
-    #main {
-        flex: 1;
-        display: flex;
-        flex-direction: row;
-    }
-    
-    #ubicación {
-        display: flex;
-        flex: 1;
-    }
-    
-    .container div.slider-wrapper {
-      display: none;
-    }
-    
-    #footer {
-        flex: 1; 
-    }
-    
-    .slider {
-        display: none,
-    }
-    
-    .slider-wrapper {
-      display: none;
-    }
-    
-      /* Apunta a todos los elementos h3 con clase CSS title */
-      .title {
-        color: black;
-        font-size: 20px;
-        text-align: left;
-        padding-left: 10px;
-        padding-top: 10px;
-      }
-      
-      /* Apunta a todos los parrafos con la clase CSS text */
-      .text {
-        color: black;
-        font-size: 19px;
-        width: 100%;
-        padding: 10px;
-        margin: 0, 20px;
-        text-align: justify;
-      }
-    
-      * Mostrar horizontalmente, poner un poco de espacio alrededor */
-    .flex {
-      display: flex;
-      justify-content: space-around;
-    }
-    
-    /* Agregar algo de padding alrededor del contenedor. Alinear el texto al centro */
-    .stats {
-      padding: 45px 50px;
-      text-align: center;
-    }
-    
-    /* Aplicar margen y ancho */
-    .stat {
-      margin: 0 30px;
-      text-align: center;
-      width: 800px;
-    }
-    
-    .stats .fa {
-        color: blue;
-    }
-    
-    .testimonial {
-        color: black;
-        padding: 40px;
-        margin-top: 15em;
-    }
-    
-    .testimonial img {
-        height: 100%;
-        clip-path: circle();
-    }
-    
-    /* Alinea el texto al centro */
-    
-    h2{
-      position: absolute;
-      top: 9em; left: 0em;
-      font-size: 180%;
-      width: 100%;
-      text-align: center;
-    }
-    
-    .grid-3 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 100px;
-      }
-    
-    
-    div.testimonial div.card {
-      display: none;
-    }
-    
-      footer.grid-3 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 100px;
-      }
-    
-      
-      
-      
-      /* Crear una tarjeta en blanco con sombreado alrededor */
-      .card {
-        padding: 10px;
-        padding-bottom: 50%;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
-                     7px  7px 20px rgba(0, 0, 0, 0.2);
-      }
-    
-      .card-1 {
-        background-image: url(./img/FONTANERO-SUELDO.jpg);
-        background-size: cover;
-      }
-    
-      .card-2 {
-        background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
-        background-size: cover;
-      }
-      
-      .card-3 {
-        background-image: url(./img/cocinero.webp);
-        background-size: cover;
-      }
-    
-      .card-4 {
-        background-image: url(./img/funciones-de-un-jardinero.jpg);
-        background-size: cover;
-      }
-    
-      .card-5 {
-        background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
-        background-size: cover;
-      }
-    
-      .card-6 {
-        background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
-        background-size: cover;
-      }
-    
-      .card h3 {
-        background-color: rgba(255, 255, 255, 0.672);
-        padding-bottom: 7%;
-        padding-top: 3%;
-        text-align: center;
-        justify-content: center;
-        width: 110%; height: 100%;
-        position: relative;
-        top: 9.7em; right: 5%;
-        border-radius: 10px;
-        font-size: 70%;
-      }
-    
-      .card p {
-        text-align: center;
-        justify-content: center;
-        width: 110%; height: 100%;
-        position: relative;
-        top: 5.6em; right: 2.6%;
-        border-radius: 10px;
-        font-size: 80%;
-      }
-    
-      
-    
-      .card p:before {
-        opacity: 0;
-      }
-    
-      .card p:hover::before {
-        content: attr(data-content);
-        opacity: 1;
-      }
-    
-    
-    
-    /* Add padding around the footer as well */
-    
-    footer {
-        background-color: black;
-        padding: 20px 10px;
-        margin-top: 32%;
-      }
-    
-      .copyright {
-        color: white;
-        margin-bottom: 1em;
-      }
-    
-      iframe  {
-        margin-left: 0%;
-        margin-top: 33.8%;
-        margin-bottom: -33.4%;
-        padding-bottom: -20%;
-        max-height: 30em;
-        max-width: 100em;
-        width: 100%;
-      }
-    
-      .card-7 p {
-        padding: 2em;
-        justify-content: center;
-        text-align: center;
-        width: 60%;
-        font-size: 120%;
-        margin-left: 18%;
-        margin-bottom: -7em;
-      }
-    
-      .card-7 h3 {
-        padding-top: 1em;
-        margin-left: 0%;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-        font-size: 210%;
-      }
-    
-      .card-7 {
-        position: relative;
-        width: 100%;
-        height: 10%;
-        background-color: white;
-        margin-left: 0%;
-        margin-top:  19%;
-      }
-    
-    
-      
-      /* Sets all link texts to white and puts margin to the left and right */
-      
-      footer a {
-        color: white;
-        margin: 1 0px;
-        position: relative;
-        left: 15em;
-      }
-      
-    
-      footer a:hover {
-        color: cornflowerblue;
-      }
-    
-    /* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
-    */ 
-    
-    .image {
-        width: 600px;
-        margin-left: 80px;
-      }
-    
-    /* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
-    
-    .stats .flex {
-        flex-direction: column;
-      }
-    
-      .stats {
-        text-align: center;
-      }
-    
-    /* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
-    
-    .stat {
-        width: 100%;
-        padding-right: 80px;
-      }
-    
-    /* Mueve el círculo al centro de la tarjeta  */
-    
-      /* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
-    
-    .navbar .flex {
-        flex-direction: column;
-      }
-    
-    
-    /* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
-    
-      .navbar a:hover {
-        color: white;
-        border-bottom: 2px solid black;
-      }
-    
-    
-    /* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
-    
-      .navbar ul {
-        background: #9867C5;
-        border-radius: 5px;
-        padding: 10px 0;
-      }
-    
-    
-    /* Alinear el texto al centro */
-    
-      .showcase {
-        height: auto;
-        text-align: center;
-      }
-    
-    
-    /* Reducir el tamaño de la fuente */
-    
-    .little-info {
-        font-size: 13px;
-      }
-    
-    
-    /* Reducir el ancho de la imágen */
-    
-      .image {
-        width: 350px;
-        margin-left: 70px;
-      }
-    
-      .stat {
-        margin-bottom: 40px;
-      }
-    
-    }
-
-@media screen and (min-width: 780px) and (max-width: 910px) {
+  @media screen and (min-width: 280px) and (max-width: 300px) {
     * {
       margin: 0;
       padding: 0;
@@ -2983,9 +765,9 @@ footer {
   
     img#img-logo {
       position: absolute;
-      top: 1.4em; left: 20em;
-      width: 12em;
-      height: 3em;
+      top: 2.5em; left: 8em;
+      width: 8em;
+      height: 2em;
       margin-left: 0em;
     }
   
@@ -2993,7 +775,7 @@ footer {
       display: block;
       cursor: pointer;
       position: relative;
-      top:4em; left: 2em;
+      top:3.5em; left: 2em;
       width: 100%;
     }
   
@@ -3006,7 +788,7 @@ footer {
       position: relative;
       left: -100%;
       margin-bottom: 26em;
-      margin-top: 10em;
+      margin-top: 4em;
     }
   
     .nav ul.htopnav {
@@ -3017,7 +799,7 @@ footer {
     .nav ul li {
       position: relative;
       top: 0em; left: 0em;
-      margin-bottom: 2em;
+      margin-bottom: 3em;
     }
   
     .nav ul li a {
@@ -3026,8 +808,8 @@ footer {
       padding: 20px;
       border-bottom: 1px solid black;
       margin-left: 13em;
+      font-size: 80%;
       float: none;
-      font-size: 150%;
     }
   
     .nav ul li a::before,
@@ -3051,7 +833,7 @@ footer {
   }
   
   .nav ul li a.list {
-    width: 80em;
+    width: 40em;
   }
   
     .nav ul li a.list-element2 {
@@ -3078,105 +860,21 @@ footer {
   }
   
   .container div.slider-wrapper {
-    display: flex;
-    flex: 1;
-    max-width: 180em;
-    max-height: 80em;
+    display: none;
   }
   
   #footer {
       flex: 1; 
   }
   
-  .slider-wrapper {
-    position: relative;
-    max-width: 180em;
-    max-height: 80em;
-    margin-left: 0em;
-  }
-  
   .slider {
-      display: flex;
-      aspect-ratio: 4 / 3;
-      overflow-x: hidden;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      box-shadow: 0 .25rem .5rem #21212126;
-      border-radius: .5rem;
+      display: none,
   }
   
-  .slider img {
-      flex: 1 0 100%;
-      scroll-snap-align: start;
-      object-fit: fill;
-      width: 100%;
-      padding-top: 9em;
+  .slider-wrapper {
+    display: none;
   }
   
-  .slider video {
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: fill;
-    width: 100%;
-    padding-top: 8em;
-  }
-  
-  .slider-nav {
-      display: flex;
-      column-gap: 1rem;
-      position: absolute;
-      top: 34rem;
-      left: 50%;
-      transform: translate(-50%);
-      z-index: 4;
-  }
-  
-  .slider-nav a {
-      width: .5rem;
-      height: .5rem;
-      border-radius: 50%;
-      background-color: #fff;
-      opacity: .75;
-      transition: opacity ease 250ms;
-  }
-  
-  .slider-nav a:hover {
-      opacity: 1;
-  }
-  
-  .slider-nav-flecha {
-      display: flex;
-      column-gap: 1rem;
-      position: relative;
-      width: 100px;
-      height: 50px;
-      margin:0 auto;
-      bottom: 20em;
-      left: 43%;
-      z-index: 1;
-  }
-  
-  .flecha1 {
-      margin-left: -17.5em;
-  }
-  
-  .animatedColor {
-      color: white;
-  }
-  
-  .slider-nav-flecha a {
-      width: 100px;
-      height: 50px;
-      margin-top: 50%;
-      font-size:20px; 
-  }
-  
-  .slider-nav-flecha a i:hover {
-      transform: scale(1.2);
-  }
-  
-    
-    
     /* Apunta a todos los elementos h3 con clase CSS title */
     .title {
       color: black;
@@ -3222,8 +920,7 @@ footer {
   .testimonial {
       color: black;
       padding: 40px;
-      margin-top: 5em;
-      margin-bottom: 2em;
+      margin-top: 15em;
   }
   
   .testimonial img {
@@ -3235,23 +932,35 @@ footer {
   
   h2{
     position: absolute;
-    top: 29em; left: 7em;
+    top: 10em; left: 1em;
+    font-size: 100%;
     text-align: center;
   }
   
   .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 70px;
+      gap: 100px;
     }
   
+    footer a {
+      color: white;
+      margin: 0 10px;
+      position: relative;
+      left: -20em;
+    }
   
+  div.testimonial div.card {
+    display: none;
+  }
   
     footer.grid-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 70px;
+      gap: 100px;
     }
+  
+    
     
     
     /* Crear una tarjeta en blanco con sombreado alrededor */
@@ -3264,32 +973,32 @@ footer {
                    7px  7px 20px rgba(0, 0, 0, 0.2);
     }
   
-    .card-1 {
+    #card-1 {
       background-image: url(./img/FONTANERO-SUELDO.jpg);
       background-size: cover;
     }
   
-    .card-2 {
+    #card-2 {
       background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
       background-size: cover;
     }
     
-    .card-3 {
+    #card-3 {
       background-image: url(./img/cocinero.webp);
       background-size: cover;
     }
   
-    .card-4 {
+    #card-4 {
       background-image: url(./img/funciones-de-un-jardinero.jpg);
       background-size: cover;
     }
   
-    .card-5 {
+    #card-5 {
       background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
       background-size: cover;
     }
   
-    .card-6 {
+    #card-6 {
       background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
       background-size: cover;
     }
@@ -3300,21 +1009,21 @@ footer {
       padding-top: 3%;
       text-align: center;
       justify-content: center;
-      width: 115%; height: 100%;
+      width: 110%; height: 100%;
       position: relative;
-      top: 8.4em; right: 7%;
+      top: 9.7em; right: 5%;
       border-radius: 10px;
-      font-size: 100%;
+      font-size: 70%;
     }
   
     .card p {
       text-align: center;
       justify-content: center;
-      width: 105%; height: 100%;
+      width: 110%; height: 100%;
       position: relative;
-      top: 5.5em; right: 2.6%;
+      top: 5.6em; right: 2.6%;
       border-radius: 10px;
-      font-size: 100%;
+      font-size: 80%;
     }
   
     
@@ -3335,18 +1044,23 @@ footer {
   footer {
       background-color: black;
       padding: 20px 10px;
+      margin-top: 120%;
     }
   
     .copyright {
       color: white;
+      font-size: 70%;
+      margin-top: 2em;
     }
   
     iframe  {
-      margin-left: -0%;
-      margin-top: 5%;
-      margin-bottom: -1%;
-      max-height: 32em;
+      margin-left: 0%;
+      margin-top: 15%;
+      margin-bottom: -121.4%;
+      padding-bottom: -20%;
+      max-height: 20em;
       max-width: 100em;
+      width: 100%;
     }
   
     .card-7 p {
@@ -3354,17 +1068,18 @@ footer {
       justify-content: center;
       text-align: center;
       width: 80%;
-      font-size: 140%;
-      margin-left: 10%;
+      font-size: 100%;
+      margin-left: 8%;
     }
   
     .card-7 h3 {
-      padding-top: 2em;
-      margin-left: 24%;
+      padding-top: 1em;
+      margin-top: -5em;
+      margin-left: 0%;
       justify-content: center;
       text-align: center;
-      width: 50%;
-      font-size: 240%;
+      width: 100%;
+      font-size: 110%;
     }
   
     .card-7 {
@@ -3373,7 +1088,7 @@ footer {
       height: 10%;
       background-color: white;
       margin-left: 0%;
-      margin-top:  0%;
+      margin-top:  10%;
     }
   
   
@@ -3384,7 +1099,8 @@ footer {
       color: white;
       margin: 0 10px;
       position: relative;
-      left: 20em;
+      left: 0em;
+      margin: 1.5em;
     }
     
   
@@ -3469,26 +1185,1781 @@ footer {
       margin-bottom: 40px;
     }
   
-  
-  /* Mover el círculo una vez más */
-  
-  
-  
-  @keyframes arrow {
-      0% {
-      transform: translate(0px, 50px);
-      }
-      50% {
-      transform: translate(0px, 60px);
-      }
-      100% {
-      transform: translate(0px, 50px);
-      }
-      }
-}
+  }
 
 
-@media screen and (min-width: 910px) and (max-width: 920px) {
+  @media screen and (min-width: 300px) and (max-width: 400px) {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+  
+    body {
+      width: 100%;
+    }
+  
+    header {
+      height: fit-content;
+      overflow-x: hidden;
+      width: 100%;
+    }
+  
+    img#img-logo {
+      position: absolute;
+      top: 2.5em; left: 10em;
+      width: 8em;
+      height: 2em;
+      margin-left: 0em;
+    }
+  
+    i.menu-icon {
+      display: block;
+      cursor: pointer;
+      position: relative;
+      top:3.5em; left: 2em;
+      width: 100%;
+    }
+  
+    .nav {
+      width: 100%;
+      margin-bottom: 7em;
+    }
+  
+    .nav ul {
+      position: relative;
+      left: -100%;
+      margin-bottom: 26em;
+      margin-top: 4em;
+    }
+  
+    .nav ul.htopnav {
+      display: none;
+      width: 100%;
+    }
+  
+    .nav ul li {
+      position: relative;
+      top: 0em; left: 0em;
+      margin-bottom: 3em;
+    }
+  
+    .nav ul li a {
+      display: block;
+      margin-bottom: 1em;
+      padding: 20px;
+      border-bottom: 1px solid black;
+      margin-left: 13em;
+      font-size: 80%;
+      float: none;
+    }
+  
+    .nav ul li a::before,
+  .nav ul li a::after
+  {
+      content: '';
+      border-bottom: none;
+      position: absolute;
+      opacity: 0;
+      
+  }
+  
+  
+  
+  .nav ul li a.element1 {
+    display: none;
+  }
+  
+  .nav ul li a.element2 {
+    display: none;
+  }
+  
+  .nav ul li a.list {
+    width: 40em;
+  }
+  
+    .nav ul li a.list-element2 {
+      margin-left: -11em;
+      margin-bottom: 1em;
+    }
+  
+    #img-logo:hover {
+      transform: scale(1.2);
+      -webkit-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease;
+  }
+  
+  #main {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+  }
+  
+  #ubicación {
+      display: flex;
+      flex: 1;
+  }
+  
+  .container div.slider-wrapper {
+    display: none;
+  }
+  
+  #footer {
+      flex: 1; 
+  }
+  
+  .slider {
+      display: none,
+  }
+  
+  .slider-wrapper {
+    display: none;
+  }
+  
+    /* Apunta a todos los elementos h3 con clase CSS title */
+    .title {
+      color: black;
+      font-size: 20px;
+      text-align: left;
+      padding-left: 10px;
+      padding-top: 10px;
+    }
+    
+    /* Apunta a todos los parrafos con la clase CSS text */
+    .text {
+      color: black;
+      font-size: 19px;
+      width: 100%;
+      padding: 10px;
+      margin: 0, 20px;
+      text-align: justify;
+    }
+  
+    * Mostrar horizontalmente, poner un poco de espacio alrededor */
+  .flex {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* Agregar algo de padding alrededor del contenedor. Alinear el texto al centro */
+  .stats {
+    padding: 45px 50px;
+    text-align: center;
+  }
+  
+  /* Aplicar margen y ancho */
+  .stat {
+    margin: 0 30px;
+    text-align: center;
+    width: 800px;
+  }
+  
+  .stats .fa {
+      color: blue;
+  }
+  
+  .testimonial {
+      color: black;
+      padding: 40px;
+      margin-top: 15em;
+  }
+  
+  .testimonial img {
+      height: 100%;
+      clip-path: circle();
+  }
+  
+  /* Alinea el texto al centro */
+  
+  h2{
+    position: absolute;
+    top: 10em; left: 1em;
+    font-size: 100%;
+    text-align: center;
+  }
+  
+  .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 100px;
+    }
+  
+    footer a {
+      color: white;
+      margin: 0 10px;
+      position: relative;
+      left: 0em;
+    }
+  
+  div.testimonial div.card {
+    display: none;
+  }
+  
+    footer.grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 100px;
+    }
+  
+    
+    
+    
+    /* Crear una tarjeta en blanco con sombreado alrededor */
+    .card {
+      padding: 10px;
+      padding-bottom: 50%;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
+                   7px  7px 20px rgba(0, 0, 0, 0.2);
+    }
+  
+    #card-1 {
+      background-image: url(./img/FONTANERO-SUELDO.jpg);
+      background-size: cover;
+    }
+  
+    #card-2 {
+      background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
+      background-size: cover;
+    }
+    
+    #card-3 {
+      background-image: url(./img/cocinero.webp);
+      background-size: cover;
+    }
+  
+    #card-4 {
+      background-image: url(./img/funciones-de-un-jardinero.jpg);
+      background-size: cover;
+    }
+  
+    #card-5 {
+      background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
+      background-size: cover;
+    }
+  
+    #card-6 {
+      background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
+      background-size: cover;
+    }
+  
+    .card h3 {
+      background-color: rgba(255, 255, 255, 0.672);
+      padding-bottom: 7%;
+      padding-top: 3%;
+      text-align: center;
+      justify-content: center;
+      width: 110%; height: 100%;
+      position: relative;
+      top: 9.7em; right: 5%;
+      border-radius: 10px;
+      font-size: 70%;
+    }
+  
+    .card p {
+      text-align: center;
+      justify-content: center;
+      width: 110%; height: 100%;
+      position: relative;
+      top: 5.6em; right: 2.6%;
+      border-radius: 10px;
+      font-size: 80%;
+    }
+  
+    
+  
+    .card p:before {
+      opacity: 0;
+    }
+  
+    .card p:hover::before {
+      content: attr(data-content);
+      opacity: 1;
+    }
+  
+  
+  
+  /* Add padding around the footer as well */
+  
+  footer {
+      background-color: black;
+      padding: 20px 10px;
+      margin-top: 120%;
+    }
+  
+    .copyright {
+      color: white;
+      font-size: 70%;
+      margin-top: 2em;
+    }
+  
+    iframe  {
+      margin-left: 0%;
+      margin-top: 15%;
+      margin-bottom: -121.4%;
+      padding-bottom: -20%;
+      max-height: 20em;
+      max-width: 100em;
+      width: 100%;
+    }
+  
+    .card-7 p {
+      padding: 2em;
+      justify-content: center;
+      text-align: center;
+      width: 80%;
+      font-size: 100%;
+      margin-left: 8%;
+    }
+  
+    .card-7 h3 {
+      padding-top: 1em;
+      margin-top: -5em;
+      margin-left: 0%;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      font-size: 110%;
+    }
+  
+    .card-7 {
+      position: relative;
+      width: 100%;
+      height: 10%;
+      background-color: white;
+      margin-left: 0%;
+      margin-top:  10%;
+    }
+  
+  
+    
+    /* Sets all link texts to white and puts margin to the left and right */
+    
+    footer a {
+      color: white;
+      margin: 0 10px;
+      position: relative;
+      left: 5em;
+      margin: 1.5em;
+    }
+    
+  
+    footer a:hover {
+      color: cornflowerblue;
+    }
+  
+  /* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
+  */ 
+  
+  .image {
+      width: 600px;
+      margin-left: 80px;
+    }
+  
+  /* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
+  
+  .stats .flex {
+      flex-direction: column;
+    }
+  
+    .stats {
+      text-align: center;
+    }
+  
+  /* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
+  
+  .stat {
+      width: 100%;
+      padding-right: 80px;
+    }
+  
+  /* Mueve el círculo al centro de la tarjeta  */
+  
+    /* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
+  
+  .navbar .flex {
+      flex-direction: column;
+    }
+  
+  
+  /* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
+  
+    .navbar a:hover {
+      color: white;
+      border-bottom: 2px solid black;
+    }
+  
+  
+  /* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
+  
+    .navbar ul {
+      background: #9867C5;
+      border-radius: 5px;
+      padding: 10px 0;
+    }
+  
+  
+  /* Alinear el texto al centro */
+  
+    .showcase {
+      height: auto;
+      text-align: center;
+    }
+  
+  
+  /* Reducir el tamaño de la fuente */
+  
+  .little-info {
+      font-size: 13px;
+    }
+  
+  
+  /* Reducir el ancho de la imágen */
+  
+    .image {
+      width: 350px;
+      margin-left: 70px;
+    }
+  
+    .stat {
+      margin-bottom: 40px;
+    }
+  
+  }
+
+  
+  @media screen and (min-width: 400px) and (max-width: 412px) {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+  
+    body {
+      width: 100%;
+    }
+  
+    header {
+      height: fit-content;
+      overflow-x: hidden;
+      width: 100%;
+    }
+  
+    img#img-logo {
+      position: absolute;
+      top: 2.5em; left: 10em;
+      width: 8em;
+      height: 2em;
+      margin-left: 0em;
+    }
+  
+    i.menu-icon {
+      display: block;
+      cursor: pointer;
+      position: relative;
+      top:3.5em; left: 2em;
+      width: 100%;
+    }
+  
+    .nav {
+      width: 100%;
+      margin-bottom: 7em;
+    }
+  
+    .nav ul {
+      position: relative;
+      left: -100%;
+      margin-bottom: 26em;
+      margin-top: 4em;
+    }
+  
+    .nav ul.htopnav {
+      display: none;
+      width: 100%;
+    }
+  
+    .nav ul li {
+      position: relative;
+      top: 0em; left: 0em;
+      margin-bottom: 3em;
+    }
+  
+    .nav ul li a {
+      display: block;
+      margin-bottom: 1em;
+      padding: 20px;
+      border-bottom: 1px solid black;
+      margin-left: 13em;
+      font-size: 80%;
+      float: none;
+    }
+  
+    .nav ul li a::before,
+  .nav ul li a::after
+  {
+      content: '';
+      border-bottom: none;
+      position: absolute;
+      opacity: 0;
+      
+  }
+  
+  
+  
+  .nav ul li a.element1 {
+    display: none;
+  }
+  
+  .nav ul li a.element2 {
+    display: none;
+  }
+  
+  .nav ul li a.list {
+    width: 40em;
+  }
+  
+    .nav ul li a.list-element2 {
+      margin-left: -11em;
+      margin-bottom: 1em;
+    }
+  
+    #img-logo:hover {
+      transform: scale(1.2);
+      -webkit-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease;
+  }
+  
+  #main {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+  }
+  
+  #ubicación {
+      display: flex;
+      flex: 1;
+  }
+  
+  .container div.slider-wrapper {
+    display: none;
+  }
+  
+  #footer {
+      flex: 1; 
+  }
+  
+  .slider {
+      display: none,
+  }
+  
+  .slider-wrapper {
+    display: none;
+  }
+  
+    /* Apunta a todos los elementos h3 con clase CSS title */
+    .title {
+      color: black;
+      font-size: 20px;
+      text-align: left;
+      padding-left: 10px;
+      padding-top: 10px;
+    }
+    
+    /* Apunta a todos los parrafos con la clase CSS text */
+    .text {
+      color: black;
+      font-size: 19px;
+      width: 100%;
+      padding: 10px;
+      margin: 0, 20px;
+      text-align: justify;
+    }
+  
+    * Mostrar horizontalmente, poner un poco de espacio alrededor */
+  .flex {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* Agregar algo de padding alrededor del contenedor. Alinear el texto al centro */
+  .stats {
+    padding: 45px 50px;
+    text-align: center;
+  }
+  
+  /* Aplicar margen y ancho */
+  .stat {
+    margin: 0 30px;
+    text-align: center;
+    width: 800px;
+  }
+  
+  .stats .fa {
+      color: blue;
+  }
+  
+  .testimonial {
+      color: black;
+      padding: 40px;
+      margin-top: 15em;
+  }
+  
+  .testimonial img {
+      height: 100%;
+      clip-path: circle();
+  }
+  
+  /* Alinea el texto al centro */
+  
+  h2{
+    position: absolute;
+    top: 10em; left: 1em;
+    font-size: 100%;
+    text-align: center;
+  }
+  
+  .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 100px;
+    }
+  
+    footer a {
+      color: white;
+      margin: 0 10px;
+      position: relative;
+      left: 0em;
+    }
+  
+  div.testimonial div.card {
+    display: none;
+  }
+  
+    footer.grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 100px;
+    }
+  
+    
+    
+    
+    /* Crear una tarjeta en blanco con sombreado alrededor */
+    .card {
+      padding: 10px;
+      padding-bottom: 50%;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
+                   7px  7px 20px rgba(0, 0, 0, 0.2);
+    }
+  
+    #card-1 {
+      background-image: url(./img/FONTANERO-SUELDO.jpg);
+      background-size: cover;
+    }
+  
+    #card-2 {
+      background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
+      background-size: cover;
+    }
+    
+    #card-3 {
+      background-image: url(./img/cocinero.webp);
+      background-size: cover;
+    }
+  
+    #card-4 {
+      background-image: url(./img/funciones-de-un-jardinero.jpg);
+      background-size: cover;
+    }
+  
+    #card-5 {
+      background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
+      background-size: cover;
+    }
+  
+    #card-6 {
+      background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
+      background-size: cover;
+    }
+  
+    .card h3 {
+      background-color: rgba(255, 255, 255, 0.672);
+      padding-bottom: 7%;
+      padding-top: 3%;
+      text-align: center;
+      justify-content: center;
+      width: 110%; height: 100%;
+      position: relative;
+      top: 9.7em; right: 5%;
+      border-radius: 10px;
+      font-size: 70%;
+    }
+  
+    .card p {
+      text-align: center;
+      justify-content: center;
+      width: 110%; height: 100%;
+      position: relative;
+      top: 5.6em; right: 2.6%;
+      border-radius: 10px;
+      font-size: 80%;
+    }
+  
+    
+  
+    .card p:before {
+      opacity: 0;
+    }
+  
+    .card p:hover::before {
+      content: attr(data-content);
+      opacity: 1;
+    }
+  
+  
+  
+  /* Add padding around the footer as well */
+  
+  footer {
+      background-color: black;
+      padding: 20px 10px;
+      margin-top: 120%;
+    }
+  
+    .copyright {
+      color: white;
+      font-size: 70%;
+      margin-top: 2em;
+    }
+  
+    iframe  {
+      margin-left: 0%;
+      margin-top: 15%;
+      margin-bottom: -121.4%;
+      padding-bottom: -20%;
+      max-height: 20em;
+      max-width: 100em;
+      width: 100%;
+    }
+  
+    .card-7 p {
+      padding: 2em;
+      justify-content: center;
+      text-align: center;
+      width: 80%;
+      font-size: 100%;
+      margin-left: 8%;
+    }
+  
+    .card-7 h3 {
+      padding-top: 1em;
+      margin-top: -5em;
+      margin-left: 0%;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      font-size: 110%;
+    }
+  
+    .card-7 {
+      position: relative;
+      width: 100%;
+      height: 10%;
+      background-color: white;
+      margin-left: 0%;
+      margin-top:  10%;
+    }
+  
+  
+    
+    /* Sets all link texts to white and puts margin to the left and right */
+    
+    footer a {
+      color: white;
+      margin: 0 10px;
+      position: relative;
+      left: 5em;
+      margin: 1.5em;
+    }
+    
+  
+    footer a:hover {
+      color: cornflowerblue;
+    }
+  
+  /* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
+  */ 
+  
+  .image {
+      width: 600px;
+      margin-left: 80px;
+    }
+  
+  /* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
+  
+  .stats .flex {
+      flex-direction: column;
+    }
+  
+    .stats {
+      text-align: center;
+    }
+  
+  /* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
+  
+  .stat {
+      width: 100%;
+      padding-right: 80px;
+    }
+  
+  /* Mueve el círculo al centro de la tarjeta  */
+  
+    /* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
+  
+  .navbar .flex {
+      flex-direction: column;
+    }
+  
+  
+  /* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
+  
+    .navbar a:hover {
+      color: white;
+      border-bottom: 2px solid black;
+    }
+  
+  
+  /* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
+  
+    .navbar ul {
+      background: #9867C5;
+      border-radius: 5px;
+      padding: 10px 0;
+    }
+  
+  
+  /* Alinear el texto al centro */
+  
+    .showcase {
+      height: auto;
+      text-align: center;
+    }
+  
+  
+  /* Reducir el tamaño de la fuente */
+  
+  .little-info {
+      font-size: 13px;
+    }
+  
+  
+  /* Reducir el ancho de la imágen */
+  
+    .image {
+      width: 350px;
+      margin-left: 70px;
+    }
+  
+    .stat {
+      margin-bottom: 40px;
+    }
+  
+  }
+
+  @media screen and (min-width: 412px) and (max-width: 540px) {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+  
+    body {
+      width: 100%;
+    }
+  
+    header {
+      height: fit-content;
+      overflow-x: hidden;
+      width: 100%;
+    }
+  
+    img#img-logo {
+      position: absolute;
+      top: 2.2em; left: 12em;
+      width: 8em;
+      height: 2em;
+      margin-left: 0em;
+    }
+  
+    i.menu-icon {
+      display: block;
+      cursor: pointer;
+      position: relative;
+      top:3.5em; left: 2em;
+      width: 100%;
+    }
+  
+    .nav {
+      width: 100%;
+      margin-bottom: 7em;
+    }
+  
+    .nav ul {
+      position: relative;
+      left: -100%;
+      margin-bottom: 26em;
+      margin-top: 4em;
+    }
+  
+    .nav ul.htopnav {
+      display: none;
+      width: 100%;
+    }
+  
+    .nav ul li {
+      position: relative;
+      top: 0em; left: 0em;
+      margin-bottom: 3em;
+    }
+  
+    .nav ul li a {
+      display: block;
+      margin-bottom: 1em;
+      padding: 20px;
+      border-bottom: 1px solid black;
+      margin-left: 13em;
+      font-size: 100%;
+      float: none;
+    }
+  
+    .nav ul li a::before,
+  .nav ul li a::after
+  {
+      content: '';
+      border-bottom: none;
+      position: absolute;
+      opacity: 0;
+      
+  }
+  
+  
+  
+  .nav ul li a.element1 {
+    display: none;
+  }
+  
+  .nav ul li a.element2 {
+    display: none;
+  }
+  
+  .nav ul li a.list {
+    width: 43em;
+  }
+  
+    .nav ul li a.list-element2 {
+      margin-left: -11em;
+      margin-bottom: 1em;
+    }
+  
+    #img-logo:hover {
+      transform: scale(1.2);
+      -webkit-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease;
+  }
+  
+  #main {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+  }
+  
+  #ubicación {
+      display: flex;
+      flex: 1;
+  }
+  
+  .container div.slider-wrapper {
+    display: none;
+  }
+  
+  #footer {
+      flex: 1; 
+  }
+  
+  .slider {
+      display: none,
+  }
+  
+  .slider-wrapper {
+    display: none;
+  }
+  
+    /* Apunta a todos los elementos h3 con clase CSS title */
+    .title {
+      color: black;
+      font-size: 20px;
+      text-align: left;
+      padding-left: 10px;
+      padding-top: 10px;
+    }
+    
+    /* Apunta a todos los parrafos con la clase CSS text */
+    .text {
+      color: black;
+      font-size: 19px;
+      width: 100%;
+      padding: 10px;
+      margin: 0, 20px;
+      text-align: justify;
+    }
+  
+    * Mostrar horizontalmente, poner un poco de espacio alrededor */
+  .flex {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* Agregar algo de padding alrededor del contenedor. Alinear el texto al centro */
+  .stats {
+    padding: 45px 50px;
+    text-align: center;
+  }
+  
+  /* Aplicar margen y ancho */
+  .stat {
+    margin: 0 30px;
+    text-align: center;
+    width: 800px;
+  }
+  
+  .stats .fa {
+      color: blue;
+  }
+  
+  .testimonial {
+      color: black;
+      padding: 40px;
+      margin-top: 15em;
+  }
+  
+  .testimonial img {
+      height: 100%;
+      clip-path: circle();
+  }
+  
+  /* Alinea el texto al centro */
+  
+  h2{
+    position: absolute;
+    top: 8em; left: 2em;
+    font-size: 140%;
+    text-align: center;
+  }
+  
+  .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 100px;
+    }
+  
+  div.testimonial div.card {
+    display: none;
+  }
+  
+    footer.grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 100px;
+    }
+  
+    
+    
+    
+    /* Crear una tarjeta en blanco con sombreado alrededor */
+    .card {
+      padding: 10px;
+      padding-bottom: 50%;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
+                   7px  7px 20px rgba(0, 0, 0, 0.2);
+    }
+  
+    #card-1 {
+      background-image: url(./img/FONTANERO-SUELDO.jpg);
+      background-size: cover;
+    }
+  
+    #card-2 {
+      background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
+      background-size: cover;
+    }
+    
+    #card-3 {
+      background-image: url(./img/cocinero.webp);
+      background-size: cover;
+    }
+  
+    #card-4 {
+      background-image: url(./img/funciones-de-un-jardinero.jpg);
+      background-size: cover;
+    }
+  
+    #card-5 {
+      background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
+      background-size: cover;
+    }
+  
+    #card-6 {
+      background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
+      background-size: cover;
+    }
+  
+    .card h3 {
+      background-color: rgba(255, 255, 255, 0.672);
+      padding-bottom: 7%;
+      padding-top: 3%;
+      text-align: center;
+      justify-content: center;
+      width: 110%; height: 100%;
+      position: relative;
+      top: 9.7em; right: 5%;
+      border-radius: 10px;
+      font-size: 70%;
+    }
+  
+    .card p {
+      text-align: center;
+      justify-content: center;
+      width: 110%; height: 100%;
+      position: relative;
+      top: 5.6em; right: 2.6%;
+      border-radius: 10px;
+      font-size: 80%;
+    }
+  
+    
+  
+    .card p:before {
+      opacity: 0;
+    }
+  
+    .card p:hover::before {
+      content: attr(data-content);
+      opacity: 1;
+    }
+  
+  
+  
+  /* Add padding around the footer as well */
+  
+  footer {
+      background-color: black;
+      padding: 20px 10px;
+      margin-top: 120%;
+    }
+  
+    .copyright {
+      color: white;
+      font-size: 70%;
+      margin-top: 2em;
+    }
+  
+    iframe  {
+      margin-left: 0%;
+      margin-top: 15%;
+      margin-bottom: -121.4%;
+      padding-bottom: -20%;
+      max-height: 30em;
+      max-width: 100em;
+      width: 100%;
+    }
+  
+    .card-7 p {
+      padding: 2em;
+      justify-content: center;
+      text-align: center;
+      width: 80%;
+      font-size: 120%;
+      margin-left: 8%;
+    }
+  
+    .card-7 h3 {
+      padding-top: 1em;
+      margin-top: -5em;
+      margin-left: 0%;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      font-size: 150%;
+    }
+  
+    .card-7 {
+      position: relative;
+      width: 100%;
+      height: 10%;
+      background-color: white;
+      margin-left: 0%;
+      margin-top:  25%;
+    }
+  
+  
+    
+    /* Sets all link texts to white and puts margin to the left and right */
+    
+    footer a {
+      color: white;
+      margin: 0 10px;
+      position: relative;
+      left: 8em;
+      margin: 1.5em;
+    }
+    
+  
+    footer a:hover {
+      color: cornflowerblue;
+    }
+  
+  /* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
+  */ 
+  
+  .image {
+      width: 600px;
+      margin-left: 80px;
+    }
+  
+  /* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
+  
+  .stats .flex {
+      flex-direction: column;
+    }
+  
+    .stats {
+      text-align: center;
+    }
+  
+  /* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
+  
+  .stat {
+      width: 100%;
+      padding-right: 80px;
+    }
+  
+  /* Mueve el círculo al centro de la tarjeta  */
+  
+    /* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
+  
+  .navbar .flex {
+      flex-direction: column;
+    }
+  
+  
+  /* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
+  
+    .navbar a:hover {
+      color: white;
+      border-bottom: 2px solid black;
+    }
+  
+  
+  /* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
+  
+    .navbar ul {
+      background: #9867C5;
+      border-radius: 5px;
+      padding: 10px 0;
+    }
+  
+  
+  /* Alinear el texto al centro */
+  
+    .showcase {
+      height: auto;
+      text-align: center;
+    }
+  
+  
+  /* Reducir el tamaño de la fuente */
+  
+  .little-info {
+      font-size: 13px;
+    }
+  
+  
+  /* Reducir el ancho de la imágen */
+  
+    .image {
+      width: 350px;
+      margin-left: 70px;
+    }
+  
+    .stat {
+      margin-bottom: 40px;
+    }
+  
+  }
+  
+  @media screen and (min-width: 540px) and (max-width:780px) {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+  
+    body {
+      width: 100%;
+    }
+  
+    header {
+      height: fit-content;
+      overflow-x: hidden;
+      width: 100%;
+    }
+  
+    img#img-logo {
+      position: absolute;
+      top: 1.5em; left: 19em;
+      width: 10em;
+      height: 2.5em;
+      margin-left: 0em;
+    }
+  
+    i.menu-icon {
+      display: block;
+      cursor: pointer;
+      position: relative;
+      top:4em; left: 2em;
+      width: 100%;
+    }
+  
+    .nav {
+      width: 100%;
+      margin-bottom: 7em;
+    }
+  
+    .nav ul {
+      position: relative;
+      left: -100%;
+      margin-bottom: 26em;
+      margin-top: 7em;
+    }
+  
+    .nav ul.htopnav {
+      display: none;
+      width: 100%;
+    }
+  
+    .nav ul li {
+      position: relative;
+      top: 0em; left: 0em;
+      margin-bottom: 3em;
+    }
+  
+    .nav ul li a {
+      display: block;
+      margin-bottom: 1em;
+      padding: 20px;
+      border-bottom: 1px solid black;
+      margin-left: 13em;
+      font-size: 90%;
+      float: none;
+    }
+  
+    .nav ul li a::before,
+  .nav ul li a::after
+  {
+      content: '';
+      border-bottom: none;
+      position: absolute;
+      opacity: 0;
+      
+  }
+  
+  
+  
+  .nav ul li a.element1 {
+    display: none;
+  }
+  
+  .nav ul li a.element2 {
+    display: none;
+  }
+  
+  .nav ul li a.list {
+    width: 58em;
+  }
+  
+    .nav ul li a.list-element2 {
+      margin-left: -11em;
+      margin-bottom: 1em;
+    }
+  
+    #img-logo:hover {
+      transform: scale(1.2);
+      -webkit-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease;
+  }
+  
+  #main {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+  }
+  
+  #ubicación {
+      display: flex;
+      flex: 1;
+  }
+  
+  .container div.slider-wrapper {
+    display: none;
+  }
+  
+  #footer {
+      flex: 1; 
+  }
+  
+  .slider {
+      display: none,
+  }
+  
+  .slider-wrapper {
+    display: none;
+  }
+  
+    /* Apunta a todos los elementos h3 con clase CSS title */
+    .title {
+      color: black;
+      font-size: 20px;
+      text-align: left;
+      padding-left: 10px;
+      padding-top: 10px;
+    }
+    
+    /* Apunta a todos los parrafos con la clase CSS text */
+    .text {
+      color: black;
+      font-size: 19px;
+      width: 100%;
+      padding: 10px;
+      margin: 0, 20px;
+      text-align: justify;
+    }
+  
+    * Mostrar horizontalmente, poner un poco de espacio alrededor */
+  .flex {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* Agregar algo de padding alrededor del contenedor. Alinear el texto al centro */
+  .stats {
+    padding: 45px 50px;
+    text-align: center;
+  }
+  
+  /* Aplicar margen y ancho */
+  .stat {
+    margin: 0 30px;
+    text-align: center;
+    width: 800px;
+  }
+  
+  .stats .fa {
+      color: blue;
+  }
+  
+  .testimonial {
+      color: black;
+      padding: 40px;
+      margin-top: 15em;
+  }
+  
+  .testimonial img {
+      height: 100%;
+      clip-path: circle();
+  }
+  
+  /* Alinea el texto al centro */
+  
+  h2{
+    position: absolute;
+    top: 9em; left: 0em;
+    font-size: 180%;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 100px;
+    }
+  
+  
+  div.testimonial div.card {
+    display: none;
+  }
+  
+    footer.grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 100px;
+    }
+  
+    
+    
+    
+    /* Crear una tarjeta en blanco con sombreado alrededor */
+    .card {
+      padding: 10px;
+      padding-bottom: 50%;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
+                   7px  7px 20px rgba(0, 0, 0, 0.2);
+    }
+  
+    #card-1 {
+      background-image: url(./img/FONTANERO-SUELDO.jpg);
+      background-size: cover;
+    }
+  
+    #card-2 {
+      background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
+      background-size: cover;
+    }
+    
+    #card-3 {
+      background-image: url(./img/cocinero.webp);
+      background-size: cover;
+    }
+  
+    #card-4 {
+      background-image: url(./img/funciones-de-un-jardinero.jpg);
+      background-size: cover;
+    }
+  
+    #card-5 {
+      background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
+      background-size: cover;
+    }
+  
+    #card-6 {
+      background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
+      background-size: cover;
+    }
+  
+    .card h3 {
+      background-color: rgba(255, 255, 255, 0.672);
+      padding-bottom: 7%;
+      padding-top: 3%;
+      text-align: center;
+      justify-content: center;
+      width: 110%; height: 100%;
+      position: relative;
+      top: 9.7em; right: 5%;
+      border-radius: 10px;
+      font-size: 70%;
+    }
+  
+    .card p {
+      text-align: center;
+      justify-content: center;
+      width: 110%; height: 100%;
+      position: relative;
+      top: 5.6em; right: 2.6%;
+      border-radius: 10px;
+      font-size: 80%;
+    }
+  
+    
+  
+    .card p:before {
+      opacity: 0;
+    }
+  
+    .card p:hover::before {
+      content: attr(data-content);
+      opacity: 1;
+    }
+  
+  
+  
+  /* Add padding around the footer as well */
+  
+  footer {
+      background-color: black;
+      padding: 20px 10px;
+      margin-top: 32%;
+    }
+  
+    .copyright {
+      color: white;
+      margin-bottom: 1em;
+    }
+  
+    iframe  {
+      margin-left: 0%;
+      margin-top: 33.8%;
+      margin-bottom: -33.4%;
+      padding-bottom: -20%;
+      max-height: 30em;
+      max-width: 100em;
+      width: 100%;
+    }
+  
+    .card-7 p {
+      padding: 2em;
+      justify-content: center;
+      text-align: center;
+      width: 60%;
+      font-size: 120%;
+      margin-left: 18%;
+      margin-bottom: -7em;
+    }
+  
+    .card-7 h3 {
+      padding-top: 1em;
+      margin-left: 0%;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      font-size: 210%;
+    }
+  
+    .card-7 {
+      position: relative;
+      width: 100%;
+      height: 10%;
+      background-color: white;
+      margin-left: 0%;
+      margin-top:  19%;
+    }
+  
+  
+    
+    /* Sets all link texts to white and puts margin to the left and right */
+    
+    footer a {
+      color: white;
+      margin: 1 0px;
+      position: relative;
+      left: 15em;
+    }
+    
+  
+    footer a:hover {
+      color: cornflowerblue;
+    }
+  
+  /* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
+  */ 
+  
+  .image {
+      width: 600px;
+      margin-left: 80px;
+    }
+  
+  /* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
+  
+  .stats .flex {
+      flex-direction: column;
+    }
+  
+    .stats {
+      text-align: center;
+    }
+  
+  /* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
+  
+  .stat {
+      width: 100%;
+      padding-right: 80px;
+    }
+  
+  /* Mueve el círculo al centro de la tarjeta  */
+  
+    /* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
+  
+  .navbar .flex {
+      flex-direction: column;
+    }
+  
+  
+  /* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
+  
+    .navbar a:hover {
+      color: white;
+      border-bottom: 2px solid black;
+    }
+  
+  
+  /* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
+  
+    .navbar ul {
+      background: #9867C5;
+      border-radius: 5px;
+      padding: 10px 0;
+    }
+  
+  
+  /* Alinear el texto al centro */
+  
+    .showcase {
+      height: auto;
+      text-align: center;
+    }
+  
+  
+  /* Reducir el tamaño de la fuente */
+  
+  .little-info {
+      font-size: 13px;
+    }
+  
+  
+  /* Reducir el ancho de la imágen */
+  
+    .image {
+      width: 350px;
+      margin-left: 70px;
+    }
+  
+    .stat {
+      margin-bottom: 40px;
+    }
+  
+  }
+
+@media screen and (min-width: 780px) and (max-width: 910px) {
   * {
     margin: 0;
     padding: 0;
@@ -3535,7 +3006,7 @@ footer {
     position: relative;
     left: -100%;
     margin-bottom: 26em;
-    margin-top: 18em;
+    margin-top: 10em;
   }
 
   .nav ul.htopnav {
@@ -3556,7 +3027,7 @@ footer {
     border-bottom: 1px solid black;
     margin-left: 13em;
     float: none;
-    font-size: 180%;
+    font-size: 150%;
   }
 
   .nav ul li a::before,
@@ -3639,7 +3110,7 @@ footer {
     scroll-snap-align: start;
     object-fit: fill;
     width: 100%;
-    padding-top: 10em;
+    padding-top: 9em;
 }
 
 .slider video {
@@ -3647,14 +3118,14 @@ footer {
   scroll-snap-align: start;
   object-fit: fill;
   width: 100%;
-  padding-top: 10em;
+  padding-top: 8em;
 }
 
 .slider-nav {
     display: flex;
     column-gap: 1rem;
     position: absolute;
-    top: 39rem;
+    top: 34rem;
     left: 50%;
     transform: translate(-50%);
     z-index: 4;
@@ -3686,7 +3157,7 @@ footer {
 }
 
 .flecha1 {
-    margin-left: -19.5em;
+    margin-left: -17.5em;
 }
 
 .animatedColor {
@@ -3764,7 +3235,7 @@ footer {
 
 h2{
   position: absolute;
-  top: 32em; left: 7em;
+  top: 29em; left: 7em;
   text-align: center;
 }
 
@@ -3793,32 +3264,32 @@ h2{
                  7px  7px 20px rgba(0, 0, 0, 0.2);
   }
 
-  .card-1 {
+  #card-1 {
     background-image: url(./img/FONTANERO-SUELDO.jpg);
     background-size: cover;
   }
 
-  .card-2 {
+  #card-2 {
     background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
     background-size: cover;
   }
   
-  .card-3 {
+  #card-3 {
     background-image: url(./img/cocinero.webp);
     background-size: cover;
   }
 
-  .card-4 {
+  #card-4 {
     background-image: url(./img/funciones-de-un-jardinero.jpg);
     background-size: cover;
   }
 
-  .card-5 {
+  #card-5 {
     background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
     background-size: cover;
   }
 
-  .card-6 {
+  #card-6 {
     background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
     background-size: cover;
   }
@@ -3913,7 +3384,7 @@ footer {
     color: white;
     margin: 0 10px;
     position: relative;
-    left: 23em;
+    left: 20em;
   }
   
 
@@ -4017,793 +3488,2058 @@ footer {
 }
 
 
-@media screen and (min-width: 920px) and (max-width: 1024px) {
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@media screen and (min-width: 910px) and (max-width: 920px) {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
-    width: 100%;
-    overflow-x: hidden;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    min-height: 150vh;
-    background-color: cornflowerblue;
-    font-family: 'Abadi MT Std', sans-serif;
+body {
+  width: 100%;
 }
 
 header {
-    display: flex;
-    flex-direction: row;
-    height: fit-content;
-    width: 100%;
-    position: fixed;
-    background-color: rgb(226, 247, 255);
-    min-height: 16vh;
-    z-index: 2;
-    
+  height: fit-content;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img#img-logo {
+  position: absolute;
+  top: 1.4em; left: 20em;
+  width: 12em;
+  height: 3em;
+  margin-left: 0em;
+}
+
+i.menu-icon {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  top:4em; left: 2em;
+  width: 100%;
 }
 
 .nav {
-    flex: 5;
-    display: flex;
+  width: 100%;
+  margin-bottom: 7em;
+}
+
+.nav ul {
+  position: relative;
+  left: -100%;
+  margin-bottom: 26em;
+  margin-top: 18em;
 }
 
 .nav ul.htopnav {
-    position: absolute;
-    top: 2.5em; left: 9em;
-    display: flex;
-    width: 70%;
+  display: none;
+  width: 100%;
 }
 
 .nav ul li {
-    display: flex;
-    margin-left: 2%;
-    width: 100%;
+  position: relative;
+  top: 0em; left: 0em;
+  margin-bottom: 2em;
 }
 
-.nav ul li a{
-    position: relative;
-    display: flex;
-    width: 100%;
-    flex: 1;
-    max-width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    font-size: 80%;
+.nav ul li a {
+  display: block;
+  margin-bottom: 1em;
+  padding: 20px;
+  border-bottom: 1px solid black;
+  margin-left: 13em;
+  float: none;
+  font-size: 180%;
 }
 
 .nav ul li a::before,
 .nav ul li a::after
 {
-    content: '';
-    border-bottom: 4px solid blue;
-    position: absolute;
-    opacity: 0;
-    
+  content: '';
+  border-bottom: none;
+  position: absolute;
+  opacity: 0;
+  
 }
 
-.nav ul li a::before{
-    bottom: -0px;
-    width: 90%;
-    right: 0;
+
+
+.nav ul li a.element1 {
+display: none;
 }
 
-.nav ul li a::after{
-    bottom: -5px;
-    width: 70%;
-    left: 0;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element1:hover::after{
-    opacity: 1;
-    width: 55%;
-    left: 2em;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element2:hover::after{
-    opacity: 1;
-    width: 95%;
-    left: 0.2em;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element2:hover::after{
-    opacity: 1;
-    width: 95%;
-    left: 0.2em;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element3:hover::after{
-    opacity: 1;
-    width: 60%;
-    left: 1.8em;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element4:hover::after{
-    opacity: 1;
-    width: 60%;
-    left: 1.8em;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element5:hover::after{
-    opacity: 1;
-    width: 42%;
-    left: 2.7em;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element6:hover::after{
-    opacity: 1;
-    width: 73%;
-    left: 1.3em;
+.nav ul li a.element2 {
+display: none;
 }
 
 .nav ul li a.list {
-  width: 10em;
+width: 80em;
 }
 
 .nav ul li a.list-element2 {
-    top: 0em; left: 0em;
-}
-
-.nav ul li a.list-element {
-    top: 0em; left: -2em;
-}
-
-#img-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 2;
-    width: 15%;
-    margin-top: 3.3%;
-    margin-left: 1em;
-}
-
-
-
-.nav ul li a.list-element1:hover {
-    text-decoration: none;
-    color: blue;
-    padding: 0em;
-}
-
-.nav ul li a.list-element2:hover {
-    text-decoration: none;
-    color: blue;
-    padding: 0em;
+  margin-left: -11em;
+  margin-bottom: 1em;
 }
 
 #img-logo:hover {
-    transform: scale(1.2);
-    -webkit-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
+  transform: scale(1.2);
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
 #main {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
 }
 
 #ubicación {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
 
 .container div.slider-wrapper {
-  display: flex;
-  flex: 1;
-  max-width: 180em;
-  max-height: 80em;
+display: flex;
+flex: 1;
+max-width: 180em;
+max-height: 80em;
 }
 
 #footer {
-    flex: 1; 
-}
-
-i.menu-icon  {
-    display: none;
-}
-
-.nav div form.searchbox-form_SearchBox1 {
-    display: none;
-}
-
-.nav div form div.searchbox-form_SearchBox2{
-    display: block;
-}
-
-form {
-    position: relative;
-    top: 4.3em; right: 50em;
-    margin-bottom: 5em;
-}
-
-button {
-    position: fixed;
-    top: 4.3em; left: 37em;
-    writing-mode: horizontal-tb;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: center;
-    align-items: flex-start;
-    cursor: default;
-    box-sizing: border-box;
-    margin: 0em;
-    margin-left: 5em;
-    padding: 1px 6px;
-    border-width: 2px;
-    border-style: outset;
-    border-image: initial;
-}
-
-.button_submit {
-    display: flex;
-    justify-content: center;
-    width: 113px;
-    height: 38px;
-    border: 0;
-    border-radius: 51px;
-    background-color: rgb(36, 36, 198);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    font-weight: 700;
-    font-size: 1em;
-    color: #fff;
-}
-
-.button {
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 25px;
-    transition: all .2s ease-in-out,padding 0s;
-}
-
-.align-items-center {
-    align-items: center;
-}
-
-.btn {
-    display: inline-block;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    border: 1px solid transparent;
-    padding: 0.375em 0.75em;
-    font-size: 1em;
-    line-height: 1.5;
-}
-
-button, select {
-    text-transform: none;
-}
-
-button, input {
-    overflow: visible;
-}
-
-.searchbox-input {
-    height: 100%;
-    padding-right: 3px;
-    border: 0;
-    background-color: white;
-    font-family: Wallie;
-    font-size: 1em;
-    white-space: nowrap;
-}
-
-[type=search] {
-    outline-offset: -2px;
-}
-
-
-input[type="search"] {
-    appearance: auto;
-    box-sizing: border-box;
-    padding: 12px 12px;
-}
-
-input {
-    writing-mode: horizontal-tb;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    -webkit-rtl-ordering: logical;
-    cursor: text;
-    margin: 0em;
-    padding: 1px 2px;
-    border-width: 2px;
-    border-style: inset;
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-    border-image: initial;
-}
-
-
-.searchbox-form_SearchBox2 {
-    height: 38px;
-    border: 1px solid #90a4ae;
-    border-radius: 32px;
-    margin-left: 27%;
-    overflow: hidden;
-    background-color: white;
-}
-
-.width-100 {
-    margin-left: 0%;
-    width: 300%;
-}
-
-.display-flex {
-    display: flex;
-}
-
-i#icon-lupa {
-    position: absolute;
-    left: 62.5em; top: 2.5em;
-    display: block;
-    cursor: pointer;
+  flex: 1; 
 }
 
 .slider-wrapper {
-  position: relative;
-  max-width: 180em;
-  max-height: 80em;
-  margin-left: 0em;
+position: relative;
+max-width: 180em;
+max-height: 80em;
+margin-left: 0em;
 }
 
 .slider {
-    display: flex;
-    aspect-ratio: 16 / 9;
-    overflow-x: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 .25rem .5rem #21212126;
-    border-radius: .5rem;
+  display: flex;
+  aspect-ratio: 4 / 3;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 .25rem .5rem #21212126;
+  border-radius: .5rem;
 }
 
 .slider img {
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: fill;
-    width: 100%;
-    padding-top: 5em;
-}
-
-.slider video {
   flex: 1 0 100%;
   scroll-snap-align: start;
   object-fit: fill;
   width: 100%;
-  padding-top: 5.5em;
+  padding-top: 10em;
+}
+
+.slider video {
+flex: 1 0 100%;
+scroll-snap-align: start;
+object-fit: fill;
+width: 100%;
+padding-top: 10em;
 }
 
 .slider-nav {
-    display: flex;
-    column-gap: 1rem;
-    position: absolute;
-    top: 32rem;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: 4;
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  top: 39rem;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 4;
 }
 
 .slider-nav a {
-    width: .5rem;
-    height: .5rem;
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: .75;
-    transition: opacity ease 250ms;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: .75;
+  transition: opacity ease 250ms;
 }
 
 .slider-nav a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .slider-nav-flecha {
-    display: flex;
-    column-gap: 1rem;
-    position: relative;
-    width: 100px;
-    height: 50px;
-    margin:0 auto;
-    bottom: 20rem;
-    left: 45%;
-    z-index: 1;
+  display: flex;
+  column-gap: 1rem;
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin:0 auto;
+  bottom: 20em;
+  left: 43%;
+  z-index: 1;
 }
 
 .flecha1 {
-    margin-left: -22.7em;
+  margin-left: -19.5em;
 }
 
 .animatedColor {
-    color: white;
+  color: white;
 }
 
 .slider-nav-flecha a {
-    width: 100px;
-    height: 50px;
-    margin-top: 50%;
-    font-size:20px; 
+  width: 100px;
+  height: 50px;
+  margin-top: 50%;
+  font-size:20px; 
 }
 
 .slider-nav-flecha a i:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
-  
-  
-  /* Apunta a todos los elementos h3 con clase CSS title */
-  .title {
-    color: black;
-    font-size: 20px;
-    text-align: left;
-    padding-left: 10px;
-    padding-top: 10px;
-  }
-  
-  /* Apunta a todos los parrafos con la clase CSS text */
-  .text {
-    color: black;
-    font-size: 19px;
-    width: 100%;
-    padding: 10px;
-    margin: 0, 20px;
-    text-align: justify;
-  }
 
-  * Mostrar horizontalmente, poner un poco de espacio alrededor */
+
+/* Apunta a todos los elementos h3 con clase CSS title */
+.title {
+  color: black;
+  font-size: 20px;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+/* Apunta a todos los parrafos con la clase CSS text */
+.text {
+  color: black;
+  font-size: 19px;
+  width: 100%;
+  padding: 10px;
+  margin: 0, 20px;
+  text-align: justify;
+}
+
+* Mostrar horizontalmente, poner un poco de espacio alrededor */
 .flex {
-  display: flex;
-  justify-content: space-around;
+display: flex;
+justify-content: space-around;
 }
 
 /* Agregar algo de padding alrededor del contenedor. Alinear el texto al centro */
 .stats {
-  padding: 45px 50px;
-  text-align: center;
+padding: 45px 50px;
+text-align: center;
 }
 
 /* Aplicar margen y ancho */
 .stat {
-  margin: 0 30px;
-  text-align: center;
-  width: 800px;
+margin: 0 30px;
+text-align: center;
+width: 800px;
 }
 
 .stats .fa {
-    color: blue;
+  color: blue;
 }
 
 .testimonial {
-    color: black;
-    padding: 40px;
-    margin-top: 5em;
+  color: black;
+  padding: 40px;
+  margin-top: 5em;
+  margin-bottom: 2em;
 }
 
 .testimonial img {
-    height: 100%;
-    clip-path: circle();
+  height: 100%;
+  clip-path: circle();
 }
 
 /* Alinea el texto al centro */
 
 h2{
-  position: absolute;
-  top: 26.8em; left: 10em;
-  text-align: center;
+position: absolute;
+top: 32em; left: 7em;
+text-align: center;
 }
 
 .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 100px;
-  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+}
 
 
 
-  footer.grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 100px;
-  }
-  
-  
-  /* Crear una tarjeta en blanco con sombreado alrededor */
-  .card {
-    padding: 10px;
-    padding-bottom: 50%;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
-                 7px  7px 20px rgba(0, 0, 0, 0.2);
-  }
+footer.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+}
 
-  .card-1 {
-    background-image: url(./img/FONTANERO-SUELDO.jpg);
-    background-size: cover;
-  }
 
-  .card-2 {
-    background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
-    background-size: cover;
-  }
-  
-  .card-3 {
-    background-image: url(./img/cocinero.webp);
-    background-size: cover;
-  }
+/* Crear una tarjeta en blanco con sombreado alrededor */
+.card {
+  padding: 10px;
+  padding-bottom: 50%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
+               7px  7px 20px rgba(0, 0, 0, 0.2);
+}
 
-  .card-4 {
-    background-image: url(./img/funciones-de-un-jardinero.jpg);
-    background-size: cover;
-  }
+#card-1 {
+  background-image: url(./img/FONTANERO-SUELDO.jpg);
+  background-size: cover;
+}
 
-  .card-5 {
-    background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
-    background-size: cover;
-  }
+#card-2 {
+  background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
+  background-size: cover;
+}
 
-  .card-6 {
-    background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
-    background-size: cover;
-  }
+#card-3 {
+  background-image: url(./img/cocinero.webp);
+  background-size: cover;
+}
 
-  .card h3 {
-    background-color: rgba(255, 255, 255, 0.672);
-    padding-bottom: 7%;
-    padding-top: 3%;
-    text-align: center;
-    justify-content: center;
-    width: 110%; height: 100%;
-    position: relative;
-    top: 10em; right: 5%;
-    border-radius: 10px;
-    font-size: 80%;
-  }
+#card-4 {
+  background-image: url(./img/funciones-de-un-jardinero.jpg);
+  background-size: cover;
+}
 
-  .card p {
-    text-align: center;
-    justify-content: center;
-    width: 105%; height: 100%;
-    position: relative;
-    top: 9em; right: 2.6%;
-    border-radius: 10px;
-    font-size: 70%;
-  }
+#card-5 {
+  background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
+  background-size: cover;
+}
 
-  
+#card-6 {
+  background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
+  background-size: cover;
+}
 
-  .card p:before {
-    opacity: 0;
-  }
+.card h3 {
+  background-color: rgba(255, 255, 255, 0.672);
+  padding-bottom: 7%;
+  padding-top: 3%;
+  text-align: center;
+  justify-content: center;
+  width: 115%; height: 100%;
+  position: relative;
+  top: 8.4em; right: 7%;
+  border-radius: 10px;
+  font-size: 100%;
+}
 
-  .card p:hover::before {
-    content: attr(data-content);
-    opacity: 1;
-  }
+.card p {
+  text-align: center;
+  justify-content: center;
+  width: 105%; height: 100%;
+  position: relative;
+  top: 5.5em; right: 2.6%;
+  border-radius: 10px;
+  font-size: 100%;
+}
+
+
+
+.card p:before {
+  opacity: 0;
+}
+
+.card p:hover::before {
+  content: attr(data-content);
+  opacity: 1;
+}
 
 
 
 /* Add padding around the footer as well */
 
 footer {
-    background-color: black;
-    padding: 20px 10px;
-  }
+  background-color: black;
+  padding: 20px 10px;
+}
 
-  .copyright {
-    color: white;
-  }
+.copyright {
+  color: white;
+}
 
-  iframe  {
-    margin-left: 0%;
-    margin-top: 5%;
-    margin-bottom: -1%;
-    max-height: 30em;
-    max-width: 100em;
-    width: 105%;
-  }
+iframe  {
+  margin-left: -0%;
+  margin-top: 5%;
+  margin-bottom: -1%;
+  max-height: 32em;
+  max-width: 100em;
+}
 
-  .card-7 p {
-    padding: 2em;
-    justify-content: center;
-    text-align: center;
-    width: 50%;
-    font-size: 140%;
-    margin-left: 25%;
-  }
+.card-7 p {
+  padding: 2em;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  font-size: 140%;
+  margin-left: 10%;
+}
 
-  .card-7 h3 {
-    padding-top: 2em;
-    margin-left: 24%;
-    justify-content: center;
-    text-align: center;
-    width: 50%;
-    font-size: 240%;
-  }
+.card-7 h3 {
+  padding-top: 2em;
+  margin-left: 24%;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  font-size: 240%;
+}
 
-  .card-7 {
-    position: relative;
-    width: 100%;
-    height: 10%;
-    background-color: white;
-    margin-left: 0%;
-    margin-top:  0%;
-  }
+.card-7 {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  background-color: white;
+  margin-left: 0%;
+  margin-top:  0%;
+}
 
 
-  
-  /* Sets all link texts to white and puts margin to the left and right */
-  
-  footer a {
-    color: white;
-    margin: 0 10px;
-    position: relative;
-    left: 28em;
-  }
-  
 
-  footer a:hover {
-    color: cornflowerblue;
-  }
+/* Sets all link texts to white and puts margin to the left and right */
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  position: relative;
+  left: 23em;
+}
+
+
+footer a:hover {
+  color: cornflowerblue;
+}
 
 /* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
 */ 
 
 .image {
-    width: 600px;
-    margin-left: 80px;
-  }
+  width: 600px;
+  margin-left: 80px;
+}
 
 /* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
 
 .stats .flex {
-    flex-direction: column;
-  }
+  flex-direction: column;
+}
 
-  .stats {
-    text-align: center;
-  }
+.stats {
+  text-align: center;
+}
 
 /* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
 
 .stat {
-    width: 100%;
-    padding-right: 80px;
-  }
+  width: 100%;
+  padding-right: 80px;
+}
 
 /* Mueve el círculo al centro de la tarjeta  */
 
-  /* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
+/* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
 
 .navbar .flex {
-    flex-direction: column;
-  }
+  flex-direction: column;
+}
 
 
 /* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
 
-  .navbar a:hover {
-    color: white;
-    border-bottom: 2px solid black;
-  }
+.navbar a:hover {
+  color: white;
+  border-bottom: 2px solid black;
+}
 
 
 /* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
 
-  .navbar ul {
-    background: #9867C5;
-    border-radius: 5px;
-    padding: 10px 0;
-  }
+.navbar ul {
+  background: #9867C5;
+  border-radius: 5px;
+  padding: 10px 0;
+}
 
 
 /* Alinear el texto al centro */
 
-  .showcase {
-    height: auto;
-    text-align: center;
-  }
+.showcase {
+  height: auto;
+  text-align: center;
+}
 
 
 /* Reducir el tamaño de la fuente */
 
 .little-info {
-    font-size: 13px;
-  }
+  font-size: 13px;
+}
 
 
 /* Reducir el ancho de la imágen */
 
-  .image {
-    width: 350px;
-    margin-left: 70px;
-  }
+.image {
+  width: 350px;
+  margin-left: 70px;
+}
 
-  .stat {
-    margin-bottom: 40px;
+.stat {
+  margin-bottom: 40px;
+}
+
+
+/* Mover el círculo una vez más */
+
+
+
+@keyframes arrow {
+  0% {
+  transform: translate(0px, 50px);
   }
+  50% {
+  transform: translate(0px, 60px);
+  }
+  100% {
+  transform: translate(0px, 50px);
+  }
+  }
+}
+
+
+@media screen and (min-width: 920px) and (max-width: 1024px) {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 150vh;
+  background-color: cornflowerblue;
+  font-family: 'Abadi MT Std', sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(226, 247, 255);
+  min-height: 16vh;
+  z-index: 2;
+  
+}
+
+.nav {
+  flex: 5;
+  display: flex;
+}
+
+.nav ul.htopnav {
+  position: absolute;
+  top: 2.5em; left: 9em;
+  display: flex;
+  width: 70%;
+}
+
+.nav ul li {
+  display: flex;
+  margin-left: 2%;
+  width: 100%;
+}
+
+.nav ul li a{
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-size: 80%;
+}
+
+.nav ul li a::before,
+.nav ul li a::after
+{
+  content: '';
+  border-bottom: 4px solid blue;
+  position: absolute;
+  opacity: 0;
+  
+}
+
+.nav ul li a::before{
+  bottom: -0px;
+  width: 90%;
+  right: 0;
+}
+
+.nav ul li a::after{
+  bottom: -5px;
+  width: 70%;
+  left: 0;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element1:hover::after{
+  opacity: 1;
+  width: 55%;
+  left: 2em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element2:hover::after{
+  opacity: 1;
+  width: 95%;
+  left: 0.2em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element2:hover::after{
+  opacity: 1;
+  width: 95%;
+  left: 0.2em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element3:hover::after{
+  opacity: 1;
+  width: 60%;
+  left: 1.8em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element4:hover::after{
+  opacity: 1;
+  width: 60%;
+  left: 1.8em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element5:hover::after{
+  opacity: 1;
+  width: 42%;
+  left: 2.7em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element6:hover::after{
+  opacity: 1;
+  width: 73%;
+  left: 1.3em;
+}
+
+.nav ul li a.list {
+width: 10em;
+}
+
+.nav ul li a.list-element2 {
+  top: 0em; left: 0em;
+}
+
+.nav ul li a.list-element {
+  top: 0em; left: -2em;
+}
+
+#img-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+  width: 15%;
+  margin-top: 3.3%;
+  margin-left: 1em;
+}
+
+
+
+.nav ul li a.list-element1:hover {
+  text-decoration: none;
+  color: blue;
+  padding: 0em;
+}
+
+.nav ul li a.list-element2:hover {
+  text-decoration: none;
+  color: blue;
+  padding: 0em;
+}
+
+#img-logo:hover {
+  transform: scale(1.2);
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+#main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+#ubicación {
+  display: flex;
+  flex: 1;
+}
+
+.container div.slider-wrapper {
+display: flex;
+flex: 1;
+max-width: 180em;
+max-height: 80em;
+}
+
+#footer {
+  flex: 1; 
+}
+
+i.menu-icon  {
+  display: none;
+}
+
+.nav div form.searchbox-form_SearchBox1 {
+  display: none;
+}
+
+.nav div form div.searchbox-form_SearchBox2{
+  display: block;
+}
+
+form {
+  position: relative;
+  top: 4.3em; right: 50em;
+  margin-bottom: 5em;
+}
+
+button {
+  position: fixed;
+  top: 4.3em; left: 37em;
+  writing-mode: horizontal-tb;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  box-sizing: border-box;
+  margin: 0em;
+  margin-left: 5em;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-image: initial;
+}
+
+.button_submit {
+  display: flex;
+  justify-content: center;
+  width: 113px;
+  height: 38px;
+  border: 0;
+  border-radius: 51px;
+  background-color: rgb(36, 36, 198);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-weight: 700;
+  font-size: 1em;
+  color: #fff;
+}
+
+.button {
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 25px;
+  transition: all .2s ease-in-out,padding 0s;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375em 0.75em;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, input {
+  overflow: visible;
+}
+
+.searchbox-input {
+  height: 100%;
+  padding-right: 3px;
+  border: 0;
+  background-color: white;
+  font-family: Wallie;
+  font-size: 1em;
+  white-space: nowrap;
+}
+
+[type=search] {
+  outline-offset: -2px;
+}
+
+
+input[type="search"] {
+  appearance: auto;
+  box-sizing: border-box;
+  padding: 12px 12px;
+}
+
+input {
+  writing-mode: horizontal-tb;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  margin: 0em;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+}
+
+
+.searchbox-form_SearchBox2 {
+  height: 38px;
+  border: 1px solid #90a4ae;
+  border-radius: 32px;
+  margin-left: 27%;
+  overflow: hidden;
+  background-color: white;
+}
+
+.width-100 {
+  margin-left: 0%;
+  width: 300%;
+}
+
+.display-flex {
+  display: flex;
+}
+
+i#icon-lupa {
+  position: absolute;
+  left: 62.5em; top: 2.5em;
+  display: block;
+  cursor: pointer;
+}
+
+.slider-wrapper {
+position: relative;
+max-width: 180em;
+max-height: 80em;
+margin-left: 0em;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 .25rem .5rem #21212126;
+  border-radius: .5rem;
+}
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: fill;
+  width: 100%;
+  padding-top: 5em;
+}
+
+.slider video {
+flex: 1 0 100%;
+scroll-snap-align: start;
+object-fit: fill;
+width: 100%;
+padding-top: 5.5em;
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  top: 32rem;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 4;
+}
+
+.slider-nav a {
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: .75;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+}
+
+.slider-nav-flecha {
+  display: flex;
+  column-gap: 1rem;
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin:0 auto;
+  bottom: 20rem;
+  left: 45%;
+  z-index: 1;
+}
+
+.flecha1 {
+  margin-left: -22.7em;
+}
+
+.animatedColor {
+  color: white;
+}
+
+.slider-nav-flecha a {
+  width: 100px;
+  height: 50px;
+  margin-top: 50%;
+  font-size:20px; 
+}
+
+.slider-nav-flecha a i:hover {
+  transform: scale(1.2);
+}
+
+
+
+/* Apunta a todos los elementos h3 con clase CSS title */
+.title {
+  color: black;
+  font-size: 20px;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+/* Apunta a todos los parrafos con la clase CSS text */
+.text {
+  color: black;
+  font-size: 19px;
+  width: 100%;
+  padding: 10px;
+  margin: 0, 20px;
+  text-align: justify;
+}
+
+* Mostrar horizontalmente, poner un poco de espacio alrededor */
+.flex {
+display: flex;
+justify-content: space-around;
+}
+
+/* Agregar algo de padding alrededor del contenedor. Alinear el texto al centro */
+.stats {
+padding: 45px 50px;
+text-align: center;
+}
+
+/* Aplicar margen y ancho */
+.stat {
+margin: 0 30px;
+text-align: center;
+width: 800px;
+}
+
+.stats .fa {
+  color: blue;
+}
+
+.testimonial {
+  color: black;
+  padding: 40px;
+  margin-top: 5em;
+}
+
+.testimonial img {
+  height: 100%;
+  clip-path: circle();
+}
+
+/* Alinea el texto al centro */
+
+h2{
+position: absolute;
+top: 26.8em; left: 10em;
+text-align: center;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+}
+
+
+
+footer.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+}
+
+
+/* Crear una tarjeta en blanco con sombreado alrededor */
+.card {
+  padding: 10px;
+  padding-bottom: 50%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
+               7px  7px 20px rgba(0, 0, 0, 0.2);
+}
+
+#card-1 {
+  background-image: url(./img/FONTANERO-SUELDO.jpg);
+  background-size: cover;
+}
+
+#card-2 {
+  background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
+  background-size: cover;
+}
+
+#card-3 {
+  background-image: url(./img/cocinero.webp);
+  background-size: cover;
+}
+
+#card-4 {
+  background-image: url(./img/funciones-de-un-jardinero.jpg);
+  background-size: cover;
+}
+
+#card-5 {
+  background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
+  background-size: cover;
+}
+
+#card-6 {
+  background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
+  background-size: cover;
+}
+
+.card h3 {
+  background-color: rgba(255, 255, 255, 0.672);
+  padding-bottom: 7%;
+  padding-top: 3%;
+  text-align: center;
+  justify-content: center;
+  width: 110%; height: 100%;
+  position: relative;
+  top: 10em; right: 5%;
+  border-radius: 10px;
+  font-size: 80%;
+}
+
+.card p {
+  text-align: center;
+  justify-content: center;
+  width: 105%; height: 100%;
+  position: relative;
+  top: 9em; right: 2.6%;
+  border-radius: 10px;
+  font-size: 70%;
+}
+
+
+
+.card p:before {
+  opacity: 0;
+}
+
+.card p:hover::before {
+  content: attr(data-content);
+  opacity: 1;
+}
+
+
+
+/* Add padding around the footer as well */
+
+footer {
+  background-color: black;
+  padding: 20px 10px;
+}
+
+.copyright {
+  color: white;
+}
+
+iframe  {
+  margin-left: 0%;
+  margin-top: 5%;
+  margin-bottom: -1%;
+  max-height: 30em;
+  max-width: 100em;
+  width: 105%;
+}
+
+.card-7 p {
+  padding: 2em;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  font-size: 140%;
+  margin-left: 25%;
+}
+
+.card-7 h3 {
+  padding-top: 2em;
+  margin-left: 24%;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  font-size: 240%;
+}
+
+.card-7 {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  background-color: white;
+  margin-left: 0%;
+  margin-top:  0%;
+}
+
+
+
+/* Sets all link texts to white and puts margin to the left and right */
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  position: relative;
+  left: 28em;
+}
+
+
+footer a:hover {
+  color: cornflowerblue;
+}
+
+/* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
+*/ 
+
+.image {
+  width: 600px;
+  margin-left: 80px;
+}
+
+/* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
+
+.stats .flex {
+  flex-direction: column;
+}
+
+.stats {
+  text-align: center;
+}
+
+/* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
+
+.stat {
+  width: 100%;
+  padding-right: 80px;
+}
+
+/* Mueve el círculo al centro de la tarjeta  */
+
+/* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
+
+.navbar .flex {
+  flex-direction: column;
+}
+
+
+/* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
+
+.navbar a:hover {
+  color: white;
+  border-bottom: 2px solid black;
+}
+
+
+/* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
+
+.navbar ul {
+  background: #9867C5;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+
+/* Alinear el texto al centro */
+
+.showcase {
+  height: auto;
+  text-align: center;
+}
+
+
+/* Reducir el tamaño de la fuente */
+
+.little-info {
+  font-size: 13px;
+}
+
+
+/* Reducir el ancho de la imágen */
+
+.image {
+  width: 350px;
+  margin-left: 70px;
+}
+
+.stat {
+  margin-bottom: 40px;
+}
 
 
 /* Mover el círculo una vez más */
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 150vh;
+  background-color: cornflowerblue;
+  font-family: 'Abadi MT Std', sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(226, 247, 255);
+  min-height: 16vh;
+  z-index: 2;
+  
+}
+
+.nav {
+  flex: 5;
+  display: flex;
+}
+
+.nav ul.htopnav {
+  position: absolute;
+  top: 3.5em; left: 16em;
+  display: flex;
+  width: 70%;
+}
+
+.nav ul li {
+  display: flex;
+  margin-left: 2%;
+  width: 100%;
+}
+
+.nav ul li a{
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-size: 100%;
+}
+
+.nav ul li a::before,
+.nav ul li a::after
+{
+  content: '';
+  border-bottom: 4px solid blue;
+  position: absolute;
+  opacity: 0;
+  
+}
+
+.nav ul li a::before{
+  bottom: -0px;
+  width: 90%;
+  right: 0;
+}
+
+.nav ul li a::after{
+  bottom: -5px;
+  width: 70%;
+  left: 0;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element1:hover::after{
+  opacity: 1;
+  width: 55%;
+  left: 2em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element2:hover::after{
+  opacity: 1;
+  width: 95%;
+  left: 0.2em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element2:hover::after{
+  opacity: 1;
+  width: 95%;
+  left: 0.2em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element3:hover::after{
+  opacity: 1;
+  width: 60%;
+  left: 1.8em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element4:hover::after{
+  opacity: 1;
+  width: 60%;
+  left: 1.8em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element5:hover::after{
+  opacity: 1;
+  width: 42%;
+  left: 2.7em;
+}
+
+.nav ul li a.activo::after,
+.nav ul li a.element6:hover::after{
+  opacity: 1;
+  width: 73%;
+  left: 1.3em;
+}
+
+.nav ul li a.list {
+width: 10em;
+}
+
+.nav ul li a.list-element2 {
+  top: 0em; left: 6em;
+}
+
+.nav ul li a.list-element {
+  top: 0em; left: -2em;
+}
+
+#img-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+  width: 22%;
+  margin-top: 4.3%;
+  margin-left: 3em;
+}
+
+
+
+.nav ul li a.list-element1:hover {
+  text-decoration: none;
+  color: blue;
+  padding: 0em;
+}
+
+.nav ul li a.list-element2:hover {
+  text-decoration: none;
+  color: blue;
+  padding: 0em;
+}
+
+#img-logo:hover {
+  transform: scale(1.2);
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+#main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+#ubicación {
+  display: flex;
+  flex: 1;
+}
+
+.container div.slider-wrapper {
+display: flex;
+flex: 1;
+max-width: 180em;
+max-height: 80em;
+}
+
+#footer {
+  flex: 1; 
+}
+
+i.menu-icon  {
+  display: none;
+}
+
+.nav div form.searchbox-form_SearchBox1 {
+  display: none;
+}
+
+.nav div form div.searchbox-form_SearchBox2{
+  display: block;
+}
+
+form {
+  position: relative;
+  top: 5.3em; right: 53.5em;
+  margin-bottom: 5em;
+}
+
+button {
+  position: fixed;
+  top: 5.3em; left: 42em;
+  writing-mode: horizontal-tb;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  box-sizing: border-box;
+  margin: 0em;
+  margin-left: 5em;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-image: initial;
+}
+
+.button_submit {
+  display: flex;
+  justify-content: center;
+  width: 113px;
+  height: 38px;
+  border: 0;
+  border-radius: 51px;
+  background-color: rgb(36, 36, 198);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-weight: 700;
+  font-size: 1em;
+  color: #fff;
+}
+
+.button {
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 25px;
+  transition: all .2s ease-in-out,padding 0s;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375em 0.75em;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, input {
+  overflow: visible;
+}
+
+.searchbox-input {
+  height: 100%;
+  padding-right: 3px;
+  border: 0;
+  background-color: white;
+  font-family: Wallie;
+  font-size: 1em;
+  white-space: nowrap;
+}
+
+[type=search] {
+  outline-offset: -2px;
+}
+
+
+input[type="search"] {
+  appearance: auto;
+  box-sizing: border-box;
+  padding: 12px 12px;
+}
+
+input {
+  writing-mode: horizontal-tb;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  margin: 0em;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+}
+
+
+.searchbox-form_SearchBox2 {
+  height: 38px;
+  border: 1px solid #90a4ae;
+  border-radius: 32px;
+  margin-left: 27%;
+  overflow: hidden;
+  background-color: white;
+}
+
+.width-100 {
+  margin-left: 0%;
+  width: 300%;
+}
+
+.display-flex {
+  display: flex;
+}
+
+i#icon-lupa {
+  position: absolute;
+  left: 77em; top: 3.2em;
+  display: block;
+  cursor: pointer;
+}
+
+.slider-wrapper {
+position: relative;
+max-width: 180em;
+max-height: 80em;
+margin-left: 0em;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 .25rem .5rem #21212126;
+  border-radius: .5rem;
+}
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: fill;
+  width: 100%;
+  padding-top: 8em;
+}
+
+.slider video {
+flex: 1 0 100%;
+scroll-snap-align: start;
+object-fit: fill;
+width: 100%;
+padding-top: 8em;
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  top: 40rem;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 4;
+}
+
+.slider-nav a {
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: .75;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+}
+
+.slider-nav-flecha {
+  display: flex;
+  column-gap: 1rem;
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin:0 auto;
+  bottom: 24rem;
+  left: 45%;
+  z-index: 1;
+}
+
+.flecha1 {
+  margin-left: -28.8em;
+}
+
+.animatedColor {
+  color: white;
+}
+
+.slider-nav-flecha a {
+  width: 100px;
+  height: 50px;
+  margin-top: 50%;
+  font-size:20px; 
+}
+
+.slider-nav-flecha a i:hover {
+  transform: scale(1.2);
+}
+
+
+
+/* Apunta a todos los elementos h3 con clase CSS title */
+.title {
+  color: black;
+  font-size: 20px;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+/* Apunta a todos los parrafos con la clase CSS text */
+.text {
+  color: black;
+  font-size: 19px;
+  width: 100%;
+  padding: 10px;
+  margin: 0, 20px;
+  text-align: justify;
+}
+
+* Mostrar horizontalmente, poner un poco de espacio alrededor */
+.flex {
+display: flex;
+justify-content: space-around;
+}
+
+/* Agregar algo de padding alrededor del contenedor. Alinear el texto al centro */
+.stats {
+padding: 45px 50px;
+text-align: center;
+}
+
+/* Aplicar margen y ancho */
+.stat {
+margin: 0 30px;
+text-align: center;
+width: 800px;
+}
+
+.stats .fa {
+  color: blue;
+}
+
+.testimonial {
+  color: black;
+  padding: 40px;
+  margin-top: 5em;
+}
+
+.testimonial img {
+  height: 100%;
+  clip-path: circle();
+}
+
+/* Alinea el texto al centro */
+
+h2{
+position: absolute;
+top: 33em; left: 17em;
+text-align: center;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+}
+
+
+
+footer.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+}
+
+
+/* Crear una tarjeta en blanco con sombreado alrededor */
+.card {
+  padding: 10px;
+  padding-bottom: 50%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
+               7px  7px 20px rgba(0, 0, 0, 0.2);
+}
+
+#card-1 {
+  background-image: url(./img/FONTANERO-SUELDO.jpg);
+  background-size: cover;
+}
+
+#card-2 {
+  background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
+  background-size: cover;
+}
+
+#card-3 {
+  background-image: url(./img/cocinero.webp);
+  background-size: cover;
+}
+
+#card-4 {
+  background-image: url(./img/funciones-de-un-jardinero.jpg);
+  background-size: cover;
+}
+
+#card-5 {
+  background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
+  background-size: cover;
+}
+
+#card-6 {
+  background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
+  background-size: cover;
+}
+
+.card h3 {
+  background-color: rgba(255, 255, 255, 0.672);
+  padding-bottom: 7%;
+  padding-top: 3%;
+  text-align: center;
+  justify-content: center;
+  width: 110%; height: 100%;
+  position: relative;
+  top: 10.5em; right: 5%;
+  border-radius: 10px;
+  font-size: 100%;
+}
+
+.card p {
+  text-align: center;
+  justify-content: center;
+  width: 105%; height: 100%;
+  position: relative;
+  top: 8.5em; right: 2.6%;
+  border-radius: 10px;
+  font-size: 100%;
+}
+
+
+
+.card p:before {
+  opacity: 0;
+}
+
+.card p:hover::before {
+  content: attr(data-content);
+  opacity: 1;
+}
+
+
+
+/* Add padding around the footer as well */
+
+footer {
+  background-color: black;
+  padding: 20px 10px;
+}
+
+.copyright {
+  color: white;
+}
+
+iframe  {
+  margin-left: 0%;
+  margin-top: 5%;
+  margin-bottom: -1%;
+  max-height: 30em;
+  max-width: 100em;
+  width: 105%;
+}
+
+.card-7 p {
+  padding: 2em;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  font-size: 140%;
+  margin-left: 25%;
+}
+
+.card-7 h3 {
+  padding-top: 2em;
+  margin-left: 24%;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  font-size: 240%;
+}
+
+.card-7 {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  background-color: white;
+  margin-left: 0%;
+  margin-top:  0%;
+}
+
+
+
+/* Sets all link texts to white and puts margin to the left and right */
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  position: relative;
+  left: 38em;
+}
+
+
+footer a:hover {
+  color: cornflowerblue;
+}
+
+/* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
+*/ 
+
+.image {
+  width: 600px;
+  margin-left: 80px;
+}
+
+/* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
+
+.stats .flex {
+  flex-direction: column;
+}
+
+.stats {
+  text-align: center;
+}
+
+/* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
+
+.stat {
+  width: 100%;
+  padding-right: 80px;
+}
+
+/* Mueve el círculo al centro de la tarjeta  */
+
+/* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
+
+.navbar .flex {
+  flex-direction: column;
+}
+
+
+/* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
+
+.navbar a:hover {
+  color: white;
+  border-bottom: 2px solid black;
+}
+
+
+/* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
+
+.navbar ul {
+  background: #9867C5;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+
+/* Alinear el texto al centro */
+
+.showcase {
+  height: auto;
+  text-align: center;
+}
+
+
+/* Reducir el tamaño de la fuente */
+
+.little-info {
+  font-size: 13px;
+}
+
+
+/* Reducir el ancho de la imágen */
+
+.image {
+  width: 350px;
+  margin-left: 70px;
+}
+
+.stat {
+  margin-bottom: 40px;
+}
+
+
+/* Mover el círculo una vez más */
+}
+
+@media screen and (min-width: 1281px) {
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html, body {
+  }
+  
+  html, body {
     width: 100%;
     overflow-x: hidden;
-}
-
-body{
+  }
+  
+  body{
     display: flex;
     flex-direction: column;
     min-height: 150vh;
     background-color: cornflowerblue;
     font-family: 'Abadi MT Std', sans-serif;
-}
-
-header {
+  }
+  
+  header {
     display: flex;
     flex-direction: row;
     height: fit-content;
     width: 100%;
     position: fixed;
     background-color: rgb(226, 247, 255);
-    min-height: 16vh;
+    min-height: 18vh;
     z-index: 2;
     
-}
-
-.nav {
+  }
+  
+  .nav {
     flex: 5;
     display: flex;
-}
-
-.nav ul.htopnav {
+  }
+  
+  .nav ul.htopnav {
     position: absolute;
     top: 3.5em; left: 16em;
     display: flex;
     width: 70%;
-}
-
-.nav ul li {
+  }
+  
+  .nav ul li {
     display: flex;
     margin-left: 2%;
     width: 100%;
-}
-
-.nav ul li a{
+  }
+  
+  .nav ul li a{
     position: relative;
     display: flex;
     width: 100%;
@@ -4814,92 +5550,92 @@ header {
     text-decoration: none;
     color: black;
     font-size: 100%;
-}
-
-.nav ul li a::before,
-.nav ul li a::after
-{
+  }
+  
+  .nav ul li a::before,
+  .nav ul li a::after
+  {
     content: '';
     border-bottom: 4px solid blue;
     position: absolute;
     opacity: 0;
     
-}
-
-.nav ul li a::before{
+  }
+  
+  .nav ul li a::before{
     bottom: -0px;
     width: 90%;
     right: 0;
-}
-
-.nav ul li a::after{
+  }
+  
+  .nav ul li a::after{
     bottom: -5px;
     width: 70%;
     left: 0;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element1:hover::after{
+  }
+  
+  .nav ul li a.activo::after,
+  .nav ul li a.element1:hover::after{
     opacity: 1;
     width: 55%;
     left: 2em;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element2:hover::after{
+  }
+  
+  .nav ul li a.activo::after,
+  .nav ul li a.element2:hover::after{
     opacity: 1;
     width: 95%;
     left: 0.2em;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element2:hover::after{
+  }
+  
+  .nav ul li a.activo::after,
+  .nav ul li a.element2:hover::after{
     opacity: 1;
     width: 95%;
     left: 0.2em;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element3:hover::after{
+  }
+  
+  .nav ul li a.activo::after,
+  .nav ul li a.element3:hover::after{
     opacity: 1;
     width: 60%;
     left: 1.8em;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element4:hover::after{
+  }
+  
+  .nav ul li a.activo::after,
+  .nav ul li a.element4:hover::after{
     opacity: 1;
     width: 60%;
     left: 1.8em;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element5:hover::after{
+  }
+  
+  .nav ul li a.activo::after,
+  .nav ul li a.element5:hover::after{
     opacity: 1;
     width: 42%;
     left: 2.7em;
-}
-
-.nav ul li a.activo::after,
-.nav ul li a.element6:hover::after{
+  }
+  
+  .nav ul li a.activo::after,
+  .nav ul li a.element6:hover::after{
     opacity: 1;
     width: 73%;
     left: 1.3em;
-}
-
-.nav ul li a.list {
+  }
+  
+  .nav ul li a.list {
   width: 10em;
-}
-
-.nav ul li a.list-element2 {
+  }
+  
+  .nav ul li a.list-element2 {
     top: 0em; left: 6em;
-}
-
-.nav ul li a.list-element {
+  }
+  
+  .nav ul li a.list-element {
     top: 0em; left: -2em;
-}
-
-#img-logo {
+  }
+  
+  #img-logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4907,70 +5643,70 @@ header {
     width: 22%;
     margin-top: 4.3%;
     margin-left: 3em;
-}
-
-
-
-.nav ul li a.list-element1:hover {
+  }
+  
+  
+  
+  .nav ul li a.list-element1:hover {
     text-decoration: none;
     color: blue;
     padding: 0em;
-}
-
-.nav ul li a.list-element2:hover {
+  }
+  
+  .nav ul li a.list-element2:hover {
     text-decoration: none;
     color: blue;
     padding: 0em;
-}
-
-#img-logo:hover {
+  }
+  
+  #img-logo:hover {
     transform: scale(1.2);
     -webkit-transition: all 500ms ease;
     -o-transition: all 500ms ease;
     transition: all 500ms ease;
-}
-
-#main {
+  }
+  
+  #main {
     flex: 1;
     display: flex;
     flex-direction: row;
-}
-
-#ubicación {
+  }
+  
+  #ubicación {
     display: flex;
     flex: 1;
-}
-
-.container div.slider-wrapper {
+  }
+  
+  .container div.slider-wrapper {
   display: flex;
   flex: 1;
   max-width: 180em;
   max-height: 80em;
-}
-
-#footer {
+  }
+  
+  #footer {
     flex: 1; 
-}
-
-i.menu-icon  {
+  }
+  
+  i.menu-icon  {
     display: none;
-}
-
-.nav div form.searchbox-form_SearchBox1 {
+  }
+  
+  .nav div form.searchbox-form_SearchBox1 {
     display: none;
-}
-
-.nav div form div.searchbox-form_SearchBox2{
+  }
+  
+  .nav div form div.searchbox-form_SearchBox2{
     display: block;
-}
-
-form {
+  }
+  
+  form {
     position: relative;
     top: 5.3em; right: 53.5em;
     margin-bottom: 5em;
-}
-
-button {
+  }
+  
+  button {
     position: fixed;
     top: 5.3em; left: 42em;
     writing-mode: horizontal-tb;
@@ -4988,9 +5724,9 @@ button {
     border-width: 2px;
     border-style: outset;
     border-image: initial;
-}
-
-.button_submit {
+  }
+  
+  .button_submit {
     display: flex;
     justify-content: center;
     width: 113px;
@@ -5004,20 +5740,20 @@ button {
     font-weight: 700;
     font-size: 1em;
     color: #fff;
-}
-
-.button {
+  }
+  
+  .button {
     color: #fff;
     padding: 12px 20px;
     border-radius: 25px;
     transition: all .2s ease-in-out,padding 0s;
-}
-
-.align-items-center {
+  }
+  
+  .align-items-center {
     align-items: center;
-}
-
-.btn {
+  }
+  
+  .btn {
     display: inline-block;
     font-weight: 400;
     color: white;
@@ -5030,17 +5766,17 @@ button {
     padding: 0.375em 0.75em;
     font-size: 1em;
     line-height: 1.5;
-}
-
-button, select {
+  }
+  
+  button, select {
     text-transform: none;
-}
-
-button, input {
+  }
+  
+  button, input {
     overflow: visible;
-}
-
-.searchbox-input {
+  }
+  
+  .searchbox-input {
     height: 100%;
     padding-right: 3px;
     border: 0;
@@ -5048,20 +5784,20 @@ button, input {
     font-family: Wallie;
     font-size: 1em;
     white-space: nowrap;
-}
-
-[type=search] {
+  }
+  
+  [type=search] {
     outline-offset: -2px;
-}
-
-
-input[type="search"] {
+  }
+  
+  
+  input[type="search"] {
     appearance: auto;
     box-sizing: border-box;
     padding: 12px 12px;
-}
-
-input {
+  }
+  
+  input {
     writing-mode: horizontal-tb;
     text-transform: none;
     text-indent: 0px;
@@ -5076,42 +5812,42 @@ input {
     border-style: inset;
     border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
     border-image: initial;
-}
-
-
-.searchbox-form_SearchBox2 {
+  }
+  
+  
+  .searchbox-form_SearchBox2 {
     height: 38px;
     border: 1px solid #90a4ae;
     border-radius: 32px;
     margin-left: 27%;
     overflow: hidden;
     background-color: white;
-}
-
-.width-100 {
+  }
+  
+  .width-100 {
     margin-left: 0%;
     width: 300%;
-}
-
-.display-flex {
+  }
+  
+  .display-flex {
     display: flex;
-}
-
-i#icon-lupa {
+  }
+  
+  i#icon-lupa {
     position: absolute;
-    left: 77em; top: 3.2em;
+    left: 91em; top: 3.4em;
     display: block;
     cursor: pointer;
-}
-
-.slider-wrapper {
+  }
+  
+  .slider-wrapper {
   position: relative;
   max-width: 180em;
   max-height: 80em;
   margin-left: 0em;
-}
-
-.slider {
+  }
+  
+  .slider {
     display: flex;
     aspect-ratio: 16 / 9;
     overflow-x: hidden;
@@ -5119,78 +5855,78 @@ i#icon-lupa {
     scroll-behavior: smooth;
     box-shadow: 0 .25rem .5rem #21212126;
     border-radius: .5rem;
-}
-
-.slider img {
+  }
+  
+  .slider img {
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: fill;
     width: 100%;
     padding-top: 8em;
-}
-
-.slider video {
+  }
+  
+  .slider video {
   flex: 1 0 100%;
   scroll-snap-align: start;
   object-fit: fill;
   width: 100%;
   padding-top: 8em;
-}
-
-.slider-nav {
+  }
+  
+  .slider-nav {
     display: flex;
     column-gap: 1rem;
     position: absolute;
-    top: 40rem;
+    top: 50rem;
     left: 50%;
     transform: translate(-50%);
     z-index: 4;
-}
-
-.slider-nav a {
+  }
+  
+  .slider-nav a {
     width: .5rem;
     height: .5rem;
     border-radius: 50%;
     background-color: #fff;
     opacity: .75;
     transition: opacity ease 250ms;
-}
-
-.slider-nav a:hover {
+  }
+  
+  .slider-nav a:hover {
     opacity: 1;
-}
-
-.slider-nav-flecha {
+  }
+  
+  .slider-nav-flecha {
     display: flex;
     column-gap: 1rem;
     position: relative;
     width: 100px;
     height: 50px;
     margin:0 auto;
-    bottom: 24rem;
+    bottom: 30rem;
     left: 45%;
     z-index: 1;
-}
-
-.flecha1 {
-    margin-left: -28.8em;
-}
-
-.animatedColor {
+  }
+  
+  .flecha1 {
+    margin-left: -34.2em;
+  }
+  
+  .animatedColor {
     color: white;
-}
-
-.slider-nav-flecha a {
+  }
+  
+  .slider-nav-flecha a {
     width: 100px;
     height: 50px;
     margin-top: 50%;
     font-size:20px; 
-}
-
-.slider-nav-flecha a i:hover {
+  }
+  
+  .slider-nav-flecha a i:hover {
     transform: scale(1.2);
-}
-
+  }
+  
   
   
   /* Apunta a todos los elementos h3 con clase CSS title */
@@ -5211,57 +5947,57 @@ i#icon-lupa {
     margin: 0, 20px;
     text-align: justify;
   }
-
+  
   * Mostrar horizontalmente, poner un poco de espacio alrededor */
-.flex {
+  .flex {
   display: flex;
   justify-content: space-around;
-}
-
-/* Agregar algo de padding alrededor del contenedor. Alinear el texto al centro */
-.stats {
+  }
+  
+  /* Agregar algo de padding alrededor del contenedor. Alinear el texto al centro */
+  .stats {
   padding: 45px 50px;
   text-align: center;
-}
-
-/* Aplicar margen y ancho */
-.stat {
+  }
+  
+  /* Aplicar margen y ancho */
+  .stat {
   margin: 0 30px;
   text-align: center;
   width: 800px;
-}
-
-.stats .fa {
+  }
+  
+  .stats .fa {
     color: blue;
-}
-
-.testimonial {
+  }
+  
+  .testimonial {
     color: black;
     padding: 40px;
     margin-top: 5em;
-}
-
-.testimonial img {
+  }
+  
+  .testimonial img {
     height: 100%;
     clip-path: circle();
-}
-
-/* Alinea el texto al centro */
-
-h2{
+  }
+  
+  /* Alinea el texto al centro */
+  
+  h2{
   position: absolute;
-  top: 33em; left: 17em;
+  top: 38em; left: 20em;
   text-align: center;
-}
-
-.grid-3 {
+  }
+  
+  .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 100px;
   }
-
-
-
+  
+  
+  
   footer.grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -5278,37 +6014,37 @@ h2{
     box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
                  7px  7px 20px rgba(0, 0, 0, 0.2);
   }
-
-  .card-1 {
+  
+  #card-1 {
     background-image: url(./img/FONTANERO-SUELDO.jpg);
     background-size: cover;
   }
-
-  .card-2 {
+  
+  #card-2 {
     background-image: url(./img/20210222_142324_0000\ \(1\)-1616455846.webp);
     background-size: cover;
   }
   
-  .card-3 {
+  #card-3 {
     background-image: url(./img/cocinero.webp);
     background-size: cover;
   }
-
-  .card-4 {
+  
+  #card-4 {
     background-image: url(./img/funciones-de-un-jardinero.jpg);
     background-size: cover;
   }
-
-  .card-5 {
+  
+  #card-5 {
     background-image: url(./img/auto-car-repair-service-center-mechanic-examining-car-suspension-min-scaled.jpg.webp);
     background-size: cover;
   }
-
-  .card-6 {
+  
+  #card-6 {
     background-image: url(./img/Q74KMBUDEVBSZH7WVXR3ESFCCE.avif);
     background-size: cover;
   }
-
+  
   .card h3 {
     background-color: rgba(255, 255, 255, 0.672);
     padding-bottom: 7%;
@@ -5317,45 +6053,45 @@ h2{
     justify-content: center;
     width: 110%; height: 100%;
     position: relative;
-    top: 10.5em; right: 5%;
+    top: 13em; right: 5%;
     border-radius: 10px;
     font-size: 100%;
   }
-
+  
   .card p {
     text-align: center;
     justify-content: center;
     width: 105%; height: 100%;
     position: relative;
-    top: 8.5em; right: 2.6%;
+    top: 10.5em; right: 2.6%;
     border-radius: 10px;
     font-size: 100%;
   }
-
   
-
+  
+  
   .card p:before {
     opacity: 0;
   }
-
+  
   .card p:hover::before {
     content: attr(data-content);
     opacity: 1;
   }
-
-
-
-/* Add padding around the footer as well */
-
-footer {
+  
+  
+  
+  /* Add padding around the footer as well */
+  
+  footer {
     background-color: black;
     padding: 20px 10px;
   }
-
+  
   .copyright {
     color: white;
   }
-
+  
   iframe  {
     margin-left: 0%;
     margin-top: 5%;
@@ -5364,7 +6100,7 @@ footer {
     max-width: 100em;
     width: 105%;
   }
-
+  
   .card-7 p {
     padding: 2em;
     justify-content: center;
@@ -5373,7 +6109,7 @@ footer {
     font-size: 140%;
     margin-left: 25%;
   }
-
+  
   .card-7 h3 {
     padding-top: 2em;
     margin-left: 24%;
@@ -5382,7 +6118,7 @@ footer {
     width: 50%;
     font-size: 240%;
   }
-
+  
   .card-7 {
     position: relative;
     width: 100%;
@@ -5391,8 +6127,8 @@ footer {
     margin-left: 0%;
     margin-top:  0%;
   }
-
-
+  
+  
   
   /* Sets all link texts to white and puts margin to the left and right */
   
@@ -5400,91 +6136,91 @@ footer {
     color: white;
     margin: 0 10px;
     position: relative;
-    left: 38em;
+    left: 49em;
   }
   
-
+  
   footer a:hover {
     color: cornflowerblue;
   }
-
-/* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
-*/ 
-
-.image {
+  
+  /* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
+  */ 
+  
+  .image {
     width: 600px;
     margin-left: 80px;
   }
-
-/* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
-
-.stats .flex {
+  
+  /* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
+  
+  .stats .flex {
     flex-direction: column;
   }
-
+  
   .stats {
     text-align: center;
   }
-
-/* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
-
-.stat {
+  
+  /* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
+  
+  .stat {
     width: 100%;
     padding-right: 80px;
   }
-
-/* Mueve el círculo al centro de la tarjeta  */
-
+  
+  /* Mueve el círculo al centro de la tarjeta  */
+  
   /* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
-
-.navbar .flex {
+  
+  .navbar .flex {
     flex-direction: column;
   }
-
-
-/* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
-
+  
+  
+  /* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
+  
   .navbar a:hover {
     color: white;
     border-bottom: 2px solid black;
   }
-
-
-/* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
-
+  
+  
+  /* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
+  
   .navbar ul {
     background: #9867C5;
     border-radius: 5px;
     padding: 10px 0;
   }
-
-
-/* Alinear el texto al centro */
-
+  
+  
+  /* Alinear el texto al centro */
+  
   .showcase {
     height: auto;
     text-align: center;
   }
-
-
-/* Reducir el tamaño de la fuente */
-
-.little-info {
+  
+  
+  /* Reducir el tamaño de la fuente */
+  
+  .little-info {
     font-size: 13px;
   }
-
-
-/* Reducir el ancho de la imágen */
-
+  
+  
+  /* Reducir el ancho de la imágen */
+  
   .image {
     width: 350px;
     margin-left: 70px;
   }
-
+  
   .stat {
     margin-bottom: 40px;
   }
-
-
-/* Mover el círculo una vez más */
-}
+  
+  
+  /* Mover el círculo una vez más */
+  }
