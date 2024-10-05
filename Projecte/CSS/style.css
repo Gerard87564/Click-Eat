@@ -8,8 +8,8 @@
 }
 
 #htopnav {
+    margin-left: 10em;
     position: relative;
-    left: 10em;
     bottom: 4.5em;
 }
 
