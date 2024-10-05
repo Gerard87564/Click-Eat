@@ -2,3 +2,22 @@
     margin: 0;
     padding: 0;
 }
+
+#img-nav img {
+    width: 100px;
+}
+
+#htopnav {
+    position: relative;
+    left: 10em;
+    bottom: 4.5em;
+}
+
+#htopnav button {
+    margin-left: 5em;
+    width: 15em;
+}
+
+header {
+    background-color: #ebfdff;
+}
