@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -135,10 +136,10 @@ nav ul#htopnav {
         #htopnav.visible {
             display: block;
             position: fixed;
+            height: 100dvh;
             top: 3em;
             left: 7em;
             background-color: #ebfdff;
-            padding-bottom: 37.6em;
         }
 
         #htopnav.visible .btn {
