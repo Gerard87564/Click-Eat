@@ -8,13 +8,15 @@
 html, body {
     width: 100%;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: white;
 }
 
@@ -24,6 +26,14 @@ header {
     max-height: 10vh;
     width: 100%;
     background-color: #ebfdff;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    background-color: white;
+    font-family: 'Fredoka One';
+    margin-bottom:1em;
 }
 
 nav {
@@ -41,6 +51,33 @@ nav ul#htopnav {
     width: auto;
 }
 
+footer {
+    background-color: #f1f1f1;
+    font-family: 'Fredoka One';
+    text-align: center;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 5em;
+}
+
+#footer-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em; 
+}
+
+footer img {
+    width: 30px;
+    height: auto;
+}
+
+#number, #copy {
+    margin: 0.5em;
+    text-align: center;
+}
 
 #img-nav {
     flex: 1;
@@ -60,14 +97,111 @@ nav ul#htopnav {
     border: none;
 }
 
-#htopnav .button {
-    margin-left: 5em;
-    border-radius: 15em;
-    width: 5em;
-}
-
 #htopnav .btn:hover {
     color: green;
+}
+
+#img-container {
+    position: relative;
+    overflow: hidden; 
+    height: 80vh;
+}
+
+#img-container img {
+    position: absolute;
+    bottom: 2em; 
+    left: 92%;
+    transform: translateX(-50%);
+    width: 50%; 
+    height: auto;
+}
+
+h1,
+h2 {
+    width: auto;
+    margin: 0;
+    position: relative;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: grey;
+    top: 12em;
+    margin-left: 1.5em;
+}
+
+h1 {
+    font-size: 2em;
+    top: 8em;
+    margin-left: 1em;
+}
+
+#seccio-principal button {
+    position: relative;
+    top: 24em;
+    left: 3em;
+    height: 5%;
+    width: 10%;
+    border-radius: 10px;
+}
+
+#menus {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    margin-top: 0;
+    height: 22vh;
+}
+
+.menu-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+}
+
+#grandecaja, #infantilCaja {
+    max-width: 100%;
+    max-height: 300px; 
+    height: auto;
+    object-fit: contain;
+    padding: 0px;
+}
+
+#gran, #infantil {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 0em;
+    position: relative;
+    z-index: 1;
+}
+
+#hamburger, #hamburger2 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 1.2em;
+    margin-bottom: 0em;
+}
+
+#infantil {
+    top: 1em;
+}
+
+#hamburger {
+    max-width: 100%;
+    max-height: 300px; 
+    top: 1.2em;
+}
+
+#hamburger2 {
+    max-width: 100%;
+    max-height: 300px; 
+    top: 1.2em;
+}
+
+#gran {
+    top: 2em;
 }
 
 @keyframes slideDown {
@@ -107,13 +241,6 @@ nav ul#htopnav {
         padding: 0.5em;
         font-size: 0.6em;
     }
-
-    #htopnav .button {
-        margin: 0.5em;
-        width: 20%;
-        padding: 0.5em;
-        font-size: 0.6em;
-    }
 }
 
 @media only screen and (min-width: 300px) and (max-width: 600px)  {
@@ -132,15 +259,16 @@ nav ul#htopnav {
         width: 100%;
 
         #hamburger-menu {
-            position: absolute;
-            top: 0.5em;
-            left: 19em;
+            position: relative;
+            top: -1em;
+            left: 7em;
             right: 0;
             bottom: 0;
             margin: auto;
             width: auto;
             height: auto;
             cursor: pointer;
+            z-index: 2;
         }
 
         #bar,
@@ -151,10 +279,14 @@ nav ul#htopnav {
         }
 
         #bar {
-            position: relative;
+            position: absolute;
             transform: translateY(25px);
             background: black;
             transition: all 0ms 300ms;
+        }
+
+        #bar.visible {
+            position: fixed;
         }
 
         #bar.animate {
@@ -197,25 +329,19 @@ nav ul#htopnav {
         }
 
         #htopnav.visible {
+            z-index: 2;
             display: block;
             position: fixed;
             height: 100dvh;
-            top: 3em;
+            bottom: 0em;
             left: 7em;
             background-color: #ebfdff;
             animation: slideDown 0.3s ease-out;
         }
 
         #htopnav.visible .btn {
-            margin-top: 2em;
+            margin-top: 5em;
             font-size: 0.7em;
-        }
-
-        #htopnav.visible .button {
-            background: none;
-            border: none;
-            margin-top: 2em;
-            
         }
 
         #htopnav .btn {
@@ -224,17 +350,113 @@ nav ul#htopnav {
             text-align: center;
             font-size: 0.6em;
         }
+    }
 
-        #htopnav .button {
-            margin: 0em;
-            width: 100%;
-            height: auto;
-            font-size: 0.6em;
-        }
+    h1, h2{
+        font-size: 100%;
+    }
+
+    h1 {
+        top: 6em;
+    }
+
+    h2 {
+        top: 6em;
+        right: 0.5em;
+    }
+
+    #seccio-principal button {
+        font-size: 70%;
+        width: 30%;
+        top: 9em;
+        left: 1.5em;
+    }
+
+    #img-container {
+        position: relative;
+        overflow: hidden; 
+        height: 32vh;
+        width: 100%;
+    }
+
+    #img-container img {
+        position: absolute;
+        top: 1em;
+        left: 90%; 
+        width: 80%; 
+        height: 100%; 
+        max-height: 100%;
+    }
+    
+    #menus {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0;
+        margin-top: 0;
+        gap: 1em;
+        z-index: 0;
+    }
+    
+    .menu-contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 45%;
+        margin-bottom: 0.5em;
+    }
+    
+    #grandecaja, #infantilCaja, #hamburger, #hamburger2 {
+        margin: 0;
+        padding: 0;
+        display: block;
+        z-index: 0;
+    }
+
+    #hamburger, #hamburger2 {
+        top: 0;
+        margin-top: 0;
+    }
+    
+    #gran, #infantil {
+        z-index: 0;
+        font-size: 1.4em; 
+        margin-top: 0em;
+    }
+
+    #grandecaja, #infantilCaja {
+       width: auto;
+       height: auto;
+    }
+
+    #infantilCaja {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        bottom: 2em;
+    }
+
+    #infantil {
+        margin-left: 0em;
+        position: relative;
+        top: -0.1em;
+        z-index: 1;
+    }
+
+    footer {
+        margin-top: auto;
+        position: relative;
+        top: 60em;
+    }
+
+    #footer-content {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
-@media only screen and (min-width: 601px)  {
+@media only screen and (min-width: 601px) and (max-width: 900px) {
     .col-dm-1 {width: 8.33%;}
     .col-dm-2 {width: 16.66%;}
     .col-dm-3 {width: 25%;}
@@ -259,17 +481,52 @@ nav ul#htopnav {
             text-align: center;
             font-size: 0.8em;
         }
+    }
+    
+    #img-container {
+        position: relative;
+        bottom: 23em;
+    }
 
-        #htopnav .button {
-            margin: 0em;
-            width: 60%;
-            height: auto;
-            font-size: 0.8em;
-        }
+    h1 {
+        position: relative;
+        top: 6em;
+    }
+
+    h2 {
+        position: relative;
+        top: 10em;
+    }
+
+    #seccio-principal button {
+        position: relative;
+        top: 20em;
+        width: 25%;
+    }
+
+    #menus {
+        position: relative;
+        bottom: 18em;
+        display: flex;                 
+        flex-wrap: wrap;              
+        justify-content: space-between;
+    }
+    
+    .menu-contenidor {
+        flex: 0 0 calc(50% - 10px);    
+        margin-bottom: 20px;           
+        display: flex;                 
+        flex-direction: column;        
+        align-items: center;          
+    }
+    
+    .menu-contenidor img {
+        max-width: 100%;
+        height: auto;           
     }
 }
 
-@media only screen and (min-width: 901px)  {
+@media only screen and (min-width: 901px) and (max-width: 1280)  {
     .col-lg-1 {width: 8.33%;}
     .col-lg-2 {width: 16.66%;}
     .col-lg-3 {width: 25%;}
@@ -292,13 +549,6 @@ nav ul#htopnav {
             margin: 0.5em;
             width: 100%;
             text-align: center;
-            padding: 0.5em;
-            font-size: 0.6em;
-        }
-
-        #htopnav .button {
-            margin: 0.5em;
-            width: 20%;
             padding: 0.5em;
             font-size: 0.6em;
         }

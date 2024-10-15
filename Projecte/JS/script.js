@@ -7,4 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
         icon.classList.toggle('animate');
         htopnav.classList.toggle('visible');
     }); 
+
+    icon.addEventListener("click", function () {
+        icon.classList.toggle('visible');
+    }); 
 });
