@@ -18,6 +18,7 @@ body {
     height: 100vh;
     width: 100%;
     background-color: white;
+    font-family: 'Fredoka One';
 }
 
 header {
@@ -25,14 +26,13 @@ header {
     height: fit-content;
     max-height: 10vh;
     width: 100%;
-    background-color: #ebfdff;
+    background-color: #d96907;
 }
 
 main {
     flex: 1;
     width: 100%;
     background-color: white;
-    font-family: 'Fredoka One';
     margin-bottom:1em;
 }
 
@@ -44,11 +44,12 @@ nav {
 }
 
 nav ul#htopnav {
-    margin-top: 1em;
+    margin-top: 0.5em;
     height: 2em;
     display: flex;
     flex: 1;
     width: auto;
+    font-size: 1.2em;
 }
 
 footer {
@@ -98,7 +99,7 @@ footer img {
 }
 
 #htopnav .btn:hover {
-    color: green;
+    color: white;
 }
 
 #img-container {
@@ -145,63 +146,64 @@ h1 {
     border-radius: 10px;
 }
 
+#slider {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
 #menus {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0;
-    margin-top: 0;
-    height: 22vh;
+    transition: transform 0.5s ease-in-out;
 }
 
-.menu-contenedor {
+.menu-contenidor {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.menu-contenidor img{
+    width: 100%;
+    display: block;
+}
+
+.gallery-navigation {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    width: 45%;
-}
-
-#grandecaja, #infantilCaja {
-    max-width: 100%;
-    max-height: 300px; 
-    height: auto;
-    object-fit: contain;
-    padding: 0px;
-}
-
-#gran, #infantil {
-    text-align: center;
-    font-size: 1.5em;
-    margin-bottom: 0em;
+    width: 100%;
+    height: 100%;
     position: relative;
-    z-index: 1;
+    bottom: 25em;
+    padding: 0 20px;
 }
 
-#hamburger, #hamburger2 {
-    text-align: center;
-    font-size: 1.5em;
-    margin-top: 1.2em;
-    margin-bottom: 0em;
+.nav-button {
+    background-color: transparent;
+    color: #008CBA;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2em;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
 }
 
-#infantil {
-    top: 1em;
+.prev-button {
+    left: 10px;
 }
 
-#hamburger {
-    max-width: 100%;
-    max-height: 300px; 
-    top: 1.2em;
+.next-button {
+    right: 10px;
 }
 
-#hamburger2 {
-    max-width: 100%;
-    max-height: 300px; 
-    top: 1.2em;
-}
-
-#gran {
-    top: 2em;
+.nav-button:hover {
+    background-color: #005f5f;
 }
 
 @keyframes slideDown {
@@ -335,7 +337,7 @@ h1 {
             height: 100dvh;
             bottom: 0em;
             left: 7em;
-            background-color: #ebfdff;
+            background-color: #d96907;
             animation: slideDown 0.3s ease-out;
         }
 
@@ -388,67 +390,27 @@ h1 {
         max-height: 100%;
     }
     
-    #menus {
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 0;
-        margin-top: 0;
-        gap: 1em;
-        z-index: 0;
-    }
-    
-    .menu-contenedor {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 45%;
-        margin-bottom: 0.5em;
-    }
-    
-    #grandecaja, #infantilCaja, #hamburger, #hamburger2 {
-        margin: 0;
-        padding: 0;
-        display: block;
-        z-index: 0;
+    .nav-button {
+        font-size: 1.5em;
+        width: 40px;
+        height: 40px; 
+        padding: 5px; 
     }
 
-    #hamburger, #hamburger2 {
-        top: 0;
-        margin-top: 0;
-    }
-    
-    #gran, #infantil {
-        z-index: 0;
-        font-size: 1.4em; 
-        margin-top: 0em;
-    }
-
-    #grandecaja, #infantilCaja {
-       width: auto;
-       height: auto;
-    }
-
-    #infantilCaja {
-        margin: 0;
-        padding: 0;
+    .gallery-navigation {
+        padding: 0 10px;
         position: relative;
-        bottom: 2em;
-        left: 0em;
+        bottom: 12em;
     }
 
-    #infantil {
-        margin-left: 0em;
-        position: relative;
-        top: -0.1em;
-        z-index: 1;
+    #slider {
+        width: 100%;
     }
-
+    
     footer {
         margin-top: auto;
         position: relative;
-        top: 60em;
+        top: 0em;
     }
 
     #footer-content {
@@ -499,40 +461,30 @@ h1 {
         top: 10em;
     }
 
+    #seccio-principal {
+        height: 700px;
+    }
+
     #seccio-principal button {
         position: relative;
         top: 20em;
         width: 25%;
     }
 
-    #menus {
+    .nav-button {
+        font-size: 1.5em;
+        width: 40px;
+        height: 40px; 
+        padding: 5px; 
+    }
+
+    .gallery-navigation {
+        padding: 0 10px;
         position: relative;
-        bottom: 18em;
-        display: flex;                 
-        flex-wrap: wrap;              
-        justify-content: space-between;
-    }
-    
-    .menu-contenidor {
-        flex: 0 0 calc(50% - 10px);    
-        margin-bottom: 20px;           
-        display: flex;                 
-        flex-direction: column;        
-        align-items: center;          
-    }
-    
-    .menu-contenidor img {
-        max-width: 100%;
-        height: 100%;           
+        bottom: 22em;
     }
 
-    #infantilCaja {
-        height: 225px;
-        width: 100%;
-    }
-
-    #grandecaja {
-        height: 100%;
+    #slider {
         width: 100%;
     }
 }
