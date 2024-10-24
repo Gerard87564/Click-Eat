@@ -12,3 +12,11 @@ document.addEventListener('DOMContentLoaded', function () {
         icon.classList.toggle('visible');
     }); 
 });
+
+function trbNosaltres () {
+    window.location.href = '../treballaAmbNosaltres.html';
+}
+
+function inici() {
+    window.location.href = '../index.html';
+}

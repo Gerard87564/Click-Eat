@@ -54,6 +54,7 @@ nav ul#htopnav {
 }
 
 nav ul button {
+    color: black;
     font-family: 'Fredoka One';
 }
 
@@ -108,119 +109,50 @@ footer img {
     color: white;
 }
 
-#img-container {
-    position: relative;
-    overflow: hidden; 
-    height: 80vh;
-}
-
-#img-container img {
-    position: absolute;
-    bottom: 2em; 
-    left: 92%;
-    transform: translateX(-50%);
-    width: 50%; 
-    height: auto;
-}
-
-h1,
-h2 {
-    width: auto;
-    margin: 0;
-    position: relative;
-}
-
-h2 {
-    font-size: 2.5em;
-    color: grey;
-    top: 8em;
-    margin-left: 1.3em;
-}
-
-h1 {
-    font-size: 3em;
-    top: 6em;
-    margin-left: 1em;
-}
-
-#seccio-principal button {
-    position: relative;
-    top: 24em;
-    left: 3em;
-    font-family: 'Fredoka One';
-    height: 5%;
-    width: 15%;
-    border-radius: 10px;
-    font-size: 1em;
-}
-
-#slider {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
-#background {
-    padding-top: 3em;
-    background-color: #f0e4d7;
-}
-
-#menus {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.menu-contenidor {
-    min-width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-}
-
-.menu-contenidor img{
+#seccio-principal {
+    max-width: 500px;
+    height: 400px;
     width: 100%;
-    height: 100%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
     display: block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    margin-top: 15px;
 }
 
-.gallery-navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+input[type="text"], input[type="email"] {
     width: 100%;
-    height: 100%;
-    position: relative;
-    bottom: 20em;
-    padding: 0 20px;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.nav-button {
-    background-color: transparent;
-    color: #008CBA;
-    border: none;
+input[type="file"] {
+    margin-top: 10px;
+}
+
+button {
+    width: 100%;
     padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 2em;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
-.prev-button {
-    left: 10px;
-}
-
-.next-button {
-    right: 10px;
-}
-
-.nav-button:hover {
-    background-color: #005f5f;
+button:hover {
+    background-color: #218838;
 }
 
 @keyframes slideDown {
@@ -279,8 +211,8 @@ h1 {
 
         #hamburger-menu {
             position: relative;
-            top: -5em;
-            left: 5em;
+            top: -1em;
+            left: 7em;
             right: 0;
             bottom: 0;
             margin: auto;
@@ -353,7 +285,6 @@ h1 {
             position: fixed;
             height: 100dvh;
             bottom: 0em;
-            top: 2em;
             left: 7em;
             background-color: #d96907;
             animation: slideDown 0.3s ease-out;
@@ -370,59 +301,6 @@ h1 {
             text-align: center;
             font-size: 0.6em;
         }
-    }
-
-    h1, h2{
-        font-size: 100%;
-    }
-
-    h1 {
-        top: 6em;
-    }
-
-    h2 {
-        top: 6em;
-        right: 0.3em;
-    }
-
-    #seccio-principal button {
-        font-size: 70%;
-        width: 30%;
-        top: 9em;
-        left: 1.5em;
-    }
-
-    #img-container {
-        position: relative;
-        overflow: hidden; 
-        height: 32vh;
-        width: 100%;
-    }
-
-    #img-container img {
-        position: absolute;
-        top: 1em;
-        left: 90%; 
-        width: 80%; 
-        height: 100%; 
-        max-height: 100%;
-    }
-    
-    .nav-button {
-        font-size: 1.5em;
-        width: 40px;
-        height: 40px; 
-        padding: 5px; 
-    }
-
-    .gallery-navigation {
-        padding: 0 10px;
-        position: relative;
-        bottom: 9em;
-    }
-
-    #slider {
-        width: 100%;
     }
     
     footer {
@@ -463,54 +341,9 @@ h1 {
             font-size: 0.8em;
         }
     }
-    
-    #img-container {
-        position: relative;
-        bottom: 25em;
-    }
-
-    h1 {
-        position: relative;
-        top: 6em;
-        font-size: 1.9em;
-    }
-
-    h2 {
-        position: relative;
-        top: 7.3em;
-        font-size: 1.6em;
-    }
-
-    #seccio-principal {
-        height: 700px;
-    }
-
-    #seccio-principal button {
-        position: relative;
-        top: 13em;
-        left: 2em;
-        width: 25%;
-    }
-
-    .nav-button {
-        font-size: 1.5em;
-        width: 40px;
-        height: 40px; 
-        padding: 5px; 
-    }
-
-    .gallery-navigation {
-        padding: 0 10px;
-        position: relative;
-        bottom: 15em;
-    }
-
-    #slider {
-        width: 100%;
-    }
 }
 
-@media only screen and (min-width: 901px) and (max-width: 1280px) {
+@media only screen and (min-width: 901px) and (max-width: 1280)  {
     .col-lg-1 {width: 8.33%;}
     .col-lg-2 {width: 16.66%;}
     .col-lg-3 {width: 25%;}

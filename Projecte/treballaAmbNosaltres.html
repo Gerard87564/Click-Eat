@@ -8,7 +8,7 @@
         <meta name="keywords" content="disseny de pagines web, web, desenvolupament web">
         <meta name="author" content="Gerard">
         <link rel="shortcut icon" href="./IMG's/IMG-20240924-WA0002-removebg-preview_1.png">
-        <link rel="stylesheet" href="./CSS/style.css">
+        <link rel="stylesheet" href="./CSS/treballaAmbNosaltres.css">
         <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
@@ -34,37 +34,16 @@
 
         <main>
             <div id="seccio-principal">
-                <h1>ON LA TECNOLOGIA I EL GUST S'UNEIXEN</h1>
-                <h2>ENTRA , CLICA I DEMANA!</h2>
-                <button>RESERVA ARA</button>
-                <div id="img-container">
-                    <img src="./IMG's/IMG-20240924-WA0002-Photoroom.png" alt="hamburguer">
-                </div>
-            </div>
-            <div id="background">
-                <section id="slider">
-                    <div id="menus">
-                        <div class="menu-contenidor">
-                            <img id="grandecaja" src="./IMG's/Gemini_Generated_Image_td35q4td35q4td35.jpg" alt="">
-                        </div>
-    
-                        <div class="menu-contenidor">
-                            <img id="hamburger" src="./IMG's/Gemini_Generated_Image_rq4s6vrq4s6vrq4s.jpg" alt="hamburger">
-                        </div>
-    
-                        <div class="menu-contenidor">
-                            <img id="hamburger2" src="./IMG's/Gemini_Generated_Image_p11zn2p11zn2p11z.jpg" alt="hamburger">
-                        </div>
-    
-                        <div class="menu-contenidor">
-                            <img id="infantilCaja" src="./IMG's/Gemini_Generated_Image_a85yqba85yqba85y.jpg" alt="">
-                        </div>
-                    </div>
-                    <nav class="gallery-navigation">
-                        <button class="nav-button prev-button">&larr;</button>
-                        <button class="nav-button next-button">&rarr;</button>
-                    </nav>
-                </section>
+                <form action="./PHP/upload_cv.php" method="post" enctype="multipart/form-data">
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa el teu nom complert" required>
+            
+                    <input type="email" id="email" name="email" placeholder="Ingresa el teu correu electronic" required>
+            
+                    <label for="cv">Adjuntar CV (PDF):</label>
+                    <input type="file" id="cv" name="cv" required>
+            
+                    <button type="submit">Enviar CV</button>
+                </form>
             </div>
         </main>
 
@@ -78,6 +57,5 @@
             </div>
         </footer>
         <script src="./JS/script.js"></script>
-        <script src="./JS/slider.js"></script>
     </body>
 </html>
