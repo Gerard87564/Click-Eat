@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function trbNosaltres () {
-    window.location.href = '../treballaAmbNosaltres.html';
+    window.location.href = '/treballaAmbNosaltres.html';
 }
 
 function inici() {
-    window.location.href = '../index.html';
+    window.location.href = '/index.html';
 }

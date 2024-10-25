@@ -16,7 +16,7 @@ body {
     flex-direction: column;
     height: 100vh;
     width: 100%;
-    background-color: white;
+    background: linear-gradient(135deg, #f7a440, #f26b3a);
     font-family: 'Fredoka One';
 }
 
@@ -26,13 +26,14 @@ header {
     height: fit-content;
     max-height: 10vh;
     width: 100%;
+    position: fixed;
+    z-index: 1;
     background-color: #d96907;
 }
 
 main {
     flex: 1;
     width: 100%;
-    background-color: white;
     margin-bottom:1em;
 }
 
@@ -114,12 +115,13 @@ footer img {
     height: 80vh;
 }
 
+
 #img-container img {
     position: absolute;
-    bottom: 2em; 
-    left: 92%;
+    top: -5em; 
+    left: 83%;
     transform: translateX(-50%);
-    width: 50%; 
+    width: 80%; 
     height: auto;
 }
 
@@ -131,22 +133,22 @@ h2 {
 }
 
 h2 {
-    font-size: 2.5em;
+    font-size: 3em;
     color: grey;
-    top: 8em;
+    top: 6em;
     margin-left: 1.3em;
 }
 
 h1 {
-    font-size: 3em;
-    top: 6em;
+    font-size: 4em;
+    top: 4em;
     margin-left: 1em;
 }
 
 #seccio-principal button {
     position: relative;
-    top: 24em;
-    left: 3em;
+    top: 20em;
+    left: 4em;
     font-family: 'Fredoka One';
     height: 5%;
     width: 15%;
@@ -279,7 +281,7 @@ h1 {
 
         #hamburger-menu {
             position: relative;
-            top: -5em;
+            top: -8em;
             left: 5em;
             right: 0;
             bottom: 0;
@@ -372,24 +374,22 @@ h1 {
         }
     }
 
-    h1, h2{
-        font-size: 100%;
-    }
-
     h1 {
+        font-size: 1.5em;
         top: 6em;
     }
 
     h2 {
-        top: 6em;
-        right: 0.3em;
+        font-size: 1.2em;
+        top: 8em;
+        right: 0em;
     }
 
     #seccio-principal button {
         font-size: 70%;
         width: 30%;
-        top: 9em;
-        left: 1.5em;
+        top: 14em;
+        left: 2em;
     }
 
     #img-container {
@@ -401,9 +401,9 @@ h1 {
 
     #img-container img {
         position: absolute;
-        top: 1em;
-        left: 90%; 
-        width: 80%; 
+        top: 7em;
+        left: 90%;
+        width: 90%; 
         height: 100%; 
         max-height: 100%;
     }
@@ -465,29 +465,38 @@ h1 {
     }
     
     #img-container {
-        position: relative;
-        bottom: 25em;
+        top: 7em;
+        z-index: 1;
+    }
+
+    
+    #img-container img {
+        top: -7em; 
+        left: 80%;
+        transform: translateX(-50%);
+        width: 100%; 
+        height: auto;
     }
 
     h1 {
         position: relative;
         top: 6em;
-        font-size: 1.9em;
+        font-size: 2.4em;
     }
 
     h2 {
         position: relative;
         top: 7.3em;
-        font-size: 1.6em;
+        font-size: 2em;
     }
 
     #seccio-principal {
-        height: 700px;
+        height: 600px;
     }
 
     #seccio-principal button {
         position: relative;
-        top: 13em;
+        top: 16em;
         left: 2em;
         width: 25%;
     }
@@ -507,6 +516,11 @@ h1 {
 
     #slider {
         width: 100%;
+    }
+
+    #background {
+        position: relative;
+        z-index: 2;
     }
 }
 
@@ -536,5 +550,15 @@ h1 {
             padding: 0.5em;
             font-size: 0.6em;
         }
+    }
+
+    
+    #img-container img {
+        position: absolute;
+        top: -3em; 
+        left: 83%;
+        transform: translateX(-50%);
+        width: 90%; 
+        height: auto;
     }
 }
