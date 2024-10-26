@@ -164,7 +164,7 @@ h1 {
 
 #background {
     padding-top: 3em;
-    background-color: #f0e4d7;
+    background-color: #f7a440;
 }
 
 #menus {
@@ -406,7 +406,7 @@ h1 {
 
     #img-container img {
         position: absolute;
-        top: 7em;
+        top: 6em;
         left: 90%;
         width: 90%; 
         height: 100%; 
