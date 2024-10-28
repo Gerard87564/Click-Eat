@@ -51,7 +51,7 @@ nav ul#htopnav {
     display: flex;
     flex: 1;
     width: auto;
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
 
 nav ul button {
@@ -518,13 +518,16 @@ h1 {
         }
     }
     
+
     #img-container {
+        position: relative;
+        overflow: hidden; 
         top: 7em;
-        z-index: 1;
     }
 
     
     #img-container img {
+        position: absolute;
         top: -7em; 
         left: 80%;
         transform: translateX(-50%);
@@ -574,7 +577,7 @@ h1 {
 
     #background {
         position: relative;
-        z-index: 2;
+        z-index: 0;
     }
 }
 
