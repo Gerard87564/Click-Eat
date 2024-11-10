@@ -20,3 +20,7 @@ function trbNosaltres () {
 function inici() {
     window.location.href = 'index.html';
 }
+
+function carta() {
+    window.location.href = 'carta.html';
+}

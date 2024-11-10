@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Click&Eat</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Click&Eat">
+        <meta name="keywords" content="disseny de pagines web, web, desenvolupament web">
+        <meta name="author" content="Gerard">
+        <link rel="shortcut icon" href="./IMG's/IMG-20240924-WA0002-removebg-preview_1.png">
+        <link rel="stylesheet" href="./CSS/carta.css">
+        <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <nav class="col-12 col-lg-12 col-dm-12 col-sm-12">
+                <div id="img-nav">
+                    <img src="./IMG's/pixelcut-export (3).png" alt="logo">                      
+                    <ul id="htopnav">
+                        <button class="btn" onclick="inici()"><p>INICI</p></button>
+                        <button class="btn" onclick="carta()"><p>CARTA</p></button>
+                        <button class="btn" onclick="trbNosaltres()"><p>TREBALLA AMB NOSALTRES</p></button>
+                        <button class="btn"><p>CONTACTE</p></button>
+                    </ul>
+
+                    <div id="hamburger-menu">
+                        <div id="bar"></div>
+                    </div>  
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section id="wrap">
+                <div class="wrap-title-section">
+                    <h2>Hamburgueses</h2>
+                </div>
+                <div class="wrap column-2 carta">
+                    <div class="plato-carta">
+                        <div class="img-plato-carta">
+                            <img src="./IMG's/chicken.png" alt="hamburguer1">
+                        </div>
+                        <div class="title-plato-carta">
+                            <h4>Chicken</h4>
+                        </div>
+                        <div class="precio-plato-carta">
+                            <span>9€</span>
+                        </div>
+                    </div>
+                    <div class="plato-carta">
+                        <div class="img-plato-carta">
+                            <img src="./IMG's/lomo.png" alt="hamburguer1">
+                        </div>
+                        <div class="title-plato-carta">
+                            <h4>Lomo</h4>
+                        </div>
+                        <div class="precio-plato-carta">
+                            <span>9€</span>
+                        </div>
+                    </div>
+                    <div class="plato-carta">
+                        <div class="img-plato-carta">
+                            <img src="./IMG's/vacuno.png" alt="hamburguer1">
+                        </div>
+                        <div class="title-plato-carta">
+                            <h4>Boví</h4>
+                        </div>
+                        <div class="precio-plato-carta">
+                            <span>11€</span>
+                        </div>
+                    </div>
+                    <div class="plato-carta">
+                        <div class="img-plato-carta">
+                            <img src="./IMG's/classica.png" alt="hamburguer1">
+                        </div>
+                        <div class="title-plato-carta">
+                            <h4>Classica</h4>
+                        </div>
+                        <div class="precio-plato-carta">
+                            <span>12€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrap-title-section">
+                    <h2>Complements</h2>
+                </div>
+                <div class="wrap column-2 carta">
+                    <div class="plato-carta">
+                        <div class="img-plato-carta">
+                            <img src="./IMG's/nugget.png" alt="hamburguer1">
+                        </div>
+                        <div class="title-plato-carta">
+                            <h4>Nuggets</h4>
+                        </div>
+                        <div class="precio-plato-carta">
+                            <span>6€</span>
+                        </div>
+                    </div>
+                    <div class="plato-carta">
+                        <div class="img-plato-carta">
+                            <img src="./IMG's/alitas.png" alt="hamburguer1">
+                        </div>
+                        <div class="title-plato-carta">
+                            <h4>Aletes de pollastre</h4>
+                        </div>
+                        <div class="precio-plato-carta">
+                            <span>7€</span>
+                        </div>
+                    </div>
+                    <div class="plato-carta">
+                        <div class="img-plato-carta">
+                            <img src="./IMG's/patates-fregides.webp" alt="hamburguer1">
+                        </div>
+                        <div class="title-plato-carta">
+                            <h4>Patates</h4>
+                        </div>
+                        <div class="precio-plato-carta">
+                            <span>6€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrap-title-section">
+                    <h2>Ensalades</h2>
+                </div>
+                <div class="wrap column-2 carta">
+                    <div class="plato-carta">
+                        <div class="img-plato-carta">
+                            <img src="./IMG's/Ensalada-Pollo.png" alt="hamburguer1">
+                        </div>
+                        <div class="title-plato-carta">
+                            <h4>Ensalada pollastre</h4>
+                        </div>
+                        <div class="precio-plato-carta">
+                            <span>8€</span>
+                        </div>
+                    </div>
+                    <div class="plato-carta">
+                        <div class="img-plato-carta">
+                            <img src="./IMG's/ensalada-arroz.png" alt="hamburguer1">
+                        </div>
+                        <div class="title-plato-carta">
+                            <h4>Ensalada d'arros</h4>
+                        </div>
+                        <div class="precio-plato-carta">
+                            <span>8€</span>
+                        </div>
+                    </div>
+                    <div class="plato-carta">
+                        <div class="img-plato-carta">
+                            <img src="./IMG's/ensalada-pasta.png" alt="hamburguer1">
+                        </div>
+                        <div class="title-plato-carta">
+                            <h4>Ensalada de pasta</h4>
+                        </div>
+                        <div class="precio-plato-carta">
+                            <span>8€</span>
+                        </div>
+                    </div>
+                    <div class="plato-carta">
+                        <div class="img-plato-carta">
+                            <img src="./IMG's/ensalada.png" alt="hamburguer1">
+                        </div>
+                        <div class="title-plato-carta">
+                            <h4>Ensalada tradicional</h4>
+                        </div>
+                        <div class="precio-plato-carta">
+                            <span>8€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrap-title-section">
+                    <h2>Menus</h2>
+                </div>
+                <div class="wrap column-2 carta">
+                    <div class="plato-carta">
+                        <div class="img-plato-carta">
+                            <img src="./IMG's/infantil.png" alt="hamburguer1">
+                        </div>
+                        <div class="title-plato-carta">
+                            <h4>Infantil</h4>
+                        </div>
+                        <div class="precio-plato-carta">
+                            <span>9€</span>
+                        </div>
+                    </div>
+                    <div class="plato-carta">
+                        <div class="img-plato-carta">
+                            <img src="./IMG's/celiaco.png" alt="hamburguer1">
+                        </div>
+                        <div class="title-plato-carta">
+                            <h4>Celiac</h4>
+                        </div>
+                        <div class="precio-plato-carta">
+                            <span>9€</span>
+                        </div>
+                    </div>
+                    <div class="plato-carta">
+                        <div class="img-plato-carta">
+                            <img src="./IMG's/vegano.png" alt="hamburguer1">
+                        </div>
+                        <div class="title-plato-carta">
+                            <h4>Vegà</h4>
+                        </div>
+                        <div class="precio-plato-carta">
+                            <span>9€</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div id="footer-content">
+                <img id="telephone" src="./IMG's/455705.png" alt="telephone">
+                <p id="number">964324567</p>
+                <p id="copy">Click&Eat 2024&copy;, All rights reserved</p>
+                <img id="x" src="./IMG's/x-social-media-black-icon.png" alt="x">
+                <img id="insta" src="./IMG's/black-instagram-icon.webp" alt="instagram">
+            </div>
+        </footer>
+        <script src="./JS/script.js"></script>
+    </body>
+</html>
