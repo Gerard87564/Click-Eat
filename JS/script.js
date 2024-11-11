@@ -24,3 +24,7 @@ function inici() {
 function carta() {
     window.location.href = 'carta.html';
 }
+
+function contacte() {
+    window.location.href = 'contacte.html';
+}

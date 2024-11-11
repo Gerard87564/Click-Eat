@@ -8,9 +8,10 @@
         <meta name="keywords" content="disseny de pagines web, web, desenvolupament web">
         <meta name="author" content="Gerard">
         <link rel="shortcut icon" href="./IMG's/IMG-20240924-WA0002-removebg-preview_1.png">
-        <link rel="stylesheet" href="./CSS/treballaAmbNosaltres.css">
+        <link rel="stylesheet" href="./CSS/contacte.css">
         <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://kit.fontawesome.com/f2dbf97883.js" crossorigin="anonymous"></script>
     </head>
     
     <body>
@@ -33,16 +34,18 @@
         </header>
 
         <main>
-            <div id="seccio-principal">
-                <form action="./PHP/upload_cv.php" method="post" enctype="multipart/form-data">
-                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa el teu nom complert" required>
-            
-                    <input type="email" id="email" name="email" placeholder="Ingresa el teu correu electronic" required>
-            
-                    <label for="cv">Adjuntar CV (PDF):</label>
-                    <input type="file" id="cv" name="cv" required>
-            
-                    <button type="submit">Enviar CV</button>
+            <div class="seccio-principal">
+                <div class="info-form">
+                    <h2>Contactans</h2>
+                    <a href="#"><i class="fa fa-phone"></i>964324567</a>
+                    <a href="#"><i class="fa fa-envelope"></i>clickeat@gmail.com</a>
+                    <a href="#"><i class="fa fa-map-marked"></i>Barcelona, Espanya</a>
+                </div>
+                <form action="#" autocomplete="off">
+                    <input type="text" name="nombre" placeholder="Ingresa el teu nom" class="campo">
+                    <input type="email" name="email" placeholder="Ingresa el teu mail" class="campo">
+                    <input type="text" name="message" placeholder="Ingresa el teu missatge" class="campo">
+                    <input type="submit" name="enviar" value="Enviar missatge" class="btn-enviar">
                 </form>
             </div>
         </main>
