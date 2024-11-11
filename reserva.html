@@ -8,7 +8,7 @@
         <meta name="keywords" content="disseny de pagines web, web, desenvolupament web">
         <meta name="author" content="Gerard">
         <link rel="shortcut icon" href="./IMG's/IMG-20240924-WA0002-removebg-preview_1.png">
-        <link rel="stylesheet" href="./CSS/style.css">
+        <link rel="stylesheet" href="./CSS/reserva.css">
         <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
@@ -34,55 +34,48 @@
 
         <main>
             <div id="seccio-principal">
-                <h1>ON LA TECNOLOGIA I EL GUST S'UNEIXEN</h1>
-                <h2>ENTRA , CLICA I DEMANA!</h2>
-                <button id="reserva-btn" onclick="reserva()"><p>RESERVA ARA</p></button>
-                <div id="img-container">
-                    <img src="./IMG's/IMG-20240924-WA0002-Photoroom.png" alt="hamburguer">
-                </div>
-            </div>
-            <div id="background">
-                <section id="slider">
-                    <div id="menus">
-                        <div class="menu-contenidor">
-                            <img id="grandecaja" src="./IMG's/menuGrande.jpg" alt="grandemenu">
-                        </div>
-    
-                        <div class="menu-contenidor">
-                            <img src="./IMG's/comida-china.jpg" alt="comida-china">
-                        </div>
-    
-                        <div class="menu-contenidor">
-                            <img src="./IMG's/ramen.jpg" alt="ramen">
-                        </div>
-    
-                        <div class="menu-contenidor">
-                            <img id="infantilCaja" src="./IMG's/hamburguesa.jpg" alt="infantilmenu">
+                <form action="#" autocomplete="off">
+                    <input type="date" name="data" placeholder="dd/mm/aaaa" class="campo">
+                    <input type="time" name="time" placeholder="Hora.." class="campo">
+                </form>
+
+                <div id="grid">
+                    <div class="div-rows">
+                        <div>
+                            <span class="background"><p>1</p></span>
                         </div>
 
-                        <div class="menu-contenidor">
-                            <img src="./IMG's/patatas.jpg" alt="patatas">
+                        <div>
+                            <span class="background"><p>2</p></span>
                         </div>
 
-                        <div class="menu-contenidor">
-                            <img src="./IMG's/nugget.jpg" alt="nugget">
+                        <div>
+                            <span class="background"><p>3</p></span>
+                        </div>
+
+                        <div>
+                            <span class="background"><p>4</p></span>
                         </div>
                     </div>
-                    <nav class="gallery-navigation">
-                        <button class="nav-button prev-button">&larr;</button>
-                        <button class="nav-button next-button">&rarr;</button>
-                    </nav>
-                </section>
-            </div>
 
-            <div id="img-parrilla">
-                <img src="./IMG's/hamburguesas-parrilla-parrilla_933065-104 (1).jpeg" alt="parrilla">
-            </div>
+                    <div class="div-rows">
+                        <div>
+                            <span class="background"><p>5</p></span>
+                        </div>
 
-            <div id="info">
-                <h3>RESTAURANT CYBER DESDE 2024</h3>
-                <p>A Click & Eat disfrutaras d'una experiencia cyber-fastfood innovadora</p>
-                <p>Entra clica  disfruta!</p>
+                        <div>
+                            <span class="background"><p>6</p></span>
+                        </div>
+
+                        <div>
+                            <span class="background"><p>7</p></span>
+                        </div>
+
+                        <div>
+                            <span class="background"><p>8</p></span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 
@@ -96,6 +89,5 @@
             </div>
         </footer>
         <script src="./JS/script.js"></script>
-        <script src="./JS/slider.js"></script>
     </body>
 </html>

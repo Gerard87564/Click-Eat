@@ -28,3 +28,7 @@ function carta() {
 function contacte() {
     window.location.href = 'contacte.html';
 }
+
+function reserva() {
+    window.location.href = 'reserva.html';
+}
