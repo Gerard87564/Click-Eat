@@ -37,13 +37,13 @@
                 <p id="info-mesa"></p>
 
                 <form id="orderForm">
-                    <label for="menuId">Selecciona el Menú:</label>
-                    <input type="text" id="menuId" name="menuId">
-                    <input type="text" id="dni" name="dni">
-                    <input type="text" id="nom" name="nom">
-                    <input type="text" id="cognom" name="cognom">
-                    <input type="tel" id="tlf" name="tlf">
-                    <input type="email" id="correu" name="correu">
+                    <label for="menuId">Omple les dades:</label>
+                    <input type="text" id="menuId" name="menuId" placeholder="Ingressa el numero de menu...">
+                    <input type="text" id="dni" name="dni" placeholder="Ingressa el dni...">
+                    <input type="text" id="nom" name="nom" placeholder="Ingressa el teu nom...">
+                    <input type="text" id="cognom" name="cognom" placeholder="Ingressa el teu cognom...">
+                    <input type="tel" id="tlf" name="tlf" placeholder="Ingressa el numero de telefon...">
+                    <input type="email" id="correu" name="correu" placeholder="Ingressa el email...">
                     <button type="submit">Fer comanda</button>
                 </form>                             
             </div>
@@ -76,7 +76,17 @@
                 } else {
                     console.warn("Parámetro 'mesa' no encontrado en la URL.");
                 }
+
+                const buttonSubmit= document.querySelector('button');
+
+                buttonSubmit.addEventListener("click", function () {
+                    redireccionarComanda();
+                });
             });
+
+            function redireccionarComanda() {
+                window.location.href = 'comanda.html';
+            }
         </script>
     </body>
 </html>

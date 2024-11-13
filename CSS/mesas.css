@@ -163,6 +163,10 @@ form button:hover {
     background-color: #ff4a4a;
 }
 
+form input {
+    width: 300px;
+}
+
 @keyframes slideDown {
     from {
       opacity: 0;

@@ -8,7 +8,7 @@
         <meta name="keywords" content="disseny de pagines web, web, desenvolupament web">
         <meta name="author" content="Gerard">
         <link rel="shortcut icon" href="./IMG's/IMG-20240924-WA0002-removebg-preview_1.png">
-        <link rel="stylesheet" href="./CSS/reserva.css">
+        <link rel="stylesheet" href="./CSS/comanda.css">
         <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
@@ -34,45 +34,10 @@
 
         <main>
             <div id="seccio-principal">
-                <h1>Taula a escollir</h1>
-
-                <div id="grid">
-                    <div class="div-rows">
-                        <div>
-                            <span class="background" id="mesa-1"><p>1</p></span>
-                        </div>
-
-                        <div>
-                            <span class="background" id="mesa-2"><p>2</p></span>
-                        </div>
-
-                        <div>
-                            <span class="background" id="mesa-3"><p>3</p></span>
-                        </div>
-
-                        <div>
-                            <span class="background" id="mesa-4"><p>4</p></span>
-                        </div>
-                    </div>
-
-                    <div class="div-rows">
-                        <div>
-                            <span class="background" id="mesa-5"><p>5</p></span>
-                        </div>
-
-                        <div>
-                            <span class="background" id="mesa-6"><p>6</p></span>
-                        </div>
-
-                        <div>
-                            <span class="background" id="mesa-7"><p>7</p></span>
-                        </div>
-
-                        <div>
-                            <span class="background" id="mesa-8"><p>8</p></span>
-                        </div>
-                    </div>
-                </div>
+                <h1>Detalls de la comanda</h1>
+                <div id="orderDetails" style="display:none;">
+                    <div id="orderData"></div>
+                </div>                        
             </div>
         </main>
 
@@ -86,6 +51,47 @@
             </div>
         </footer>
         <script src="./JS/script.js"></script>
-        <script src="./JS/mesas.js"></script>
+        <script src="./JS/api.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const formData = localStorage.getItem('formData');
+                if (formData) {
+                    const data = JSON.parse(formData);
+
+                    fetch('https://api.clickeat.cat/comandes', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Error en la solicitud');
+                        }
+                        return response.json();
+                    })
+                    .then(responseData => {
+                        console.log('Comanda creada:', responseData);
+
+                        const orderDataContainer = document.getElementById('orderData');
+                        orderDataContainer.innerHTML = '';
+
+                        Object.entries(responseData).forEach(([key, value]) => {
+                            const paragraph = document.createElement('p');
+                            paragraph.textContent = `${key}: ${value}`;
+                            orderDataContainer.appendChild(paragraph);
+                        });
+
+                        document.getElementById('orderDetails').style.display = 'block';
+                    })
+                    .catch(error => {
+                        console.error('Ups ha succeit un problema amb la comanda:', error);
+                    });
+
+                    localStorage.removeItem('formData');
+                }
+            });
+        </script>
     </body>
 </html>

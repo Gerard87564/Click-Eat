@@ -7,39 +7,15 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
     const cognom = document.getElementById('cognom').value;
     const tlf = document.getElementById('tlf').value;
     const correu = document.getElementById('correu').value;
-    
-    fetch('https://api.clickeat.cat/comandes', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            MenuID: menuId,
-            DNI: dni,
-            Nom: nom,
-            Cognom: cognom,
-            Tlf: tlf,
-            Correu: correu
-        })
-    })
 
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Error en la solicitud');
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log('Comanda creada:', data);
-    })
-    .catch(error => {
-        console.error('Ups ha succeit un problema amb la comanda:', error);
-    });
+    localStorage.setItem('formData', JSON.stringify({
+        MenuID: menuId,
+        DNI: dni,
+        Nom: nom,
+        Cognom: cognom,
+        Tlf: tlf,
+        Correu: correu
+    }));
 
-    console.log('menuId:', menuId);
-    console.log('dni:', dni);
-    console.log('nom:', nom);
-    console.log('cognom:', cognom);
-    console.log('tlf:', tlf);
-    console.log('correu:', correu);
+    window.location.href = 'comanda.html';
 });

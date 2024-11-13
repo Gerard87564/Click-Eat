@@ -26,15 +26,19 @@ header {
     height: fit-content;
     max-height: 10vh;
     width: 100%;
-    z-index: 2;
     position: fixed;
+    z-index: 1;
     background-color: #d96907;
 }
 
 main {
     flex: 1;
-    width: 100%;
-    margin-bottom:1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+    text-align: center;
+    padding: 2rem;
 }
 
 nav {
@@ -99,59 +103,6 @@ footer img {
     width: 100px;
 }
 
-#seccio-principal {
-    position: relative;
-    top: 10em;
-    right: 0em;
-}
-
-#seccio-principal h1 {
-    text-align: center;
-    margin: 0 auto;
-    width: fit-content;
-    display: block;
-}
-
-#grid {
-   position: relative;
-   margin-left: 25em; 
-   margin-top: 5em;
-   right: 10em;
-}
-
-.div-rows {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    column-gap: 1rem;
-    row-gap: 1rem;
-    margin-top: 1em;
-}
-
-.background {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 100px;
-    background-color: #c2b280;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    transition: transform 0.3s ease;
-}
-
-.background:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.background p {
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    margin: 0;
-}
-
 #htopnav .btn {
     margin-left: 5em;
     width: 15em;
@@ -161,6 +112,44 @@ footer img {
 
 #htopnav .btn:hover {
     color: white;
+}
+
+#seccio-principal {
+    max-width: 500px;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-top: 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#orderDetails {
+    display: none;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#orderDetails h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#orderData p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin: 5px 0;
 }
 
 @keyframes slideDown {
@@ -322,29 +311,6 @@ footer img {
         flex-direction: column;
         align-items: center;
     }
-
-    #grid {
-        grid-template-columns: 1fr;
-        padding: 15px;
-        margin-top: 0em;
-        margin-left: 14em; 
-    }
-
-    .background {
-        width: 50px;
-        height: 50px;
-    }
-
-    .background p {
-        font-size: 12px;
-    }
-
-    #seccio-principal .campo {
-        position: relative;
-        left: 8em;
-        margin-left: 10em;
-        width: 35%;
-    }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
@@ -372,18 +338,6 @@ footer img {
             text-align: center;
             font-size: 0.6em;
         }
-    }
-
-    #grid {
-        margin-left: 16em; 
-        margin-top: 5em;
-    }
-
-    #seccio-principal .campo {
-        position: relative;
-        left: 9em;
-        margin-left: 10em;
-        width: 15%;
     }
 }
 
