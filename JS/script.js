@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     icon.addEventListener("click", function () {
         icon.classList.toggle('visible');
-    }); 
+    });
 });
 
 function trbNosaltres () {

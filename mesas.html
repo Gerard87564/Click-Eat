@@ -8,7 +8,7 @@
         <meta name="keywords" content="disseny de pagines web, web, desenvolupament web">
         <meta name="author" content="Gerard">
         <link rel="shortcut icon" href="./IMG's/IMG-20240924-WA0002-removebg-preview_1.png">
-        <link rel="stylesheet" href="./CSS/reserva.css">
+        <link rel="stylesheet" href="./CSS/mesas.css">
         <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
@@ -34,48 +34,18 @@
 
         <main>
             <div id="seccio-principal">
-                <form action="#" autocomplete="off">
-                    <input type="date" name="data" placeholder="dd/mm/aaaa" class="campo">
-                    <input type="time" name="time" placeholder="Hora.." class="campo">
-                </form>
+                <p id="info-mesa"></p>
 
-                <div id="grid">
-                    <div class="div-rows">
-                        <div>
-                            <span class="background" id="mesa-1"><p>1</p></span>
-                        </div>
-
-                        <div>
-                            <span class="background" id="mesa-2"><p>2</p></span>
-                        </div>
-
-                        <div>
-                            <span class="background" id="mesa-3"><p>3</p></span>
-                        </div>
-
-                        <div>
-                            <span class="background" id="mesa-4"><p>4</p></span>
-                        </div>
-                    </div>
-
-                    <div class="div-rows">
-                        <div>
-                            <span class="background" id="mesa-5"><p>5</p></span>
-                        </div>
-
-                        <div>
-                            <span class="background" id="mesa-6"><p>6</p></span>
-                        </div>
-
-                        <div>
-                            <span class="background" id="mesa-7"><p>7</p></span>
-                        </div>
-
-                        <div>
-                            <span class="background" id="mesa-8"><p>8</p></span>
-                        </div>
-                    </div>
-                </div>
+                <form id="orderForm">
+                    <label for="menuId">Selecciona el Menú:</label>
+                    <input type="text" id="menuId" name="menuId">
+                    <input type="text" id="dni" name="dni">
+                    <input type="text" id="nom" name="nom">
+                    <input type="text" id="cognom" name="cognom">
+                    <input type="tel" id="tlf" name="tlf">
+                    <input type="email" id="correu" name="correu">
+                    <button type="submit">Fer comanda</button>
+                </form>                             
             </div>
         </main>
 
@@ -89,6 +59,24 @@
             </div>
         </footer>
         <script src="./JS/script.js"></script>
-        <script src="./JS/mesas.js"></script>
+        <script src="./JS/api.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                function getParameterByName(name) {
+                    const url = window.location.search;
+                    const params = new URLSearchParams(url);
+                    return params.get(name);
+                }
+
+                const numeroMesa = getParameterByName('mesa');
+
+                if (numeroMesa) {
+                    const infoMesa = document.getElementById("info-mesa");
+                    infoMesa.textContent = `Has escollit la taula ${numeroMesa}`;
+                } else {
+                    console.warn("Parámetro 'mesa' no encontrado en la URL.");
+                }
+            });
+        </script>
     </body>
 </html>
