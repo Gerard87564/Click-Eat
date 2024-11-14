@@ -51,6 +51,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <p class="count"></p>
                     </div>
                     <div class="plato-carta">
                         <div class="img-plato-carta">
@@ -65,6 +66,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <p class="count"></p>
                     </div>
                     <div class="plato-carta">
                         <div class="img-plato-carta">
@@ -79,6 +81,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <p class="count"></p>
                     </div>
                     <div class="plato-carta">
                         <div class="img-plato-carta">
@@ -93,6 +96,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <p class="count"></p>
                     </div>
                 </div>
 
@@ -113,6 +117,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <p class="count"></p>
                     </div>
                     <div class="plato-carta">
                         <div class="img-plato-carta">
@@ -127,6 +132,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <p class="count"></p>
                     </div>
                     <div class="plato-carta">
                         <div class="img-plato-carta">
@@ -141,6 +147,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <p class="count"></p>
                     </div>
                 </div>
 
@@ -161,6 +168,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <p class="count"></p>
                     </div>
                     <div class="plato-carta">
                         <div class="img-plato-carta">
@@ -175,6 +183,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <p class="count"></p>
                     </div>
                     <div class="plato-carta">
                         <div class="img-plato-carta">
@@ -189,6 +198,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <p class="count"></p>
                     </div>
                     <div class="plato-carta">
                         <div class="img-plato-carta">
@@ -203,6 +213,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <p class="count"></p>
                     </div>
                 </div>
 
@@ -223,6 +234,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <p class="count"></p>
                     </div>
                     <div class="plato-carta">
                         <div class="img-plato-carta">
@@ -237,6 +249,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <p class="count"></p>
                     </div>
                     <div class="plato-carta">
                         <div class="img-plato-carta">
@@ -251,6 +264,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <p class="count"></p>
                     </div>
                 </div>
             </section>
@@ -288,7 +302,12 @@
                                 const barra = plato.querySelector('.barra-disponibilidad');
                                 
                                 if (barra) {
+                                    var pItem= plato.getElementsByClassName("count");
                                     barra.style.width = item.disponible + "%";
+                                    if (pItem.length > 0) {
+                                        pItem[0].textContent = item.disponible + " uds"; // Actualiza el primer elemento de la colección
+                                    }
+
                                     barra.style.backgroundColor = 
                                         item.disponible > 50 ? "#4caf50" : 
                                         (item.disponible > 20 ? "orange" : "red");
