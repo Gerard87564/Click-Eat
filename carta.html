@@ -405,7 +405,8 @@
                             return;
                         }
 
-                        const menuIDs = cart.map(item => item.menuID).flat();
+                        const menuIDs = Array.isArray(cart) ? cart.map(item => item.menuID).flat() : [cart.menuID];
+                        console.log('MenuIDs a enviar:', menuIDs);
 
                         const orderData = {
                             MenuID: menuIDs, 

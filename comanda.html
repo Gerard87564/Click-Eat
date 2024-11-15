@@ -98,10 +98,9 @@
                 const cart = localStorage.getItem('pedido');
                 if (cart) {
                     const data = JSON.parse(cart); 
-
                     console.log('Datos almacenados en localStorage:', data);
 
-                    const menuIDs = Array.isArray(data.MenuID) ? data.MenuID : [data.MenuID]; // Asegurarse de que MenuID sea un array
+                    const menuIDs = Array.isArray(data.MenuID) ? data.MenuID : [data.MenuID]; // Asegúrate de que MenuID sea un array
 
                     const orderData = {
                         MenuID: menuIDs, 
