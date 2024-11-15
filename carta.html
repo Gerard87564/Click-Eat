@@ -391,33 +391,35 @@
                     })
                     .catch(error => console.error('Error al obtener la disponibilidad:', error));
 
-                document.getElementById('submit-order').addEventListener('click', function(event) {
-                    event.preventDefault();
+                    document.getElementById('submit-order').addEventListener('click', function(event) {
+                        event.preventDefault();
 
-                    const dni = document.getElementById('dni').value;
-                    const nom = document.getElementById('nom').value;
-                    const cognom = document.getElementById('cognom').value;
-                    const tlf = document.getElementById('tlf').value;
-                    const correu = document.getElementById('correu').value;
+                        const dni = document.getElementById('dni').value;
+                        const nom = document.getElementById('nom').value;
+                        const cognom = document.getElementById('cognom').value;
+                        const tlf = document.getElementById('tlf').value;
+                        const correu = document.getElementById('correu').value;
 
-                    if (cart.length === 0) {
-                        alert("Por favor, agrega productos al carrito antes de hacer el pedido.");
-                        return;
-                    }
+                        if (cart.length === 0) {
+                            alert("Por favor, agrega productos al carrito antes de hacer el pedido.");
+                            return;
+                        }
 
-                    const orderData = {
-                        MenuID: cart.map(item => item.menuID), 
-                        DNI: dni,
-                        Nom: nom,
-                        Cognom: cognom,
-                        Tlf: tlf,
-                        Correu: correu
-                    };
+                        const menuIDs = cart.map(item => item.menuID).flat();
 
-                    localStorage.setItem('pedido', JSON.stringify(orderData));
+                        const orderData = {
+                            MenuID: menuIDs, 
+                            DNI: dni,
+                            Nom: nom,
+                            Cognom: cognom,
+                            Tlf: tlf,
+                            Correu: correu
+                        };
 
-                    window.location.href = 'comanda.html';
-                });
+                        localStorage.setItem('pedido', JSON.stringify(orderData));
+
+                        window.location.href = 'comanda.html';  
+                    });
             });
         </script>
     </body>
