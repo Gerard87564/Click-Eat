@@ -182,19 +182,13 @@ footer img {
 }
 
 .add-to-cart {
-    background-color: #ff9800;
-    color: white; 
-    border: none;
-    border-radius: 5px; 
-    padding: 8px 12px; 
     cursor: pointer;
-    font-family: 'Fredoka One', sans-serif;
     transition: background-color 0.3s ease;
     margin-top: 10px;
 }
 
 .add-to-cart:hover {
-    background-color: #ffb74d;
+    color: white;
 }
 
 #cart-container {
