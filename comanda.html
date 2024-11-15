@@ -93,5 +93,57 @@
                 }
             });
         </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const cart = localStorage.getItem('pedido');
+                if (cart) {
+                    const data = JSON.parse(cart);
+                    console.log(data);
+                    
+                    const menuIDs = Array.isArray(data.menuID) ? data.menuID.join(',') : data.menuID;
+                    
+                    const orderData = {
+                        menuID: menuIDs, 
+                        DNI: data.DNI,
+                        Nom: data.Nom,
+                        Cognom: data.Cognom,
+                        Tlf: data.Tlf,
+                        Correu: data.Correu
+                    };
+                    
+                    fetch('https://api.clickeat.cat/comandes', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(orderData)
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            return response.json().then(error => {
+                                throw new Error(error.message || 'Error en la solicitud');
+                            });
+                        }
+                        return response.json();
+                    })
+                    .then(responseData => {
+                        console.log('Comanda creada:', responseData);
+                        const orderDataContainer = document.getElementById('orderData');
+                        orderDataContainer.innerHTML = '';
+                        const orderDetails = Object.entries(responseData).map(([key, value]) => {
+                            return `<p>${key}: ${value}</p>`;
+                        }).join('');
+                        orderDataContainer.innerHTML = orderDetails;
+                        document.getElementById('orderDetails').style.display = 'block';
+                    })
+                    .catch(error => {
+                        console.error('Ups ha succeit un problema amb la comanda:', error);
+                        alert('Hubo un problema al enviar la comanda. Por favor, intenta nuevamente.');
+                    });
+
+                    localStorage.removeItem('pedido');
+                }
+            });
+        </script>        
     </body>
 </html>

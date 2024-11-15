@@ -51,6 +51,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <button class="add-to-cart">Añadir al carrito</button>
                         <p class="count"></p>
                     </div>
                     <div class="plato-carta">
@@ -66,6 +67,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <button class="add-to-cart">Añadir al carrito</button>
                         <p class="count"></p>
                     </div>
                     <div class="plato-carta">
@@ -81,6 +83,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <button class="add-to-cart">Añadir al carrito</button>
                         <p class="count"></p>
                     </div>
                     <div class="plato-carta">
@@ -96,6 +99,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <button class="add-to-cart">Añadir al carrito</button>
                         <p class="count"></p>
                     </div>
                 </div>
@@ -117,6 +121,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <button class="add-to-cart">Añadir al carrito</button>
                         <p class="count"></p>
                     </div>
                     <div class="plato-carta">
@@ -132,6 +137,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <button class="add-to-cart">Añadir al carrito</button>
                         <p class="count"></p>
                     </div>
                     <div class="plato-carta">
@@ -147,6 +153,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <button class="add-to-cart">Añadir al carrito</button>
                         <p class="count"></p>
                     </div>
                 </div>
@@ -168,6 +175,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <button class="add-to-cart">Añadir al carrito</button>
                         <p class="count"></p>
                     </div>
                     <div class="plato-carta">
@@ -183,6 +191,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <button class="add-to-cart">Añadir al carrito</button>
                         <p class="count"></p>
                     </div>
                     <div class="plato-carta">
@@ -198,6 +207,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <button class="add-to-cart">Añadir al carrito</button>
                         <p class="count"></p>
                     </div>
                     <div class="plato-carta">
@@ -213,6 +223,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <button class="add-to-cart">Añadir al carrito</button>
                         <p class="count"></p>
                     </div>
                 </div>
@@ -234,6 +245,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <button class="add-to-cart">Añadir al carrito</button>
                         <p class="count"></p>
                     </div>
                     <div class="plato-carta">
@@ -249,6 +261,7 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <button class="add-to-cart">Añadir al carrito</button>
                         <p class="count"></p>
                     </div>
                     <div class="plato-carta">
@@ -264,10 +277,26 @@
                         <div class="disponibilidad">
                             <div class="barra-disponibilidad"></div>
                         </div>
+                        <button class="add-to-cart">Añadir al carrito</button>
                         <p class="count"></p>
                     </div>
                 </div>
             </section>
+
+            <form id="orderForm">
+                <label for="menuId">Omple les dades:</label>
+                <input type="text" id="dni" name="dni" placeholder="Ingressa el dni...">
+                <input type="text" id="nom" name="nom" placeholder="Ingressa el teu nom...">
+                <input type="text" id="cognom" name="cognom" placeholder="Ingressa el teu cognom...">
+                <input type="tel" id="tlf" name="tlf" placeholder="Ingressa el numero de telefon...">
+                <input type="email" id="correu" name="correu" placeholder="Ingressa el email...">
+            </form> 
+
+            <div id="cart-container">
+                <h2>Carrito</h2>
+                <ul id="cart-list"></ul>
+                <button id="submit-order">Realizar pedido</button>
+            </div>
         </main>
 
         <footer>
@@ -280,44 +309,115 @@
             </div>
         </footer>
         <script src="./JS/script.js"></script>
+        <script src="./JS/api.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", () => {
-            fetch("https://api.clickeat.cat/menus")
-            .then(response => response.json())
-            .then(data => {
-                console.log("Datos completos de la API:", data);
+                let cart = [];
                 
-                data.forEach(item => {
-                    console.log("Elemento individual:", item);
-                    
-                    const itemName = item.Nombre; 
+                function addToCart(itemId, itemName, itemPrice, menuID) {
+                    const item = {
+                        id: itemId,
+                        name: itemName,
+                        price: itemPrice,
+                        quantity: 1,
+                        menuID: menuID
+                    };
 
-                    if (itemName) {
-                        const platos = document.querySelectorAll('.plato-carta');
+                    const existingItem = cart.find(product => product.id === itemId && product.menuID === menuID);
+                    if (existingItem) {
+                        existingItem.quantity += 1;
+                    } else {
+                        cart.push(item);
+                    }
+
+                    updateCartDisplay();
+                }
+
+                function updateCartDisplay() {
+                    const cartList = document.getElementById('cart-list');
+                    cartList.innerHTML = ''; 
+
+                    cart.forEach(item => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = `${item.name} - ${item.quantity} x ${item.price}€`; 
+                        cartList.appendChild(listItem);  
+                    });
+                }
+
+                fetch("https://api.clickeat.cat/menus")
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log("Datos completos de la API:", data);
                         
-                        platos.forEach(plato => {
-                            const titulo = plato.querySelector('h4');
-                            
-                            if (titulo && titulo.textContent.trim().toLowerCase() === itemName.toLowerCase()) {
-                                const barra = plato.querySelector('.barra-disponibilidad');
-                                
-                                if (barra) {
-                                    var pItem= plato.getElementsByClassName("count");
-                                    barra.style.width = item.disponible + "%";
-                                    if (pItem.length > 0) {
-                                        pItem[0].textContent = item.disponible + " uds"; // Actualiza el primer elemento de la colección
-                                    }
+                        data.forEach(item => {
+                            const itemMenuID = item.MenuID;
+                            const itemName = item.Nombre;
 
-                                    barra.style.backgroundColor = 
-                                        item.disponible > 50 ? "#4caf50" : 
-                                        (item.disponible > 20 ? "orange" : "red");
-                                }
+                            if (itemName) {
+                                document.querySelectorAll('.plato-carta').forEach(plato => {
+                                    const titulo = plato.querySelector('h4');
+                                    
+                                    if (titulo && titulo.textContent.trim().toLowerCase() === itemName.toLowerCase()) {
+                                        plato.setAttribute('data-menu-id', itemMenuID);
+
+                                        const barra = plato.querySelector('.barra-disponibilidad');
+                                        if (barra) {
+                                            const pItem = plato.querySelector('.count');
+                                            barra.style.width = item.disponible + "%";
+                                            if (pItem) {
+                                                pItem.textContent = item.disponible + " uds";
+                                            }
+
+                                            barra.style.backgroundColor = 
+                                                item.disponible > 50 ? "#4caf50" : 
+                                                (item.disponible > 20 ? "orange" : "red");
+                                        }
+                                    }
+                                });
                             }
                         });
+
+                        document.querySelectorAll('.add-to-cart').forEach(button => {
+                            button.addEventListener('click', (e) => {
+                                const parent = e.target.closest('.plato-carta');
+                                const itemId = parent.getAttribute('data-id');
+                                const itemName = parent.querySelector('h4').textContent;
+                                const itemPrice = parseFloat(parent.querySelector('.precio-plato-carta span').textContent);
+                                const menuID = parent.getAttribute('data-menu-id');
+                                
+                                addToCart(itemId, itemName, itemPrice, menuID);
+                            });
+                        });
+                    })
+                    .catch(error => console.error('Error al obtener la disponibilidad:', error));
+
+                document.getElementById('submit-order').addEventListener('click', function(event) {
+                    event.preventDefault();
+
+                    const dni = document.getElementById('dni').value;
+                    const nom = document.getElementById('nom').value;
+                    const cognom = document.getElementById('cognom').value;
+                    const tlf = document.getElementById('tlf').value;
+                    const correu = document.getElementById('correu').value;
+
+                    if (cart.length === 0) {
+                        alert("Por favor, agrega productos al carrito antes de hacer el pedido.");
+                        return;
                     }
+
+                    const orderData = {
+                        MenuID: cart.map(item => item.menuID), 
+                        DNI: dni,
+                        Nom: nom,
+                        Cognom: cognom,
+                        Tlf: tlf,
+                        Correu: correu
+                    };
+
+                    localStorage.setItem('pedido', JSON.stringify(orderData));
+
+                    window.location.href = 'comanda.html';
                 });
-            })
-            .catch(error => console.error('Error al obtener la disponibilidad:', error));
             });
         </script>
     </body>

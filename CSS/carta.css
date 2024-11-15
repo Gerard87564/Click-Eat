@@ -181,6 +181,123 @@ footer img {
     transition: width 0.3s ease;
 }
 
+.add-to-cart {
+    background-color: #ff9800;
+    color: white; 
+    border: none;
+    border-radius: 5px; 
+    padding: 8px 12px; 
+    cursor: pointer;
+    font-family: 'Fredoka One', sans-serif;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.add-to-cart:hover {
+    background-color: #ffb74d;
+}
+
+#cart-container {
+    position: relative;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%); 
+    top: 10em; 
+    margin-bottom: 6em;
+    padding: 12px;
+    border-radius: 10px 10px 0 0;
+    background-color: #fff;
+    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#cart-container h2 {
+    font-size: 1.5rem;
+    font-family: 'Fredoka One', sans-serif;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#cart-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-list li {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    font-family: 'Fredoka One', sans-serif;
+    color: #333;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#submit-order {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    font-family: 'Fredoka One', sans-serif; 
+    transition: background-color 0.3s ease; 
+}
+
+#submit-order:hover {
+    background-color: #66bb6a;
+}
+
+#orderForm {
+    position: relative;
+    top: 8em;
+    width: 100%;
+    max-width: 500px; 
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#orderForm label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#orderForm input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+#orderForm input:focus {
+    border-color: #4CAF50; 
+    outline: none;
+}
+
+#orderForm input::placeholder {
+    color: #888;
+}
+
+#orderForm input[type="tel"],
+#orderForm input[type="email"] {
+    -webkit-appearance: none; 
+    appearance: none;
+}
 
 @keyframes slideDown {
     from {
