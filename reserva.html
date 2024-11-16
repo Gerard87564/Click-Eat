@@ -89,21 +89,15 @@
         <script src="./JS/marcarMesa.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                fetch('https://api.clickeat.cat/estado-mesas')
-                    .then(response => response.json())
-                    .then(data => {
-                        data.mesas.forEach(function (mesa) {
-                            const mesaElement = document.getElementById('mesa-' + mesa.id);
-                            if (mesa.estado === 'ocupada') {
-                                mesaElement.classList.add('mesa-ocupada');
-                                mesaElement.innerHTML = "<p>Ocupada</p>";
-                            }
-                            console.log(mesa.estado)
-                        });
-                    })
-                    .catch(error => {
-                        console.error("Error al obtener el estado de las mesas:", error);
-                    });
+                let mesasOcupadas = JSON.parse(localStorage.getItem('mesasOcupadas')) || [];
+
+                mesasOcupadas.forEach(function(mesaId) {
+                    const mesaElement = document.getElementById(mesaId);
+                    if (mesaElement) {
+                        mesaElement.classList.add('mesa-ocupada');
+                        mesaElement.innerHTML = "<p>Ocupada</p>";
+                    }
+                });
             });
         </script>
     </body>
