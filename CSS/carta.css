@@ -293,6 +293,24 @@ footer img {
     appearance: none;
 }
 
+#seccio-principal {
+    max-width: 500px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    top: 7.5em;
+}
+
+#info-mesa {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
 @keyframes slideDown {
     from {
       opacity: 0;

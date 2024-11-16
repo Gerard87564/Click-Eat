@@ -34,6 +34,9 @@
         </header>
 
         <main>
+            <div id="seccio-principal">
+                <p id="info-mesa"></p>                            
+            </div>
             <section id="wrap">
                 <div class="wrap-title-section">
                     <h2>Hamburgueses</h2>
@@ -422,6 +425,30 @@
 
                         window.location.href = 'comanda.html';  
                     });
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                function getParameterByName(name) {
+                    const url = window.location.search;
+                    const params = new URLSearchParams(url);
+                    return params.get(name);
+                }
+
+                const numeroMesa = getParameterByName('mesa');
+
+                if (numeroMesa) {
+                    const infoMesa = document.getElementById("info-mesa");
+                    infoMesa.textContent = `Has escollit la taula ${numeroMesa}, selecciona el teu menu:`;
+                } else {
+                    console.warn("Parámetro 'mesa' no encontrado en la URL.");
+                }
+
+                const buttonSubmit= document.querySelector('button');
+
+                buttonSubmit.addEventListener("click", function () {
+                    redireccionarComanda();
+                });
             });
         </script>
     </body>

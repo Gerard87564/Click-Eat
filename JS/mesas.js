@@ -1,5 +1,5 @@
 function redireccionarMesa(numeroMesa) {
-    window.location.href = `mesas.html?mesa=${numeroMesa}`;
+    window.location.href = `carta.html?mesa=${numeroMesa}`;
 }
 
 document.addEventListener('DOMContentLoaded', function () {

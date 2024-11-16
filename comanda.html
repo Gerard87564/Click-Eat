@@ -51,48 +51,7 @@
             </div>
         </footer>
         <script src="./JS/script.js"></script>
-        <script src="./JS/api.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const formData = localStorage.getItem('formData');
-                if (formData) {
-                    const data = JSON.parse(formData);
-
-                    fetch('https://api.clickeat.cat/comandes', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(data)
-                    })
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Error en la solicitud');
-                        }
-                        return response.json();
-                    })
-                    .then(responseData => {
-                        console.log('Comanda creada:', responseData);
-
-                        const orderDataContainer = document.getElementById('orderData');
-                        orderDataContainer.innerHTML = '';
-
-                        Object.entries(responseData).forEach(([key, value]) => {
-                            const paragraph = document.createElement('p');
-                            paragraph.textContent = `${key}: ${value}`;
-                            orderDataContainer.appendChild(paragraph);
-                        });
-
-                        document.getElementById('orderDetails').style.display = 'block';
-                    })
-                    .catch(error => {
-                        console.error('Ups ha succeit un problema amb la comanda:', error);
-                    });
-
-                    localStorage.removeItem('formData');
-                }
-            });
-        </script>
+        <script src="./JS/api.js"></script>    
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const cart = localStorage.getItem('pedido');
@@ -100,8 +59,8 @@
                     const data = JSON.parse(cart); 
                     console.log('Datos almacenados en localStorage:', data);
 
-                    const menuIDs = Array.isArray(data.MenuID) ? data.MenuID : [data.MenuID]; // Asegúrate de que MenuID sea un array
-
+                    const menuIDs = Array.isArray(data.MenuID) ? data.MenuID : [data.MenuID];
+                    
                     const orderData = {
                         MenuID: menuIDs, 
                         DNI: data.DNI,
@@ -126,10 +85,26 @@
 
                         const orderDataContainer = document.getElementById('orderData');
                         orderDataContainer.innerHTML = '';
-                        const orderDetails = Object.entries(responseData).map(([key, value]) => {
-                            return `<p>${key}: ${value}</p>`;
-                        }).join('');
-                        orderDataContainer.innerHTML = orderDetails;
+
+                        if (Array.isArray(responseData.comandes)) {
+                            responseData.comandes.forEach(comanda => {
+                                const row = document.createElement('p');
+                                row.innerHTML = `
+                                    <strong>FacturaID:</strong> ${comanda.FacturaID} <br>
+                                    <strong>MenuID:</strong> ${comanda.MenuID} <br>
+                                    <strong>ClientID:</strong> ${comanda.ClientID} <br>
+                                    <strong>Estado:</strong> ${comanda.estat} <br>
+                                    <strong>Tiempo Restante:</strong> ${comanda.TempsRestant} min <br>
+                                    <hr>
+                                `;
+                                orderDataContainer.appendChild(row);
+                            });
+                        } else {
+                            const row = document.createElement('p');
+                            row.innerHTML = `Respuesta inesperada del servidor: ${JSON.stringify(responseData)}`;
+                            orderDataContainer.appendChild(row);
+                        }
+
                         document.getElementById('orderDetails').style.display = 'block';
                     })
                     .catch(error => {
@@ -138,6 +113,6 @@
                     });
                 }
             });
-        </script>        
+        </script>   
     </body>
 </html>
