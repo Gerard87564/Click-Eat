@@ -1,18 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
     const mesas = document.querySelectorAll('.background');
 
+    let occupiedTables = JSON.parse(localStorage.getItem('occupiedTables')) || [];
+    console.log("Occupied tables on page load:", occupiedTables);
+
+    occupiedTables.forEach(function (table) {
+        const tableElement = document.getElementById(table.id);
+        if (tableElement) {
+            tableElement.classList.add('mesa-ocupada');
+            tableElement.innerHTML = "<p>Ocupada</p>";
+        }
+    });
+
     mesas.forEach(function (mesa) {
         mesa.addEventListener('click', function () {
             if (mesa.classList.contains('mesa-ocupada')) {
                 alert("Esta mesa ya está ocupada.");
             } else {
-                setTimeout(function () {
-                    localStorage.removeItem(`mesa_${mesa.id}`);
-
-                    mesa.classList.remove('mesa-ocupada');
-                    mesa.innerHTML = "";
-                }, 30 * 60 * 1000);
-
                 fetch('https://api.clickeat.cat/marcar-mesa-ocupada', {
                     method: 'POST',
                     headers: {
@@ -25,21 +29,47 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (data.success) {
                         mesa.classList.add('mesa-ocupada');
                         mesa.innerHTML = "<p>Ocupada</p>";
-                        
-                        let mesasOcupadas = JSON.parse(localStorage.getItem('mesasOcupadas')) || [];
-                        mesasOcupadas.push(mesa.id); 
-                        localStorage.setItem('mesasOcupadas', JSON.stringify(mesasOcupadas));
-                
+
+                        let occupiedTables = JSON.parse(localStorage.getItem('occupiedTables')) || [];
+                        occupiedTables.push({
+                            id: mesa.id,
+                            timestamp: Date.now()
+                        });
+                        localStorage.setItem('occupiedTables', JSON.stringify(occupiedTables));
+
+                        console.log(`Mesa ${mesa.id} marcada como ocupada`);
+
                         window.location.href = `carta.html?mesa=${mesa.id}`;
                     } else {
+                        console.error("API returned an error:", data);
                         alert("Hubo un problema al marcar la mesa.");
                     }
                 })
                 .catch(error => {
-                    console.error("Error al marcar la mesa como ocupada:", error);
-                    alert("Hubo un error al procesar la solicitud.");
-                });                
+                    console.error("Error al hacer la solicitud:", error);
+                    alert("Hubo un error al marcar la mesa.");
+                });
             }
         });
     });
+
+    setInterval(function () {
+        let occupiedTables = JSON.parse(localStorage.getItem('occupiedTables')) || [];
+        const currentTime = Date.now();
+
+        occupiedTables.forEach(function (table) {
+            if (currentTime - table.timestamp > 1 * 60 * 1000) { 
+                const tableElement = document.getElementById(table.id);
+                if (tableElement) {
+                    tableElement.classList.remove('mesa-ocupada');
+                    tableElement.innerHTML = table.id; 
+
+                    occupiedTables = occupiedTables.filter(t => t.id !== table.id);
+                    localStorage.setItem('occupiedTables', JSON.stringify(occupiedTables));
+
+                    console.log(`Mesa ${table.id} desocupada automáticamente después de 1 minuto`);
+                }
+            }
+        });
+    }, 5000);  
 });

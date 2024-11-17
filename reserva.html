@@ -87,18 +87,5 @@
         </footer>
         <script src="./JS/script.js"></script>
         <script src="./JS/marcarMesa.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                let mesasOcupadas = JSON.parse(localStorage.getItem('mesasOcupadas')) || [];
-
-                mesasOcupadas.forEach(function(mesaId) {
-                    const mesaElement = document.getElementById(mesaId);
-                    if (mesaElement) {
-                        mesaElement.classList.add('mesa-ocupada');
-                        mesaElement.innerHTML = "<p>Ocupada</p>";
-                    }
-                });
-            });
-        </script>
     </body>
 </html>
