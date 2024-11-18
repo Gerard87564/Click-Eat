@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $arxius = '/ARXIUS/';
+    $arxius = 'ARXIUS/';
     $absolutePath = $arxius . basename($_FILES["cv"]["name"]);
     $extension = strtolower(pathinfo($absolutePath, PATHINFO_EXTENSION));
     $extension_validate = ['pdf'];
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Mostrar alerta con el mensaje
             alert('$message');
             // Redirigir al formulario inicial (cambia 'index.php' a la ruta correcta de tu formulario)
-            window.location.href = './index.html';
+            window.location.href = 'index.html';
         </script>
     </head>
     <body>
