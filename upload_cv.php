@@ -1,21 +1,23 @@
 <?php
-if($_SERVER['REQUEST_METHOD']=='POST') {
-    $arxius= '../ARXIUS/'; 
-
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $arxius = '../ARXIUS/'; 
     $absolutePath = $arxius . basename($_FILES["cv"]["name"]);
-    $extension= strtolower(pathinfo($absolutePath, PATHINFO_EXTENSION));
-
-    $extension_validate= ['pdf'];
+    $extension = strtolower(pathinfo($absolutePath, PATHINFO_EXTENSION));
+    $extension_validate = ['pdf'];
 
     if (!in_array($extension, $extension_validate)) {
-        echo 'Extensió del ficher no valida, només es admes pdf!';
+        header('Location: error.php?msg=extensio_no_valida');
+        exit();
     } else if ($_FILES["cv"]["size"] > 5 * 1024 * 1024) {
-        echo "Arxiu massa gran!, limit 5 MB";
+        header('Location: error.php?msg=arxiu_masssa_gran');
+        exit();
     } else {
         if (move_uploaded_file($_FILES["cv"]["tmp_name"], $absolutePath)) {
-            echo 'Fitxer ' . basename($_FILES["cv"]["name"]) . ' pujat correctament!, rebrás un email si resultes candidat';
+            header('Location: success.html');
+            exit();
         } else {
-            echo "UPS!, no s'ha pogut pujar el fitxer...";
+            header('Location: error.php?msg=fitxer_no_pujat');
+            exit();
         }
     }
 }

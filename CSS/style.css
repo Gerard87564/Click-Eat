@@ -99,9 +99,8 @@ footer img {
     z-index: 0;
 }
 
-#reserva-btn {
-    position: relative;
-    z-index: 1;
+#reserva-btn p{
+    width: 100%;
 }
 
 #htopnav .btn {
@@ -157,9 +156,14 @@ h1 {
     left: 4em;
     font-family: 'Fredoka One';
     height: 5%;
-    width: 15%;
+    width: 10%;
     border-radius: 10px;
     font-size: 1em;
+    z-index: 1;
+}
+
+#seccio-principal button:hover {
+    background-color: lightgrey; 
 }
 
 #slider {
