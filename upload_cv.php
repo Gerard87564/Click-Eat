@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $arxius = '../ARXIUS/';
+    $arxius = '/ARXIUS/';
     $absolutePath = $arxius . basename($_FILES["cv"]["name"]);
     $extension = strtolower(pathinfo($absolutePath, PATHINFO_EXTENSION));
     $extension_validate = ['pdf'];
