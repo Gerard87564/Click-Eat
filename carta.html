@@ -346,7 +346,7 @@
                         cartList.appendChild(listItem);  
                     });
                 }
-
+                
                 fetch("https://api.clickeat.cat/menus")
                     .then(response => response.json())
                     .then(data => {
@@ -394,6 +394,13 @@
                     })
                     .catch(error => console.error('Error al obtener la disponibilidad:', error));
 
+                    function getParameterByName(name) {
+                        const url = window.location.search;
+                        const params = new URLSearchParams(url);
+                        return params.get(name);
+                    }
+                    const numeroMesa = getParameterByName('mesa');
+
                     document.getElementById('submit-order').addEventListener('click', function(event) {
                         event.preventDefault();
 
@@ -417,11 +424,14 @@
                             Nom: nom,
                             Cognom: cognom,
                             Tlf: tlf,
-                            Correu: correu
+                            Correu: correu,
                         };
 
-                        localStorage.setItem('pedido', JSON.stringify(orderData));
+                        if (numeroMesa!=undefined) {
+                            orderData.Taula = numeroMesa;
+                        }
 
+                        localStorage.setItem('pedido', JSON.stringify(orderData));
                         window.location.href = 'comanda.html';  
                     });
             });

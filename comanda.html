@@ -51,7 +51,6 @@
             </div>
         </footer>
         <script src="./JS/script.js"></script>
-        <script src="./JS/api.js"></script>    
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const cart = localStorage.getItem('pedido');
@@ -67,8 +66,12 @@
                         Nom: data.Nom,
                         Cognom: data.Cognom,
                         Tlf: data.Tlf,
-                        Correu: data.Correu
+                        Correu: data.Correu,
                     };
+
+                    if (data.Taula) {
+                        orderData.Taula = data.Taula;
+                    }
 
                     console.log('Datos de la orden a enviar:', orderData);
 
@@ -85,18 +88,30 @@
 
                         const orderDataContainer = document.getElementById('orderData');
                         orderDataContainer.innerHTML = '';
-
+                        
                         if (Array.isArray(responseData.comandes)) {
                             responseData.comandes.forEach(comanda => {
                                 const row = document.createElement('p');
-                                row.innerHTML = `
-                                    <strong>FacturaID:</strong> ${comanda.FacturaID} <br>
-                                    <strong>MenuID:</strong> ${comanda.MenuID} <br>
-                                    <strong>ClientID:</strong> ${comanda.ClientID} <br>
-                                    <strong>Estado:</strong> ${comanda.estat} <br>
-                                    <strong>Tiempo Restante:</strong> ${comanda.TempsRestant} min <br>
-                                    <hr>
-                                `;
+                                if (data.Taula) {
+                                    row.innerHTML = `
+                                        <strong>FacturaID:</strong> ${comanda.FacturaID} <br>
+                                        <strong>MenuID:</strong> ${comanda.MenuID} <br>
+                                        <strong>ClientID:</strong> ${comanda.ClientID} <br>
+                                        <strong>Estado:</strong> ${comanda.estat} <br>
+                                        <strong>Tiempo Restante:</strong> ${comanda.TempsRestant} min <br>
+                                        <strong>Taula:</strong> ${comanda.Taula} <br>
+                                        <hr>
+                                    `;
+                                } else {
+                                    row.innerHTML = `
+                                        <strong>FacturaID:</strong> ${comanda.FacturaID} <br>
+                                        <strong>MenuID:</strong> ${comanda.MenuID} <br>
+                                        <strong>ClientID:</strong> ${comanda.ClientID} <br>
+                                        <strong>Estado:</strong> ${comanda.estat} <br>
+                                        <strong>Tiempo Restante:</strong> ${comanda.TempsRestant} min <br>
+                                        <hr>
+                                    `;
+                                }
                                 orderDataContainer.appendChild(row);
                             });
                         } else {

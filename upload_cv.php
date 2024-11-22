@@ -1,24 +1,32 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $arxius = 'ARXIUS/';
-    $absolutePath = $arxius . basename($_FILES["cv"]["name"]);
-    $extension = strtolower(pathinfo($absolutePath, PATHINFO_EXTENSION));
-    $extension_validate = ['pdf'];
-    $message = '';
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['pdf']) && $_FILES['pdf']['error'] == 0) {
+    $archivo = $_FILES['pdf'];
+    $nombreArchivo = $archivo['name'];
+    $tipoArchivo = $archivo['type'];
+    $tmpArchivo = $archivo['tmp_name'];
+    $tamañoArchivo = $archivo['size'];
+    
+    $directorioDestino = 'ARXIUS/'; 
 
-    if (!in_array($extension, $extension_validate)) {
-        $message = 'Extensión no válida. Solo se permiten archivos PDF.';
-    } else if ($_FILES["cv"]["size"] > 5 * 1024 * 1024) {
-        $message = 'El archivo es demasiado grande. Máximo permitido: 5 MB.';
-    } else {
-        if (move_uploaded_file($_FILES["cv"]["tmp_name"], $absolutePath)) {
-            $message = 'Archivo subido con éxito.';
+    $rutaDestino = $directorioDestino . basename($nombreArchivo);
+
+    if ($tipoArchivo == 'application/pdf') {
+        
+        $tamañoMaximo = 5 * 1024 * 1024;
+        if ($tamañoArchivo <= $tamañoMaximo) {
+
+            if (move_uploaded_file($tmpArchivo, $rutaDestino)) {
+                echo "El archivo PDF se ha subido correctamente.";
+            } else {
+                echo "Error al mover el archivo al directorio de destino.";
+            }
         } else {
-            $message = 'Hubo un error al subir el archivo.';
+            echo "El archivo es demasiado grande. El tamaño máximo permitido es 5MB.";
         }
+    } else {
+        echo "El archivo debe ser un PDF.";
     }
-
-    header("Location: index.html");
-    exit();
+} else {
+    echo "No se ha enviado ningún archivo o ha ocurrido un error.";
 }
 ?>
