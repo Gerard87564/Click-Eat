@@ -11,12 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['pdf']) && $_FILES['pd
     $rutaDestino = $directorioDestino . basename($nombreArchivo);
 
     if ($tipoArchivo == 'application/pdf') {
-        
-        $tamañoMaximo = 5 * 1024 * 1024;
+        $tamañoMaximo = 5 * 1024 * 1024; // 5 MB
         if ($tamañoArchivo <= $tamañoMaximo) {
-
             if (move_uploaded_file($tmpArchivo, $rutaDestino)) {
-                echo "El archivo PDF se ha subido correctamente.";
+                header("Location: index.html");
+                exit();
             } else {
                 echo "Error al mover el archivo al directorio de destino.";
             }
