@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (mesa.classList.contains('mesa-ocupada')) {
                 alert("Esta mesa ya está ocupada.");
             } else {
-                fetch('https://api.clickeat.cat/marcar-mesa-ocupada', {
+                fetch('https://apic.clickeat.cat/marcar-mesa-ocupada', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
