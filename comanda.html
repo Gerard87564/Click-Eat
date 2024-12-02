@@ -74,7 +74,7 @@
 
                     console.log('Datos de la orden a enviar:', orderData);
 
-                    fetch('https://api.clickeat.cat/comandes', {
+                    fetch('https://apic.clickeat.cat/comandes', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -83,7 +83,7 @@
                     })
                     .then(response => response.json())
                     .then(responseData => {
-                        fetch("https://api.clickeat.cat/menus")
+                        fetch("https://apic.clickeat.cat/menus")
                         .then(response => {
                             if (!response.ok) {
                                 throw new Error(`Error al cargar menús: ${response.status}`);
